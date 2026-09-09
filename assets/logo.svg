@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" width="100%" height="100%">
+    <defs>
+        <!-- Luxurious Champagne Gold Gradient -->
+        <linearGradient id="luxGold" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#A38446" />
+            <stop offset="50%" stop-color="#D1B88F" />
+            <stop offset="100%" stop-color="#FDE6B1" />
+        </linearGradient>
+        
+        <!-- Innovative Negative Space Mask -->
+        <mask id="cutoutMask">
+            <!-- White means solid gold, Black cuts a transparent hole through it -->
+            <rect x="0" y="0" width="50" height="50" fill="white" rx="25" />
+            
+            <!-- Inner Wheel Rim Cutout -->
+            <circle cx="25" cy="25" r="21" fill="none" stroke="black" stroke-width="1.5" stroke-dasharray="6 4"/>
+            
+            <!-- Center Fork Tine & Handle -->
+            <line x1="25" y1="12" x2="25" y2="40" stroke="black" stroke-width="2.5" stroke-linecap="round" />
+            
+            <!-- Left Fork Tine -->
+            <path d="M 17 12 L 17 22 C 17 28, 25 30, 25 30" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" />
+            
+            <!-- Right Fork Tine -->
+            <path d="M 33 12 L 33 22 C 33 28, 25 30, 25 30" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" />
+            
+            <!-- Sleek crossing line representing an axle -->
+            <line x1="10" y1="25" x2="40" y2="25" stroke="black" stroke-width="1.5" />
+        </mask>
+    </defs>
+
+    <!-- The Golden Emblem -->
+    <g transform="translate(10, 15)">
+        <rect x="0" y="0" width="50" height="50" rx="25" fill="url(#luxGold)" mask="url(#cutoutMask)"/>
+    </g>
+
+    <!-- Elegant Typography -->
+    <text x="80" y="47" font-family="'Didot', 'Bodoni MT', 'Times New Roman', serif" font-size="28" font-weight="400" fill="currentColor" letter-spacing="3">FOOD ON WHEELS</text>
+</svg>

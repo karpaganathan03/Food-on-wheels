@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food On Wheels</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- STANDARD CSS LINK (Not a JS module) -->
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- TAILWIND CDN (No npm needed!) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--primary)',
+                        'primary-dark': 'var(--primary-dark)',
+                        coral: 'var(--coral)',
+                        accent: 'var(--accent)',
+                        surface: 'var(--surface-color)',
+                        muted: 'var(--text-muted)',
+                        border: 'var(--border-color)',
+                        success: 'var(--success)',
+                        warning: 'var(--warning)',
+                        danger: 'var(--danger)',
+                        info: 'var(--info)',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="pattern-bg antialiased min-h-screen flex flex-col">
+    <header id="global-header" class="sticky top-0 z-50 surface bg-opacity-90 backdrop-blur-md transition-all duration-300"></header>
+    <main id="app-content" class="flex-grow w-full transition-opacity duration-300"></main>
+    <footer id="global-footer" class="surface mt-auto py-12"></footer>
+
+    <!-- PROPER JS IMPORTS -->
+    <script type="module" src="./js/storage.js"></script>
+    <script type="module" src="./js/data.js"></script>
+    <script type="module" src="./js/app.js"></script> 
+     <script type="module" src="./js/trucks.js"></script>
+</body>
+</html>
