@@ -36,7 +36,7 @@ export function renderAboutPage() {
                 </div>
             </div>
             <div class="relative h-96 rounded-3xl overflow-hidden shadow-xl">
-                <img src="https://images.unsplash.com/photo-1528821128474-27f963b062bf?auto=format&fit=crop&w=800&q=80" alt="Food Truck Owners" class="w-full h-full object-cover">
+                <img src="./assets/images/dashboard.jpg" alt="Food on Wheels Dashboard" class="w-full h-full object-cover">
             </div>
         </section>
 

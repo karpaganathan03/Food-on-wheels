@@ -3,51 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food On Wheels</title>
+    <title>Food on Wheels | Admin & Directory</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- STANDARD CSS LINK (Not a JS module) -->
-    <link rel="stylesheet" href="./style.css">
-    
-    <!-- TAILWIND CDN (No npm needed!) -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+    <!-- Tailwind Config to bridge our Premium CSS Variables -->
     <script>
         tailwind.config = {
             darkMode: ['class', '[data-theme="dark"]'],
             theme: {
                 extend: {
                     colors: {
-                        primary: 'var(--primary)',
-                        'primary-dark': 'var(--primary-dark)',
-                        coral: 'var(--coral)',
-                        accent: 'var(--accent)',
-                        surface: 'var(--surface-color)',
-                        muted: 'var(--text-muted)',
+                        primary: 'var(--color-primary)',
+                        'primary-hover': 'var(--color-primary-hover)',
+                        accent: 'var(--color-accent)',
+                        surface: 'var(--bg-surface)',
+                        'surface-soft': 'var(--bg-surface-soft)',
+                        main: 'var(--text-primary)',
+                        muted: 'var(--text-secondary)',
                         border: 'var(--border-color)',
-                        success: 'var(--success)',
-                        warning: 'var(--warning)',
-                        danger: 'var(--danger)',
-                        info: 'var(--info)',
-                    },
-                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                    }
                 }
             }
         }
     </script>
+
+    <!-- Leaflet Map CSS & JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Design Token Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Instant Theme Loader (Prevents flickering) -->
+    <script>
+        const savedTheme = localStorage.getItem('foodTruckTheme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
 </head>
 <body class="pattern-bg antialiased min-h-screen flex flex-col">
-    <header id="global-header" class="sticky top-0 z-50 surface bg-opacity-90 backdrop-blur-md transition-all duration-300"></header>
+    
+    <!-- Global Header -->
+    <header id="global-header" class="sticky top-0 z-50 glass-panel border-b border-border transition-all duration-300"></header>
+    
+    <!-- Main Application View -->
     <main id="app-content" class="flex-grow w-full transition-opacity duration-300"></main>
-    <footer id="global-footer" class="surface mt-auto py-12"></footer>
+    
+    <!-- Global Footer -->
+    <footer id="global-footer" class="surface mt-auto py-12 border-t border-border"></footer>
 
-    <!-- PROPER JS IMPORTS -->
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="fixed bottom-4 right-4 z-[110] flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- Application Scripts -->
     <script type="module" src="./js/storage.js"></script>
     <script type="module" src="./js/data.js"></script>
-    <script type="module" src="./js/app.js"></script> 
-     <script type="module" src="./js/trucks.js"></script>
+    <script type="module" src="./js/app.js"></script>
 </body>
 </html>

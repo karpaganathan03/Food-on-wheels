@@ -1,48 +1,67 @@
 // js/storage.js
-
-const Storage = {
-  // Theme Management
-  initTheme() {
-    const savedTheme = localStorage.getItem("foodTruckTheme") || "light";
-    document.documentElement.setAttribute("data-theme", savedTheme);
-    return savedTheme;
-  },
-
-  toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-    const newTheme = currentTheme === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("foodTruckTheme", newTheme);
-    return newTheme;
-  },
-
-  getTheme() {
-    return document.documentElement.getAttribute("data-theme") || "light";
-  },
-
-  // Authentication Management
-  getAuth() {
-    const auth = localStorage.getItem("foodTruckAuth");
-    return auth ? JSON.parse(auth) : null;
-  },
-
-  setAuth(userData) {
-    localStorage.setItem("foodTruckAuth", JSON.stringify(userData));
-  },
-
-  logout() {
-    localStorage.removeItem("foodTruckAuth");
-  },
-
-  // Mock Data Management
-  getData(key) {
+export default class Storage {
+  static getData(key) {
     const data = localStorage.getItem(`foodTruck_${key}`);
     return data ? JSON.parse(data) : null;
-  },
+  }
 
-  setData(key, data) {
-    localStorage.setItem(`foodTruck_${key}`, JSON.stringify(data));
-  },
-};
+  static setData(key, value) {
+    localStorage.setItem(`foodTruck_${key}`, JSON.stringify(value));
+  }
 
-export default Storage;
+  static removeData(key) {
+    localStorage.removeItem(`foodTruck_${key}`);
+  }
+
+  static getAuth() {
+    return this.getData("auth_user");
+  }
+
+  static setAuth(user) {
+    this.setData("auth_user", user);
+    window.dispatchEvent(new Event("auth-changed"));
+  }
+
+  static logout() {
+    this.removeData("auth_user");
+    window.dispatchEvent(new Event("auth-changed"));
+  }
+
+  static getTheme() {
+    return localStorage.getItem("foodTruckTheme") || "light";
+  }
+
+  static setTheme(theme) {
+    localStorage.setItem("foodTruckTheme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
+  }
+
+  static toggleTheme() {
+    const nextTheme = this.getTheme() === "dark" ? "light" : "dark";
+    this.setTheme(nextTheme);
+    return nextTheme;
+  }
+
+  static initTheme() {
+    this.setTheme(this.getTheme());
+  }
+
+  static getDirection() {
+    return localStorage.getItem("foodTruckDir") || "ltr";
+  }
+
+  static setDirection(dir) {
+    localStorage.setItem("foodTruckDir", dir);
+    document.documentElement.setAttribute("dir", dir);
+  }
+
+  static toggleDirection() {
+    const nextDir = this.getDirection() === "rtl" ? "ltr" : "rtl";
+    this.setDirection(nextDir);
+    return nextDir;
+  }
+
+  static initDirection() {
+    this.setDirection(this.getDirection());
+  }
+}
