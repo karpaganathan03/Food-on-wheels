@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>Vendor Pricing &amp; Plans — Transparent Growth on Four Wheels | StreetFeast</title>
+  <meta name="description" content="Affordable vendor membership plans designed for mobile culinary businesses. Manage live locations, capture catering bookings, and grow your food truck brand.">
+  <meta name="keywords" content="food truck pricing, food truck directory membership, food truck business tools">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Theme & Responsive Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+      <!-- GLOBAL NAVBAR -->
+  <header class="street-navbar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0">
+        <!-- Creative Food Truck Logo with Sizzling Smoke & Culinary Badge -->
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-logo-badge">
+            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="url(#sfBrandGrad)"/>
+              <path d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z" fill="white"/>
+              <path d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z" fill="white" fill-opacity="0.9"/>
+              <rect x="14" y="21" width="10" height="5" rx="1" fill="#E63946"/>
+              <path d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5" stroke="#FFD166" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z" fill="#161A1D"/>
+              <circle cx="16" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="16" cy="30" r="1.2" fill="#E9A820"/>
+              <circle cx="32" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="32" cy="30" r="1.2" fill="#E9A820"/>
+              <defs>
+                <linearGradient id="sfBrandGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E63946"/>
+                  <stop offset="1" stop-color="#E9A820"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text-wrap d-flex flex-column lh-1">
+            <span class="brand-title fw-bold fs-4 text-heading">Street<strong class="text-primary-custom">Feast</strong></span>
+            <span class="brand-tagline text-muted" style="font-size: 0.62rem; letter-spacing: 0.14em; font-weight: 800;">FOOD TRUCK &amp; TASTE</span>
+          </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#streetNavbarNav" aria-controls="streetNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="streetNavbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <!-- 1. Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-rich border-0 shadow-lg p-2">
+                <li>
+                  <a class="dropdown-item rich-dropdown-item  d-flex align-items-center gap-3 p-2 rounded-3" href="index.html">
+                    <div class="rich-dropdown-icon bg-primary-light text-primary-custom rounded-3 d-flex align-items-center justify-content-center">
+                      <i class="bi bi-shop fs-5"></i>
+                    </div>
+                    <div class="rich-dropdown-content">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="fw-bold text-heading">Home 1 — Street Vibes</span>
+                        <span class="badge badge-subtle-primary">Vibrant</span>
+                      </div>
+                      <small class="text-muted d-block">Street food photography, trucks &amp; community</small>
+                    </div>
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider my-1"></li>
+                <li>
+                  <a class="dropdown-item rich-dropdown-item  d-flex align-items-center gap-3 p-2 rounded-3" href="home-2.html">
+                    <div class="rich-dropdown-icon bg-warning-light text-secondary-custom rounded-3 d-flex align-items-center justify-content-center">
+                      <i class="bi bi-truck-front-fill fs-5"></i>
+                    </div>
+                    <div class="rich-dropdown-content">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="fw-bold text-heading">Home 2 — Catering Fleet</span>
+                        <span class="badge badge-subtle-warning">B2B</span>
+                      </div>
+                      <small class="text-muted d-block">Fleet rentals, private catering &amp; products</small>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- 2. About (Combined with Vendors) -->
+            <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+            <!-- 3. Directory with Menu dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Directory
+              </a>
+              <ul class="dropdown-menu border-0 shadow-md">
+                <li><a class="dropdown-item " href="directory.html"><i class="bi bi-grid-fill me-2 text-primary-custom"></i> Food Truck Directory</a></li>
+                <li><a class="dropdown-item " href="menu.html"><i class="bi bi-book-half me-2 text-primary-custom"></i> Signature Street Menus</a></li>
+              </ul>
+            </li>
+            <!-- 4. Events -->
+            <li class="nav-item"><a class="nav-link " href="events.html">Events</a></li>
+            <!-- 5. Pricing -->
+            <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+            <!-- 6. Blog -->
+            <li class="nav-item"><a class="nav-link " href="blog.html">Blog</a></li>
+            <!-- 7. Contact -->
+            <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <!-- Mode Toggle (Icon only) -->
+            <button class="mode-toggle-btn icon-only" type="button" aria-label="Toggle Night Market mode" title="Toggle Night Market mode">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+
+            <!-- RTL Toggle (RTL alone) -->
+            <button class="rtl-toggle-btn text-only" type="button" aria-label="Toggle RTL layout" title="Toggle RTL layout">
+              <span class="fw-bold">RTL</span>
+            </button>
+
+            <!-- Vendor Profile / Dashboard Icon Button (Placed before Login) -->
+            <a href="dashboard.html" class="nav-profile-btn" title="Vendor Profile &amp; Dashboard" aria-label="Vendor Profile and Dashboard">
+              <i class="bi bi-person-circle"></i>
+            </a>
+
+            <!-- Vendor Login -->
+            <a href="login.html" class="nav-auth-link">
+              <i class="bi bi-box-arrow-in-right"></i> Login
+            </a>
+
+            <!-- Vendor Signup -->
+            <a href="vendor-signup.html" class="btn btn-brand-outline btn-sm-pill">
+              <i class="bi bi-person-plus"></i> Signup
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SECTION 01 — PRICING HERO -->
+  <section class="py-5 bg-surface-alt">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <div class="section-tag mustard">Vendor Memberships</div>
+          <h1 class="display-3 fw-bold mb-3">
+            PLANS DESIGNED FOR <br><span class="text-primary-custom">STREET CHEFS.</span>
+          </h1>
+          <p class="lead mb-4">
+            Zero commission on your daily window orders. Keep 100% of your customer food sales while enjoying high-yield private catering leads and digital command tools.
+          </p>
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <a href="#plans" class="btn btn-brand-primary">View Pricing Tiers</a>
+            <span class="small text-muted"><i class="bi bi-shield-check text-success"></i> 30-Day Money Back Guarantee</span>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <!-- Unique Image 11: Vendor Celebration Pricing Hero -->
+          <div class="rounded-4 overflow-hidden shadow-xl border border-3 border-white">
+            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1400&auto=format&fit=crop" alt="Food truck crew celebrating a successful shift" class="w-100 object-fit-cover" style="height: 380px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02 — THE THREE TIER VENDOR PRICING CARDS -->
+  <section class="py-5" id="plans">
+    <div class="container">
+      <!-- Billing Cycle Toggle -->
+      <div class="text-center mb-5">
+        <div class="d-inline-flex align-items-center gap-3 p-2 px-3 bg-surface rounded-pill border shadow-sm">
+          <span class="small fw-bold cursor-pointer text-primary-custom" id="label-monthly">Billed Monthly</span>
+          <div class="form-check form-switch m-0 p-0 d-flex align-items-center">
+            <input class="form-check-input ms-0 cursor-pointer" type="checkbox" id="billing-cycle-switch" style="width: 2.75rem; height: 1.45rem;" aria-label="Toggle Annual Billing">
+          </div>
+          <span class="small fw-bold cursor-pointer text-muted" id="label-annual">
+            Billed Annually <span class="badge bg-success-subtle text-success border border-success ms-1">Save 20%</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Tier 1: Starter -->
+        <div class="col-lg-4">
+          <div class="pricing-card-vendor">
+            <h4 class="fw-bold mb-1">Starter</h4>
+            <p class="small text-muted mb-4">For new trucks launching their street operations.</p>
+            <div class="mb-4">
+              <span class="pricing-price-num">₹0</span>
+              <span class="text-muted d-block">/ month</span>
+            </div>
+            <ul class="list-unstyled d-flex flex-column gap-3 mb-4 small flex-grow-1">
+              <li class="d-flex gap-2"><i class="bi bi-check2 text-success fs-5"></i> Verified Food Truck Listing</li>
+              <li class="d-flex gap-2"><i class="bi bi-check2 text-success fs-5"></i> Standard Curbside Map Pin</li>
+              <li class="d-flex gap-2"><i class="bi bi-check2 text-success fs-5"></i> Basic Digital Menu (up to 10 items)</li>
+              <li class="d-flex gap-2"><i class="bi bi-check2 text-success fs-5"></i> Up to 2 Event Booking Requests / mo</li>
+              <li class="d-flex gap-2 text-muted"><i class="bi bi-x fs-5"></i> No Featured Search Placement</li>
+              <li class="d-flex gap-2 text-muted"><i class="bi bi-x fs-5"></i> No Dedicated Account Manager</li>
+            </ul>
+            <button type="button" class="btn btn-brand-outline w-100" data-pricing-plan="starter">Get Started Free</button>
+          </div>
+        </div>
+
+        <!-- Tier 2: Growth (Featured) -->
+        <div class="col-lg-4">
+          <div class="pricing-card-vendor featured">
+            <div class="pricing-ribbon">Most Popular</div>
+            <h4 class="fw-bold mb-1">Growth</h4>
+            <p class="small text-muted mb-4">For active food trucks with established daily schedules.</p>
+            <div class="mb-4">
+              <span class="pricing-price-num text-primary-custom" id="price-growth-val">₹2,499</span>
+              <span class="text-muted d-block" id="price-growth-sub">/ month</span>
+            </div>
+            <ul class="list-unstyled d-flex flex-column gap-3 mb-4 small flex-grow-1">
+              <li class="d-flex gap-2"><i class="bi bi-check2-circle text-primary-custom fs-5"></i> Everything in Starter</li>
+              <li class="d-flex gap-2"><i class="bi bi-check2-circle text-primary-custom fs-5"></i> <strong>Featured Directory Placement</strong> in your city</li>
+              <li class="d-flex gap-2"><i class="bi bi-check2-circle text-primary-custom fs-5"></i> <strong>Unlimited Private Event Leads</strong></li>
+              <li class="d-flex gap-2"><i class="bi bi-check2-circle text-primary-custom fs-5"></i> Full Vendor Command Center with Order Tracker</li>
+              <li class="d-flex gap-2"><i class="bi bi-check2-circle text-primary-custom fs-5"></i> Unlimited Menu Items &amp; Sold-Out Toggles</li>
+              <li class="d-flex gap-2"><i class="bi bi-check2-circle text-primary-custom fs-5"></i> Review Management with Customer Reply UI</li>
+            </ul>
+            <button type="button" class="btn btn-brand-primary w-100" data-pricing-plan="growth">Claim 30-Day Free Trial</button>
+          </div>
+        </div>
+
+        <!-- Tier 3: Festival Pro -->
+        <div class="col-lg-4">
+          <div class="pricing-card-vendor">
+            <h4 class="fw-bold mb-1">Festival Pro</h4>
+            <p class="small text-muted mb-4">For high-volume trucks and festival circuit operators.</p>
+            <div class="mb-4">
+              <span class="pricing-price-num" id="price-pro-val">₹5,999</span>
+              <span class="text-muted d-block" id="price-pro-sub">/ month</span>
+            </div>
+            <ul class="list-unstyled d-flex flex-column gap-3 mb-4 small flex-grow-1">
+              <li class="d-flex gap-2"><i class="bi bi-check2 text-success fs-5"></i> Everything in Growth</li>
+              <li class="d-flex gap-2"><i class="bi bi-check2 text-success fs-5"></i> <strong>Priority Festival Lineup Selection</strong></li>
+              <li class="d-flex gap-2"><i class="bi bi-check2 text-success fs-5"></i> High-Budget Corporate Campus RFP access</li>
+              <li class="d-flex gap-2"><i class="bi bi-check2 text-success fs-5"></i> Dedicated Vendor Success Concierge</li>
+              <li class="d-flex gap-2"><i class="bi bi-check2 text-success fs-5"></i> Multi-Truck Fleet Support (up to 3 trucks)</li>
+              <li class="d-flex gap-2"><i class="bi bi-check2 text-success fs-5"></i> 24/7 Priority Emergency Phone Support</li>
+            </ul>
+            <button type="button" class="btn btn-brand-outline w-100" data-pricing-plan="pro">Upgrade to Pro</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 03 — FULL COMPARISON MATRIX TABLE -->
+  <section class="py-5 bg-surface-alt">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <div class="section-tag mustard">Feature Matrix</div>
+        <h2 class="mb-2">Detailed Plan Comparison</h2>
+        <p class="text-muted">Compare features side by side to pick the right membership for your truck.</p>
+      </div>
+
+      <div class="table-responsive bg-surface rounded-4 border p-4 shadow-sm">
+        <table class="table align-middle mb-0">
+          <thead>
+            <tr>
+              <th style="width: 40%;">Feature</th>
+              <th class="text-center" style="width: 20%;">Starter (₹0)</th>
+              <th class="text-center text-primary-custom" style="width: 20%;">Growth (₹2,499)</th>
+              <th class="text-center" style="width: 20%;">Festival Pro (₹5,999)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Commission on Window Sales</td>
+              <td class="text-center fw-bold text-success">0%</td>
+              <td class="text-center fw-bold text-success">0%</td>
+              <td class="text-center fw-bold text-success">0%</td>
+            </tr>
+            <tr>
+              <td>Daily Curbside Location Scheduler</td>
+              <td class="text-center"><i class="bi bi-check-lg text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-lg text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-lg text-success fs-5"></i></td>
+            </tr>
+            <tr>
+              <td>Private Catering Booking Requests</td>
+              <td class="text-center text-muted">2 / month</td>
+              <td class="text-center fw-bold text-success">Unlimited</td>
+              <td class="text-center fw-bold text-success">Unlimited VIP</td>
+            </tr>
+            <tr>
+              <td>Featured Search Badge in City</td>
+              <td class="text-center text-muted">—</td>
+              <td class="text-center"><i class="bi bi-check-lg text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-lg text-success fs-5"></i> Top Rank</td>
+            </tr>
+            <tr>
+              <td>Real-Time Kitchen Order Tracker</td>
+              <td class="text-center text-muted">—</td>
+              <td class="text-center"><i class="bi bi-check-lg text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-lg text-success fs-5"></i></td>
+            </tr>
+            <tr>
+              <td>Customer Review Reply Tool</td>
+              <td class="text-center text-muted">—</td>
+              <td class="text-center"><i class="bi bi-check-lg text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-lg text-success fs-5"></i></td>
+            </tr>
+            <tr>
+              <td>Festival Circuit Priority Roster</td>
+              <td class="text-center text-muted">—</td>
+              <td class="text-center text-muted">—</td>
+              <td class="text-center"><i class="bi bi-check-lg text-success fs-5"></i> Guaranteed</td>
+            </tr>
+            <tr class="table-light">
+              <td class="fw-bold text-heading">Ready to Get Started?</td>
+              <td class="text-center">
+                <button type="button" class="btn btn-sm btn-brand-outline w-100" data-pricing-plan="starter">Select Starter</button>
+              </td>
+              <td class="text-center">
+                <button type="button" class="btn btn-sm btn-brand-primary w-100" data-pricing-plan="growth">Select Growth</button>
+              </td>
+              <td class="text-center">
+                <button type="button" class="btn btn-sm btn-brand-outline w-100" data-pricing-plan="pro">Select Pro</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 04 — ROI & EARNINGS CALCULATOR PREVIEW -->
+  <section class="py-5">
+    <div class="container">
+      <div class="p-4 p-lg-5 bg-surface-card rounded-4 border shadow-sm">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="section-tag green">ROI Calculator</div>
+            <h3 class="display-6 fw-bold mb-3">Just One Catering Booking Pays for an Entire Year of Growth</h3>
+            <p class="text-muted">
+              The average private food truck catering event booked through StreetFeast generates <strong>₹32,000</strong> in revenue. At ₹2,499/month, a single corporate lunch or wedding party easily recoups your investment ten times over.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-4 bg-surface-alt rounded-4 border">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Average Catering Event:</span>
+                <strong class="fs-5 text-heading">₹32,000</strong>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">StreetFeast Annual Membership:</span>
+                <span class="text-danger fw-bold">- ₹29,988</span>
+              </div>
+              <hr>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold">Net Profit after 1 Event:</span>
+                <span class="fs-4 fw-bold text-success">+ ₹2,012 &amp; 11 Months Free</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 05 — TRUST PROOF & GUARANTEE -->
+  <section class="py-5 bg-surface-alt">
+    <div class="container text-center max-w-700 mx-auto">
+      <div class="stat-icon-wrap stat-icon-green mx-auto mb-3">
+        <i class="bi bi-patch-check-fill fs-2"></i>
+      </div>
+      <h3 class="fw-bold mb-2">Our 30-Day Risk-Free Guarantee</h3>
+      <p class="text-muted mb-4">
+        Try the Growth or Festival Pro tier for 30 days. If your food truck does not receive at least 2 qualified catering requests or noticeable curbside traffic boost, we will refund 100% of your membership fee. No hard feelings.
+      </p>
+      <a href="vendor-signup.html" class="btn btn-brand-primary">Start Your 30-Day Risk-Free Trial</a>
+    </div>
+  </section>
+
+  <!-- SECTION 06 — FLEET & ENTERPRISE INQUIRY CTA -->
+  <section class="py-5">
+    <div class="container">
+      <div class="p-5 rounded-4 bg-heading text-white text-center">
+        <div class="section-tag mustard mb-2">Multi-Vehicle Operations</div>
+        <h3 class="display-6 fw-bold text-white mb-2">Do you operate a fleet of 3 or more food trucks?</h3>
+        <p class="lead text-white-50 max-w-700 mx-auto mb-4">We offer custom enterprise rates, multi-city route management, and consolidated payout invoicing for mobile restaurant franchises.</p>
+        <a href="contact.html?type=enterprise" class="btn btn-brand-secondary">Contact Fleet Solutions</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- GLOBAL FOOTER -->
+  <footer class="street-footer">
+    <div class="container">
+      <!-- Footer CTA Card -->
+      <div class="footer-cta-card">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h3 class="text-white mb-1">Have a Food Truck? Share Your Cooking with the City.</h3>
+            <p class="mb-0">Join 500+ independent food truck operators reaching thousands of hungry diners daily.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="vendor-signup.html" class="btn btn-brand-secondary">List Your Food Truck Today</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-3">
+          <a class="navbar-brand mb-3" href="index.html">
+          <div class="brand-logo-badge">
+            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="url(#sfBrandGrad)"/>
+              <path d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z" fill="white"/>
+              <path d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z" fill="white" fill-opacity="0.9"/>
+              <rect x="14" y="21" width="10" height="5" rx="1" fill="#E63946"/>
+              <path d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5" stroke="#FFD166" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z" fill="#161A1D"/>
+              <circle cx="16" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="16" cy="30" r="1.2" fill="#E9A820"/>
+              <circle cx="32" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="32" cy="30" r="1.2" fill="#E9A820"/>
+              <defs>
+                <linearGradient id="sfBrandGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E63946"/>
+                  <stop offset="1" stop-color="#E9A820"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text-wrap d-flex flex-column lh-1">
+            <span class="brand-title fw-bold fs-4 text-heading">Street<strong class="text-primary-custom">Feast</strong></span>
+            <span class="brand-tagline text-muted" style="font-size: 0.62rem; letter-spacing: 0.14em; font-weight: 800;">FOOD TRUCK &amp; TASTE</span>
+          </div>
+        </a>
+          <p class="footer-brand-desc mb-3 pe-lg-2">
+            The premier digital food truck booking &amp; discovery platform. Connecting street food lovers with live curbside kitchens, food festivals, and private catering events.
+          </p>
+          <div class="d-flex gap-2 mb-4 mb-lg-0">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Discover -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Discover</h5>
+          <ul class="footer-links">
+            <li><a href="directory.html"><i class="bi bi-chevron-right small"></i> Food Truck Directory</a></li>
+            <li><a href="directory.html?filter=nearby"><i class="bi bi-chevron-right small"></i> Nearby Trucks</a></li>
+            <li><a href="menu.html"><i class="bi bi-chevron-right small"></i> Signature Cuisines</a></li>
+            <li><a href="events.html"><i class="bi bi-chevron-right small"></i> Festivals &amp; Markets</a></li>
+            <li><a href="about.html#featured-chefs"><i class="bi bi-chevron-right small"></i> Featured Chefs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: For Vendors -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>For Vendors</h5>
+          <ul class="footer-links">
+            <li><a href="vendor-signup.html"><i class="bi bi-chevron-right small"></i> List Your Truck</a></li>
+            <li><a href="vendor-signup.html"><i class="bi bi-chevron-right small"></i> Vendor Signup</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right small"></i> Vendor Plans</a></li>
+            <li><a href="login.html"><i class="bi bi-chevron-right small"></i> Command Center</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right small"></i> Vendor Academy</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Popular Cuisines -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Popular Cuisines</h5>
+          <ul class="footer-links">
+            <li><a href="directory.html?cuisine=burgers"><i class="bi bi-chevron-right small"></i> Gourmet Burgers</a></li>
+            <li><a href="directory.html?cuisine=tacos"><i class="bi bi-chevron-right small"></i> Birria Tacos</a></li>
+            <li><a href="directory.html?cuisine=pizza"><i class="bi bi-chevron-right small"></i> Wood-Fired Pizza</a></li>
+            <li><a href="directory.html?cuisine=asian"><i class="bi bi-chevron-right small"></i> Asian &amp; Baos</a></li>
+            <li><a href="directory.html?cuisine=vegan"><i class="bi bi-chevron-right small"></i> 100% Plant Vegan</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Newsletter & Contact -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Contact</h5>
+          <ul class="list-unstyled mb-3">
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill text-primary-custom"></i>
+              <span>742 Culinary Boulevard, Austin, TX</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-envelope-fill text-primary-custom"></i>
+              <a href="mailto:hello@streetfeast.com" class="text-reset">hello@streetfeast.com</a>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill text-primary-custom"></i>
+              <a href="tel:+18004588782" class="text-reset">+1 (800) 458-TRUCK</a>
+            </li>
+          </ul>
+          <div class="mt-3">
+            <label class="footer-newsletter-label">Get Weekly Food Picks</label>
+            <form class="footer-newsletter-wrap needs-validation" novalidate>
+              <input type="email" class="form-control footer-newsletter-input" placeholder="Enter your email" required aria-label="Enter your email">
+              <button class="btn btn-brand-primary footer-newsletter-btn" type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div class="footer-copyright">
+          &copy; 2026 <strong class="text-white">StreetFeast Platform</strong>. All Rights Reserved. Built with HTML5, CSS3, Vanilla JS &amp; Bootstrap 5.
+        </div>
+        <div class="d-flex gap-4 footer-legal-links">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Service</a>
+          <a href="contact.html">Support Desk</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top-btn" type="button" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- PLAN CHECKOUT & ACTIVATION MODAL -->
+  <div class="modal fade" id="pricingCheckoutModal" tabindex="-1" aria-labelledby="pricingCheckoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-4 border-0 shadow-xl overflow-hidden">
+        <!-- Form Section -->
+        <div id="checkout-form-section">
+          <div class="modal-header bg-surface-alt border-bottom p-4 align-items-start">
+            <div>
+              <span id="modal-plan-badge" class="badge bg-primary-light text-primary-custom mb-2">Most Popular</span>
+              <h3 class="modal-title fw-bold text-heading" id="pricingCheckoutModalLabel">
+                <span id="modal-plan-title">Growth Tier</span> Activation
+              </h3>
+              <div class="d-flex align-items-baseline gap-2 mt-1">
+                <span class="fs-4 fw-bold text-primary-custom" id="modal-plan-price">₹2,499 / month</span>
+              </div>
+              <p class="small text-muted mb-0 mt-1" id="modal-plan-note">30-Day Risk-Free Trial: ₹0 due today. Cancel anytime.</p>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body p-4 p-lg-5">
+            <div class="row g-4">
+              <!-- Left: Plan perks preview -->
+              <div class="col-lg-5 border-end-lg pe-lg-4">
+                <h6 class="fw-bold text-heading mb-3"><i class="bi bi-stars text-warning me-1"></i> What's Included:</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-4" id="modal-plan-features">
+                  <!-- Injected dynamically by pricing.js -->
+                </ul>
+
+                <div class="p-3 bg-surface-alt rounded-3 border">
+                  <div class="d-flex gap-2">
+                    <i class="bi bi-shield-check text-success fs-5 flex-shrink-0"></i>
+                    <div>
+                      <strong class="d-block small text-heading">Zero Window Commission</strong>
+                      <small class="text-muted">Keep 100% of your daily curbside sales. StreetFeast never takes a percentage of your food orders.</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Quick Onboarding Form -->
+              <div class="col-lg-7 ps-lg-4">
+                <form id="checkout-subscription-form" onsubmit="handleCheckoutSubmit(event)" novalidate>
+                  <h6 class="fw-bold text-heading mb-3">Operator &amp; Truck Details:</h6>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label small">Food Truck Public Name *</label>
+                      <input type="text" class="form-control form-control-sm" id="checkout-truck-name" placeholder="e.g. The Taco Wagon" required>
+                      <div class="invalid-feedback">Truck name is required.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label small">Operator Full Name *</label>
+                      <input type="text" class="form-control form-control-sm" id="checkout-owner-name" placeholder="e.g. Marco Ruiz" required>
+                      <div class="invalid-feedback">Owner name is required.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label small">Work Email *</label>
+                      <input type="email" class="form-control form-control-sm" id="checkout-email" placeholder="chef@tacowagon.com" required>
+                      <div class="invalid-feedback">Valid email required for command center login.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label small">Phone Number *</label>
+                      <input type="tel" class="form-control form-control-sm" id="checkout-phone" placeholder="+1 (512) 555-0199" required>
+                      <div class="invalid-feedback">Phone number required.</div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label small">Primary Operating City *</label>
+                      <input type="text" class="form-control form-control-sm" id="checkout-city" placeholder="e.g. Austin, TX" required>
+                      <div class="invalid-feedback">City is required.</div>
+                    </div>
+
+                    <!-- Promo code toggle -->
+                    <div class="col-12">
+                      <label class="form-label small">Have a Partner / Festival Promo Code?</label>
+                      <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" id="checkout-promo-code" placeholder="e.g. STREET2026">
+                        <button class="btn btn-outline-secondary" type="button" onclick="applyPromoCode()">Apply</button>
+                      </div>
+                      <div id="checkout-promo-status"></div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="checkout-terms" required checked>
+                        <label class="form-check-label small text-muted" for="checkout-terms">
+                          I agree to StreetFeast Vendor Terms &amp; Conditions.
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="col-12 mt-3">
+                      <button type="submit" class="btn btn-brand-primary w-100 py-3 fw-bold" id="modal-checkout-submit-btn">
+                        <i class="bi bi-shield-check me-1"></i> Start 30-Day Free Trial (₹0 Today)
+                      </button>
+                    </div>
+
+                    <div class="col-12 text-center mt-2">
+                      <a href="vendor-signup.html" id="modal-full-signup-link" class="small text-muted text-decoration-underline">
+                        Prefer to fill the full registration form first? Complete here &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Success Section (Displayed upon submit) -->
+        <div id="checkout-success-section" style="display: none;">
+          <div class="modal-body p-4 p-lg-5 text-center">
+            <div class="mb-3">
+              <i class="bi bi-check-circle-fill text-success" style="font-size: 3.8rem;"></i>
+            </div>
+            <h2 class="fw-bold text-heading mb-2" id="success-plan-title">Growth Tier Activated!</h2>
+            <p class="lead text-muted max-w-700 mx-auto mb-4">
+              Welcome to the StreetFeast mobile vendor network! Your subscription has been initialized.
+            </p>
+
+            <!-- Receipt Box -->
+            <div class="p-4 bg-surface-alt rounded-4 border text-start max-w-700 mx-auto mb-4">
+              <h6 class="fw-bold border-bottom pb-2 mb-3 text-heading">Membership Confirmation Summary:</h6>
+              <div class="row g-2 small">
+                <div class="col-6 text-muted">Subscription Order ID:</div>
+                <div class="col-6 text-end fw-bold text-heading" id="success-order-ref">SF-SUB-849201</div>
+                <div class="col-6 text-muted">Food Truck:</div>
+                <div class="col-6 text-end fw-bold text-heading" id="success-truck-name">The Taco Wagon</div>
+                <div class="col-6 text-muted">Account Email:</div>
+                <div class="col-6 text-end fw-bold text-heading" id="success-email">chef@tacowagon.com</div>
+                <div class="col-6 text-muted">Billing Cycle:</div>
+                <div class="col-6 text-end fw-bold text-success" id="success-billing-summary">30-Day Free Trial (₹0 Today)</div>
+                <div class="col-6 text-muted">Next Renewal:</div>
+                <div class="col-6 text-end fw-bold text-heading">30 Days from Today</div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 max-w-700 mx-auto">
+              <a href="dashboard.html" class="btn btn-brand-primary flex-grow-1 py-2">
+                <i class="bi bi-speedometer2 me-1"></i> Open Vendor Command Center
+              </a>
+              <a href="vendor-signup.html" class="btn btn-brand-outline flex-grow-1 py-2">
+                <i class="bi bi-pencil-square me-1"></i> Update Menu &amp; Schedule
+              </a>
+            </div>
+            <div class="mt-3">
+              <button type="button" class="btn btn-sm btn-link text-muted" data-bs-dismiss="modal">
+                Close Window
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/forms.js"></script>
+  <script src="assets/js/pricing.js"></script>
+</body>
+</html>

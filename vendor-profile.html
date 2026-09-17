@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>Vendor Profile &amp; Settings — Command Center | StreetFeast</title>
+  <meta name="description" content="Manage your food truck business entity information, bank payout routing, contact numbers, and crew permissions.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Theme & Responsive Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- VENDOR DASHBOARD SIDEBAR -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-brand-header">
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-logo-badge">
+            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="url(#sfBrandGrad)"/>
+              <path d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z" fill="white"/>
+              <path d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z" fill="white" fill-opacity="0.9"/>
+              <rect x="14" y="21" width="10" height="5" rx="1" fill="#E63946"/>
+              <path d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5" stroke="#FFD166" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z" fill="#161A1D"/>
+              <circle cx="16" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="16" cy="30" r="1.2" fill="#E9A820"/>
+              <circle cx="32" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="32" cy="30" r="1.2" fill="#E9A820"/>
+              <defs>
+                <linearGradient id="sfBrandGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E63946"/>
+                  <stop offset="1" stop-color="#E9A820"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text-wrap d-flex flex-column lh-1">
+            <span class="brand-title fw-bold fs-4 text-heading">Street<strong class="text-primary-custom">Feast</strong></span>
+            <span class="brand-tagline text-muted" style="font-size: 0.62rem; letter-spacing: 0.14em; font-weight: 800;">FOOD TRUCK &amp; TASTE</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="sidebar-truck-badge">
+        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=200&auto=format&fit=crop" class="sidebar-truck-avatar" alt="The Taco Wagon">
+        <div class="overflow-hidden">
+          <strong class="d-block text-white text-truncate" style="font-size: 0.92rem;">The Taco Wagon</strong>
+          <small class="text-success d-flex align-items-center gap-1" style="font-size: 0.75rem;">
+            <span class="pulse-dot"></span> Serving Now
+          </small>
+        </div>
+      </div>
+
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-item"><a href="dashboard.html" class="sidebar-nav-link"><i class="bi bi-speedometer2"></i> Overview</a></li>
+        <li class="sidebar-nav-item"><a href="truck-profile.html" class="sidebar-nav-link"><i class="bi bi-truck"></i> Truck Profile</a></li>
+        <li class="sidebar-nav-item"><a href="location-schedule.html" class="sidebar-nav-link"><i class="bi bi-geo-alt"></i> Location Schedule</a></li>
+        <li class="sidebar-nav-item"><a href="menu-management.html" class="sidebar-nav-link"><i class="bi bi-journal-text"></i> Menu Management</a></li>
+        <li class="sidebar-nav-item"><a href="booking-requests.html" class="sidebar-nav-link"><i class="bi bi-calendar2-heart"></i> Booking Requests <span class="badge bg-danger rounded-pill ms-auto">6</span></a></li>
+        <li class="sidebar-nav-item"><a href="orders.html" class="sidebar-nav-link"><i class="bi bi-receipt"></i> Orders <span class="badge bg-warning text-dark rounded-pill ms-auto">3</span></a></li>
+        <li class="sidebar-nav-item"><a href="earnings.html" class="sidebar-nav-link"><i class="bi bi-cash-stack"></i> Earnings</a></li>
+        <li class="sidebar-nav-item"><a href="reviews.html" class="sidebar-nav-link"><i class="bi bi-star"></i> Reviews</a></li>
+        <li class="sidebar-nav-item"><a href="vendor-profile.html" class="sidebar-nav-link active"><i class="bi bi-person-gear"></i> Vendor Profile</a></li>
+        <li class="sidebar-nav-item mt-4 pt-3 border-top border-secondary border-opacity-25">
+          <a href="login.html" class="sidebar-nav-link text-danger"><i class="bi bi-box-arrow-left"></i> Logout</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm btn-outline-secondary d-lg-none" id="dashboard-sidebar-toggle" type="button"><i class="bi bi-list fs-5"></i></button>
+          <div>
+            <h5 class="mb-0 fw-bold">Vendor Profile &amp; Business Settings</h5>
+            <small class="text-muted">Manage legal entity, banking payouts, and account security</small>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button class="mode-toggle-btn" type="button"><i class="bi bi-moon-stars-fill"></i> <span>Night Market</span></button>
+          <button class="rtl-toggle-btn" type="button"><span class="fw-bold">LTR</span> | <span class="text-primary-custom fw-bold">RTL</span></button>
+        </div>
+      </header>
+
+      <main class="dashboard-content">
+        <!-- SECTION 01 — VENDOR HERO & COVER BANNER -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <div class="row align-items-center g-4">
+              <div class="col-md-3 text-center">
+                <!-- Unique Image 26: Vendor founder inspecting ingredients -->
+                <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?q=80&w=300&auto=format&fit=crop" class="rounded-circle object-fit-cover shadow border border-3 border-danger" style="width: 110px; height: 110px;" alt="Vendor founder">
+              </div>
+              <div class="col-md-9">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <h4 class="fw-bold mb-0">Marco Ruiz</h4>
+                  <span class="badge bg-success-light text-success border">Verified Business Owner</span>
+                </div>
+                <p class="text-muted small mb-2">Owner &amp; Head Chef, Ruiz Culinary Operations LLC • The Taco Wagon</p>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-sm btn-brand-outline"><i class="bi bi-camera me-1"></i> Update Avatar</button>
+                  <button class="btn btn-sm btn-brand-outline"><i class="bi bi-image me-1"></i> Change Cover Banner</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 02 — LEGAL ENTITY & OPERATING DETAILS -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <h5 class="fw-bold mb-3"><i class="bi bi-building text-primary-custom me-2"></i>Legal Business Information</h5>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small">Owner Legal Name</label>
+                <input type="text" class="form-control" value="Marco Antonio Ruiz">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small">Registered Business Entity</label>
+                <input type="text" class="form-control" value="Ruiz Culinary Group LLC">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small">Food Truck Public Name</label>
+                <input type="text" class="form-control" value="The Taco Wagon">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small">Federal Tax EIN / Business ID</label>
+                <input type="text" class="form-control" value="XX-XXX4819">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small">Email for Business Invoices</label>
+                <input type="email" class="form-control" value="chef.marco@streetfeast.com">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small">Primary Emergency Contact Phone</label>
+                <input type="tel" class="form-control" value="+1 (512) 555-0199">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 03 — BANKING PAYOUT ROUTING -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <h5 class="fw-bold mb-3"><i class="bi bi-bank text-secondary-custom me-2"></i>Bank Payout Direct Deposit</h5>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label small">Bank Name</label>
+                <input type="text" class="form-control" value="JPMorgan Chase Commercial">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label small">Routing Transit Number</label>
+                <input type="text" class="form-control" value="••••• 0214">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label small">Checking Account Number</label>
+                <input type="text" class="form-control" value="•••••••• 4192">
+              </div>
+            </div>
+            <small class="text-muted d-block mt-2"><i class="bi bi-lock-fill text-success me-1"></i> Bank details are encrypted with 256-bit AES encryption.</small>
+          </div>
+        </section>
+
+        <!-- SECTION 04 — NOTIFICATION PREFERENCES -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <h5 class="fw-bold mb-3"><i class="bi bi-bell text-success me-2"></i>Alert &amp; Notification Preferences</h5>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <strong>SMS Alerts for New Walk-Up Orders</strong>
+                  <p class="small text-muted mb-0">Receive a brief text chime when a customer orders via mobile window line.</p>
+                </div>
+                <div class="form-check form-switch fs-5"><input class="form-check-input" type="checkbox" checked></div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <strong>Instant Catering Booking Lead Emails</strong>
+                  <p class="small text-muted mb-0">Direct notification whenever a corporate or wedding inquiry requests your date.</p>
+                </div>
+                <div class="form-check form-switch fs-5"><input class="form-check-input" type="checkbox" checked></div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <strong>Weekly Revenue Performance Summary</strong>
+                  <p class="small text-muted mb-0">Emailed every Monday morning with gross sales, tip percentage, and top dishes.</p>
+                </div>
+                <div class="form-check form-switch fs-5"><input class="form-check-input" type="checkbox" checked></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 05 — MULTI-CREW KITCHEN PIN CODES -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <h5 class="fw-bold mb-2"><i class="bi bi-key text-warning me-2"></i>Kitchen Line Staff Passcodes</h5>
+            <p class="small text-muted mb-3">Allow prep cooks to update order queues without accessing sensitive banking settings.</p>
+            <div class="d-flex gap-3 align-items-center flex-wrap">
+              <span class="badge bg-surface-alt text-heading border p-2">Line Cook PIN: •••• 4122</span>
+              <span class="badge bg-surface-alt text-heading border p-2">Window Expediter PIN: •••• 8831</span>
+              <button class="btn btn-sm btn-brand-outline" type="button" onclick="window.showDashboardToast('🔑 <strong>PINs Reset:</strong> One-time setup links sent to your mobile phone.', 'success')">Reset Crew PINs</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 06 — SAVE CHANGES ACTION BAR -->
+        <section class="mb-4">
+          <div class="p-3 bg-surface-card rounded-4 border shadow-sm d-flex justify-content-between align-items-center">
+            <span class="small text-muted">All updates persist immediately across your vendor account.</span>
+            <button class="btn btn-brand-primary btn-save-profile" type="button">
+              <i class="bi bi-check2-circle me-1"></i> Save All Changes
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

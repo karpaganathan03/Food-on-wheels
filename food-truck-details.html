@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>The Taco Wagon — Authentic Birria &amp; Mexican Street Food | StreetFeast</title>
+  <meta name="description" content="View The Taco Wagon food truck schedule, signature birria tacos menu, live curbside locations, customer reviews, and private catering event booking.">
+  <meta name="keywords" content="The Taco Wagon, birria tacos food truck, food truck details, hire taco truck, food truck menu">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Theme & Responsive Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+      <!-- GLOBAL NAVBAR -->
+  <header class="street-navbar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0">
+        <!-- Creative Food Truck Logo with Sizzling Smoke & Culinary Badge -->
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-logo-badge">
+            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="url(#sfBrandGrad)"/>
+              <path d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z" fill="white"/>
+              <path d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z" fill="white" fill-opacity="0.9"/>
+              <rect x="14" y="21" width="10" height="5" rx="1" fill="#E63946"/>
+              <path d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5" stroke="#FFD166" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z" fill="#161A1D"/>
+              <circle cx="16" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="16" cy="30" r="1.2" fill="#E9A820"/>
+              <circle cx="32" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="32" cy="30" r="1.2" fill="#E9A820"/>
+              <defs>
+                <linearGradient id="sfBrandGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E63946"/>
+                  <stop offset="1" stop-color="#E9A820"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text-wrap d-flex flex-column lh-1">
+            <span class="brand-title fw-bold fs-4 text-heading">Street<strong class="text-primary-custom">Feast</strong></span>
+            <span class="brand-tagline text-muted" style="font-size: 0.62rem; letter-spacing: 0.14em; font-weight: 800;">FOOD TRUCK &amp; TASTE</span>
+          </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#streetNavbarNav" aria-controls="streetNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="streetNavbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <!-- 1. Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-rich border-0 shadow-lg p-2">
+                <li>
+                  <a class="dropdown-item rich-dropdown-item  d-flex align-items-center gap-3 p-2 rounded-3" href="index.html">
+                    <div class="rich-dropdown-icon bg-primary-light text-primary-custom rounded-3 d-flex align-items-center justify-content-center">
+                      <i class="bi bi-shop fs-5"></i>
+                    </div>
+                    <div class="rich-dropdown-content">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="fw-bold text-heading">Home 1 — Street Vibes</span>
+                        <span class="badge badge-subtle-primary">Vibrant</span>
+                      </div>
+                      <small class="text-muted d-block">Street food photography, trucks &amp; community</small>
+                    </div>
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider my-1"></li>
+                <li>
+                  <a class="dropdown-item rich-dropdown-item  d-flex align-items-center gap-3 p-2 rounded-3" href="home-2.html">
+                    <div class="rich-dropdown-icon bg-warning-light text-secondary-custom rounded-3 d-flex align-items-center justify-content-center">
+                      <i class="bi bi-truck-front-fill fs-5"></i>
+                    </div>
+                    <div class="rich-dropdown-content">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="fw-bold text-heading">Home 2 — Catering Fleet</span>
+                        <span class="badge badge-subtle-warning">B2B</span>
+                      </div>
+                      <small class="text-muted d-block">Fleet rentals, private catering &amp; products</small>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- 2. About (Combined with Vendors) -->
+            <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+            <!-- 3. Directory with Menu dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Directory
+              </a>
+              <ul class="dropdown-menu border-0 shadow-md">
+                <li><a class="dropdown-item " href="directory.html"><i class="bi bi-grid-fill me-2 text-primary-custom"></i> Food Truck Directory</a></li>
+                <li><a class="dropdown-item " href="menu.html"><i class="bi bi-book-half me-2 text-primary-custom"></i> Signature Street Menus</a></li>
+              </ul>
+            </li>
+            <!-- 4. Events -->
+            <li class="nav-item"><a class="nav-link " href="events.html">Events</a></li>
+            <!-- 5. Pricing -->
+            <li class="nav-item"><a class="nav-link " href="pricing.html">Pricing</a></li>
+            <!-- 6. Blog -->
+            <li class="nav-item"><a class="nav-link " href="blog.html">Blog</a></li>
+            <!-- 7. Contact -->
+            <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <!-- Mode Toggle (Icon only) -->
+            <button class="mode-toggle-btn icon-only" type="button" aria-label="Toggle Night Market mode" title="Toggle Night Market mode">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+
+            <!-- RTL Toggle (RTL alone) -->
+            <button class="rtl-toggle-btn text-only" type="button" aria-label="Toggle RTL layout" title="Toggle RTL layout">
+              <span class="fw-bold">RTL</span>
+            </button>
+
+            <!-- Vendor Profile / Dashboard Icon Button (Placed before Login) -->
+            <a href="dashboard.html" class="nav-profile-btn" title="Vendor Profile &amp; Dashboard" aria-label="Vendor Profile and Dashboard">
+              <i class="bi bi-person-circle"></i>
+            </a>
+
+            <!-- Vendor Login -->
+            <a href="login.html" class="nav-auth-link">
+              <i class="bi bi-box-arrow-in-right"></i> Login
+            </a>
+
+            <!-- Vendor Signup -->
+            <a href="vendor-signup.html" class="btn btn-brand-outline btn-sm-pill">
+              <i class="bi bi-person-plus"></i> Signup
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SECTION 01 — TRUCK HERO & LIVE STATUS -->
+  <section class="py-5 position-relative bg-surface-alt">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+            <span class="badge-status ready fs-6"><span class="pulse-dot me-1"></span> <span id="truck-status">Open Now until 9:00 PM</span></span>
+            <span class="badge bg-surface text-heading border" id="truck-hero-location"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Riverside Park East Pier</span>
+            <span class="badge bg-surface text-heading border" id="truck-hero-rating"><i class="bi bi-star-fill text-warning me-1"></i> 4.9 (328 Reviews)</span>
+          </div>
+
+          <h1 class="display-3 fw-bold mb-2" id="truck-title">The Taco Wagon</h1>
+          <p class="lead mb-4" id="truck-tagline">Slow-Braised Jalisco Beef Birria, Hand-Pressed Heirloom Corn Tortillas &amp; Fire-Roasted Salsas.</p>
+
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <button class="btn btn-brand-primary" data-bs-toggle="modal" data-bs-target="#modalBookEvent">
+              <i class="bi bi-calendar2-plus me-1"></i> Book Truck for Event
+            </button>
+            <a href="#truck-menu" class="btn btn-brand-outline">
+              <i class="bi bi-book me-1"></i> View Live Menu
+            </a>
+            <a href="#truck-schedule" class="btn btn-brand-dark">
+              <i class="bi bi-pin-map me-1"></i> Weekly Spots
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <!-- Unique Image 5: Specific Food Truck Details Hero -->
+          <div class="rounded-4 overflow-hidden shadow-xl border border-3 border-white">
+            <img id="truck-hero-img" src="https://images.unsplash.com/photo-1567129937968-cdad8f07e2f8?q=80&w=1400&auto=format&fit=crop" alt="The Taco Wagon vintage chrome mobile kitchen trailer" class="w-100 object-fit-cover" style="height: 380px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02 — ABOUT THE TRUCK & THE CHEF -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6">
+          <div class="section-tag mustard">Craft &amp; Heritage</div>
+          <h2 class="display-6 fw-bold mb-3" id="truck-about-heading">7 Years of Searing, Braising &amp; Community Joy</h2>
+          <p class="text-muted" id="truck-about-text">
+            Founded in 2019 by Chef Marco Ruiz, The Taco Wagon began with an antique 1974 trailer and a recipe inherited from Marco's abuela in Guadalajara. Every morning at 4:30 AM, marrow bones, guajillo peppers, cinnamon, and chuck roast simmer slowly for 12 hours into rich, golden-red consomé.
+          </p>
+          <div class="row g-3 mt-2">
+            <div class="col-6">
+              <div class="p-3 bg-surface-alt rounded-3 border">
+                <strong class="d-block text-heading fs-5" id="truck-highlight-1-title">100% Gluten-Free</strong>
+                <small class="text-muted" id="truck-highlight-1-desc">All corn tortillas made fresh</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 bg-surface-alt rounded-3 border">
+                <strong class="d-block text-heading fs-5" id="truck-highlight-2-title">Local Sourcing</strong>
+                <small class="text-muted" id="truck-highlight-2-desc">Grass-fed local Texas beef</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="p-4 p-lg-5 rounded-4 bg-surface-card border shadow-sm">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img id="truck-chef-img" src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=200&auto=format&fit=crop" alt="Chef Marco Ruiz" class="rounded-circle object-fit-cover" style="width: 70px; height: 70px;">
+              <div>
+                <h5 class="mb-0 fw-bold" id="truck-chef-name">Chef Marco Ruiz</h5>
+                <span class="small text-muted" id="truck-chef-role">Owner, Pitmaster &amp; Founder</span>
+              </div>
+            </div>
+            <p class="text-muted fst-italic mb-3" id="truck-chef-quote">
+              "We cook with fire, bone broth, and heart. When you take that first bite of a quesabirria dipped in hot consomé on a brisk evening, that is pure street magic."
+            </p>
+            <div class="d-flex gap-2">
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary" id="truck-chef-ig"><i class="bi bi-instagram"></i> @TheTacoWagonATX</a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary" id="truck-chef-fb"><i class="bi bi-facebook"></i> TacoWagonAustin</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 03 — SIGNATURE MENU PREVIEW -->
+  <section class="py-5 bg-surface-alt" id="truck-menu">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-4">
+        <div>
+          <div class="section-tag green">Curbside Menu</div>
+          <h2 class="mb-1">Signature Menu &amp; Specials</h2>
+          <p class="text-muted mb-0">Freshly made right when you order at the window.</p>
+        </div>
+        <a href="menu.html" class="btn btn-brand-outline mt-3 mt-md-0">
+          Full StreetFeast Menu Guide <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row g-4" id="truck-menu-container">
+        <!-- Item 1 -->
+        <div class="col-md-6">
+          <div class="p-4 bg-surface rounded-4 border shadow-sm d-flex gap-3 align-items-center">
+            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=300&auto=format&fit=crop" alt="Crispy Quesabirria Tacos" class="rounded-3 object-fit-cover" style="width: 100px; height: 100px;">
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="mb-0 fw-bold">Crispy Quesabirria Trio</h5>
+                <span class="fw-bold fs-5 text-primary-custom">₹320</span>
+              </div>
+              <p class="small text-muted mb-2">Three crisp corn tortillas filled with melted Oaxaca cheese, slow-braised beef, onions, and cilantro with 6oz bone marrow consomé.</p>
+              <div class="d-flex gap-1">
+                <span class="badge bg-danger text-white">Bestseller</span>
+                <span class="badge bg-warning text-dark">GF</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-md-6">
+          <div class="p-4 bg-surface rounded-4 border shadow-sm d-flex gap-3 align-items-center">
+            <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?q=80&w=300&auto=format&fit=crop" alt="Smoky Al Pastor Tacos" class="rounded-3 object-fit-cover" style="width: 100px; height: 100px;">
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="mb-0 fw-bold">Tacos Al Pastor (3 pcs)</h5>
+                <span class="fw-bold fs-5 text-primary-custom">₹260</span>
+              </div>
+              <p class="small text-muted mb-2">Marinated pork spit-roasted with achiote, fresh grilled pineapple, salsa verde, and diced white onion.</p>
+              <div class="d-flex gap-1">
+                <span class="badge bg-secondary-light text-dark">Chef Special</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-md-6">
+          <div class="p-4 bg-surface rounded-4 border shadow-sm d-flex gap-3 align-items-center">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=300&auto=format&fit=crop" alt="Street Corn Esquites Cup" class="rounded-3 object-fit-cover" style="width: 100px; height: 100px;">
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="mb-0 fw-bold">Mexican Street Corn Esquites</h5>
+                <span class="fw-bold fs-5 text-primary-custom">₹160</span>
+              </div>
+              <p class="small text-muted mb-2">Charred sweet corn off the cob, smoked chipotle crema, cotija cheese, cilantro, and Tajin chili lime.</p>
+              <div class="d-flex gap-1">
+                <span class="badge bg-success-light text-success">Vegetarian</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col-md-6">
+          <div class="p-4 bg-surface rounded-4 border shadow-sm d-flex gap-3 align-items-center">
+            <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?q=80&w=300&auto=format&fit=crop" alt="Artisan Cinnamon Churros" class="rounded-3 object-fit-cover" style="width: 100px; height: 100px;">
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="mb-0 fw-bold">Fresh Churros with Spiced Cajeta</h5>
+                <span class="fw-bold fs-5 text-primary-custom">₹180</span>
+              </div>
+              <p class="small text-muted mb-2">Fried to golden perfection, rolled in Ceylon cinnamon and raw sugar, served with goats milk caramel.</p>
+              <div class="d-flex gap-1">
+                <span class="badge bg-warning-light text-dark">Dessert</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 04 — CURRENT & UPCOMING LOCATION SCHEDULE -->
+  <section class="py-5" id="truck-schedule">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-7">
+          <div class="section-tag mustard">Live Schedule</div>
+          <h2 class="display-6 fw-bold mb-3">Where to Find Us This Week</h2>
+          <p class="text-muted mb-4">We park across prime business parks, farmers markets, and riverfront night lots.</p>
+
+          <div class="table-responsive">
+            <table class="table table-hover align-middle border">
+              <thead class="table-light">
+                <tr>
+                  <th>Day</th>
+                  <th>Location &amp; Spot</th>
+                  <th>Serving Hours</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="truck-schedule-body">
+                <tr class="table-success-subtle">
+                  <td class="fw-bold">Today (Tue)</td>
+                  <td><i class="bi bi-geo-alt-fill text-danger me-1"></i> Riverside Park Boardwalk #4</td>
+                  <td>11:00 AM – 9:00 PM</td>
+                  <td><span class="badge-status ready">Serving Now</span></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Wednesday</td>
+                  <td>Silicon Hills Tech Innovation Quad</td>
+                  <td>11:30 AM – 3:30 PM</td>
+                  <td><span class="badge bg-surface-alt text-muted border">Scheduled</span></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Thursday</td>
+                  <td>Arts District Brewery Lane</td>
+                  <td>5:00 PM – 10:00 PM</td>
+                  <td><span class="badge bg-surface-alt text-muted border">Scheduled</span></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Friday</td>
+                  <td>Mueller Lake Park Sunset Lot</td>
+                  <td>12:00 PM – 11:00 PM</td>
+                  <td><span class="badge-status ready">Peak Hours</span></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Saturday</td>
+                  <td>Zilker Park Great Lawn Pavilion</td>
+                  <td>10:00 AM – 8:00 PM</td>
+                  <td><span class="badge bg-surface-alt text-muted border">Festival Lineup</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="p-4 bg-surface-alt rounded-4 border text-center">
+            <h5 class="fw-bold mb-2">Today's Map Pin</h5>
+            <p class="small text-muted mb-3">Parked at Riverside Boardwalk, near Pedestrian Bridge.</p>
+            <div class="rounded-3 overflow-hidden border mb-3">
+              <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?q=80&w=600&auto=format&fit=crop" alt="Riverside Park location view" class="w-100 object-fit-cover" style="height: 200px;">
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-sm btn-brand-primary w-100">
+              <i class="bi bi-map me-1"></i> Open in Navigation
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 05 — CUSTOMER REVIEWS -->
+  <section class="py-5 bg-surface-alt">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-4">
+        <div>
+          <div class="section-tag green">Real Diners</div>
+          <h2 class="mb-1">Customer Reviews (328)</h2>
+          <p class="text-muted mb-0">Verified feedback from street food enthusiasts.</p>
+        </div>
+        <div class="d-flex align-items-center gap-2 mt-3 mt-md-0">
+          <span class="fs-4 fw-bold text-heading">4.9</span>
+          <div class="text-warning fs-5">★★★★★</div>
+          <span class="text-muted small">(98% recommended)</span>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Review 1 -->
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 bg-surface border h-100 shadow-sm customer-review-card d-flex flex-column">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="Elena Rostova" class="rounded-circle object-fit-cover shadow-xs border border-2 border-white" style="width: 50px; height: 50px; flex-shrink: 0;">
+              <div class="flex-grow-1 overflow-hidden">
+                <div class="d-flex justify-content-between align-items-center">
+                  <strong class="customer-name text-heading text-truncate d-block">Elena Rostova</strong>
+                  <span class="badge bg-success-light text-success" style="font-size: 0.68rem;">Verified Diner</span>
+                </div>
+                <small class="text-muted d-block" style="font-size: 0.76rem;">Food Enthusiast • Austin, TX</small>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="text-warning small">★★★★★</div>
+              <span class="small text-muted" style="font-size: 0.75rem;">2 days ago</span>
+            </div>
+            <p class="small text-muted review-body mb-0" style="line-height: 1.6;">
+              "The quesabirria tacos are an absolute masterpiece. You dip the taco into that deep red broth and it hits every flavor note imaginable. Worth standing in the line!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 bg-surface border h-100 shadow-sm customer-review-card d-flex flex-column">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Marcus Vance" class="rounded-circle object-fit-cover shadow-xs border border-2 border-white" style="width: 50px; height: 50px; flex-shrink: 0;">
+              <div class="flex-grow-1 overflow-hidden">
+                <div class="d-flex justify-content-between align-items-center">
+                  <strong class="customer-name text-heading text-truncate d-block">Marcus Vance</strong>
+                  <span class="badge bg-warning-light text-dark" style="font-size: 0.68rem;">Event Client</span>
+                </div>
+                <small class="text-muted d-block" style="font-size: 0.76rem;">Event Lead • Techstars ATX</small>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="text-warning small">★★★★★</div>
+              <span class="small text-muted" style="font-size: 0.75rem;">1 week ago</span>
+            </div>
+            <p class="small text-muted review-body mb-0" style="line-height: 1.6;">
+              "We booked Chef Marco for our company milestone party of 120 guests. The speed of service was incredible, and our entire team is still raving about the street corn esquites."
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 bg-surface border h-100 shadow-sm customer-review-card d-flex flex-column">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" alt="Priya Sharma" class="rounded-circle object-fit-cover shadow-xs border border-2 border-white" style="width: 50px; height: 50px; flex-shrink: 0;">
+              <div class="flex-grow-1 overflow-hidden">
+                <div class="d-flex justify-content-between align-items-center">
+                  <strong class="customer-name text-heading text-truncate d-block">Priya Sharma</strong>
+                  <span class="badge bg-primary-light text-primary-custom" style="font-size: 0.68rem;">Top Reviewer</span>
+                </div>
+                <small class="text-muted d-block" style="font-size: 0.76rem;">Culinary Blogger • Celiac Guide</small>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="text-warning small">★★★★★</div>
+              <span class="small text-muted" style="font-size: 0.75rem;">2 weeks ago</span>
+            </div>
+            <p class="small text-muted review-body mb-0" style="line-height: 1.6;">
+              "Love that everything is gluten free! The housemade corn tortillas are so fresh, and the fire-roasted salsa verde has genuine heat. Best taco truck in the state!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 06 — EVENT BOOKING CTA BANNER -->
+  <section class="py-5">
+    <div class="container">
+      <div class="p-5 rounded-4 bg-heading text-white shadow-lg">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <div class="section-tag mustard mb-2">Private Catering</div>
+            <h3 class="display-6 fw-bold text-white mb-2">Bring The Taco Wagon to Your Next Gathering.</h3>
+            <p class="lead text-white-50 mb-0">Weddings, birthdays, festivals, and tech quad corporate lunches. Custom menu packages from 50 to 500+ attendees.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <button class="btn btn-brand-primary" data-bs-toggle="modal" data-bs-target="#modalBookEvent">
+              Request Catering Quote
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal fade" id="modalBookEvent" tabindex="-1" aria-labelledby="modalBookEventLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-surface border">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="modalBookEventLabel">
+            <i class="bi bi-calendar2-check text-primary-custom me-2"></i>Book The Taco Wagon
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form class="needs-validation" novalidate id="form-event-booking">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Your Name *</label>
+                <input type="text" class="form-control" placeholder="Jane Doe" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email Address *</label>
+                <input type="email" class="form-control" placeholder="jane@example.com" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Event Date *</label>
+                <input type="date" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Event Type *</label>
+                <select class="form-select" required>
+                  <option value="">Choose event type...</option>
+                  <option>Corporate Lunch / Milestone</option>
+                  <option>Wedding Reception</option>
+                  <option>Private Birthday / Block Party</option>
+                  <option>Festival / Fair Organizer</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Expected Guest Count *</label>
+                <input type="number" class="form-control" id="booking-guests-count" value="75" min="20" max="1000" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Menu Package</label>
+                <select class="form-select" id="booking-package-select">
+                  <option data-rate="350">Street Taco Trio Fiesta (₹350/guest)</option>
+                  <option data-rate="450">VIP Birria &amp; Churro Feast (₹450/guest)</option>
+                  <option data-rate="550">Full Unlimited Truck Takeover (₹550/guest)</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Event Venue Address</label>
+                <input type="text" class="form-control" placeholder="Street address, City, ZIP" required>
+              </div>
+              <div class="col-12">
+                <div class="p-3 bg-surface-alt rounded-3 border d-flex justify-content-between align-items-center">
+                  <div>
+                    <strong class="d-block text-heading">Estimated Total Budget:</strong>
+                    <small class="text-muted">Includes base truck setup + catering service</small>
+                  </div>
+                  <span class="fs-4 fw-bold text-primary-custom" id="booking-estimated-cost">₹31,250</span>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-brand-primary w-100 py-2">
+                  Submit Booking Request (Demo)
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- GLOBAL FOOTER -->
+  <footer class="street-footer">
+    <div class="container">
+      <!-- Footer CTA Card -->
+      <div class="footer-cta-card">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h3 class="text-white mb-1">Have a Food Truck? Share Your Cooking with the City.</h3>
+            <p class="mb-0">Join 500+ independent food truck operators reaching thousands of hungry diners daily.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="vendor-signup.html" class="btn btn-brand-secondary">List Your Food Truck Today</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-3">
+          <a class="navbar-brand mb-3" href="index.html">
+          <div class="brand-logo-badge">
+            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="url(#sfBrandGrad)"/>
+              <path d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z" fill="white"/>
+              <path d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z" fill="white" fill-opacity="0.9"/>
+              <rect x="14" y="21" width="10" height="5" rx="1" fill="#E63946"/>
+              <path d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5" stroke="#FFD166" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z" fill="#161A1D"/>
+              <circle cx="16" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="16" cy="30" r="1.2" fill="#E9A820"/>
+              <circle cx="32" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="32" cy="30" r="1.2" fill="#E9A820"/>
+              <defs>
+                <linearGradient id="sfBrandGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E63946"/>
+                  <stop offset="1" stop-color="#E9A820"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text-wrap d-flex flex-column lh-1">
+            <span class="brand-title fw-bold fs-4 text-heading">Street<strong class="text-primary-custom">Feast</strong></span>
+            <span class="brand-tagline text-muted" style="font-size: 0.62rem; letter-spacing: 0.14em; font-weight: 800;">FOOD TRUCK &amp; TASTE</span>
+          </div>
+        </a>
+          <p class="footer-brand-desc mb-3 pe-lg-2">
+            The premier digital food truck booking &amp; discovery platform. Connecting street food lovers with live curbside kitchens, food festivals, and private catering events.
+          </p>
+          <div class="d-flex gap-2 mb-4 mb-lg-0">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Discover -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Discover</h5>
+          <ul class="footer-links">
+            <li><a href="directory.html"><i class="bi bi-chevron-right small"></i> Food Truck Directory</a></li>
+            <li><a href="directory.html?filter=nearby"><i class="bi bi-chevron-right small"></i> Nearby Trucks</a></li>
+            <li><a href="menu.html"><i class="bi bi-chevron-right small"></i> Signature Cuisines</a></li>
+            <li><a href="events.html"><i class="bi bi-chevron-right small"></i> Festivals &amp; Markets</a></li>
+            <li><a href="about.html#featured-chefs"><i class="bi bi-chevron-right small"></i> Featured Chefs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: For Vendors -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>For Vendors</h5>
+          <ul class="footer-links">
+            <li><a href="vendor-signup.html"><i class="bi bi-chevron-right small"></i> List Your Truck</a></li>
+            <li><a href="vendor-signup.html"><i class="bi bi-chevron-right small"></i> Vendor Signup</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right small"></i> Vendor Plans</a></li>
+            <li><a href="login.html"><i class="bi bi-chevron-right small"></i> Command Center</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right small"></i> Vendor Academy</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Popular Cuisines -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Popular Cuisines</h5>
+          <ul class="footer-links">
+            <li><a href="directory.html?cuisine=burgers"><i class="bi bi-chevron-right small"></i> Gourmet Burgers</a></li>
+            <li><a href="directory.html?cuisine=tacos"><i class="bi bi-chevron-right small"></i> Birria Tacos</a></li>
+            <li><a href="directory.html?cuisine=pizza"><i class="bi bi-chevron-right small"></i> Wood-Fired Pizza</a></li>
+            <li><a href="directory.html?cuisine=asian"><i class="bi bi-chevron-right small"></i> Asian &amp; Baos</a></li>
+            <li><a href="directory.html?cuisine=vegan"><i class="bi bi-chevron-right small"></i> 100% Plant Vegan</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Newsletter & Contact -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Contact</h5>
+          <ul class="list-unstyled mb-3">
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill text-primary-custom"></i>
+              <span>742 Culinary Boulevard, Austin, TX</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-envelope-fill text-primary-custom"></i>
+              <a href="mailto:hello@streetfeast.com" class="text-reset">hello@streetfeast.com</a>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill text-primary-custom"></i>
+              <a href="tel:+18004588782" class="text-reset">+1 (800) 458-TRUCK</a>
+            </li>
+          </ul>
+          <div class="mt-3">
+            <label class="footer-newsletter-label">Get Weekly Food Picks</label>
+            <form class="footer-newsletter-wrap needs-validation" novalidate>
+              <input type="email" class="form-control footer-newsletter-input" placeholder="Enter your email" required aria-label="Enter your email">
+              <button class="btn btn-brand-primary footer-newsletter-btn" type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div class="footer-copyright">
+          &copy; 2026 <strong class="text-white">StreetFeast Platform</strong>. All Rights Reserved. Built with HTML5, CSS3, Vanilla JS &amp; Bootstrap 5.
+        </div>
+        <div class="d-flex gap-4 footer-legal-links">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Service</a>
+          <a href="contact.html">Support Desk</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top-btn" type="button" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/forms.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/truck-data.js"></script>
+</body>
+</html>

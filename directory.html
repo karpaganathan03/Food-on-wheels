@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>Food Truck Directory — Search &amp; Filter Live Trucks | StreetFeast</title>
+  <meta name="description" content="Explore and filter food trucks by cuisine, live location, distance, open-now status, price range, and dietary options. Book trucks for events.">
+  <meta name="keywords" content="food truck directory, food trucks near me, food truck search, tacos food truck, bbq food truck, vegan food truck">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Theme & Responsive Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+      <!-- GLOBAL NAVBAR -->
+  <header class="street-navbar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0">
+        <!-- Creative Food Truck Logo with Sizzling Smoke & Culinary Badge -->
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-logo-badge">
+            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="url(#sfBrandGrad)"/>
+              <path d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z" fill="white"/>
+              <path d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z" fill="white" fill-opacity="0.9"/>
+              <rect x="14" y="21" width="10" height="5" rx="1" fill="#E63946"/>
+              <path d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5" stroke="#FFD166" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z" fill="#161A1D"/>
+              <circle cx="16" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="16" cy="30" r="1.2" fill="#E9A820"/>
+              <circle cx="32" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="32" cy="30" r="1.2" fill="#E9A820"/>
+              <defs>
+                <linearGradient id="sfBrandGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E63946"/>
+                  <stop offset="1" stop-color="#E9A820"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text-wrap d-flex flex-column lh-1">
+            <span class="brand-title fw-bold fs-4 text-heading">Street<strong class="text-primary-custom">Feast</strong></span>
+            <span class="brand-tagline text-muted" style="font-size: 0.62rem; letter-spacing: 0.14em; font-weight: 800;">FOOD TRUCK &amp; TASTE</span>
+          </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#streetNavbarNav" aria-controls="streetNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="streetNavbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <!-- 1. Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-rich border-0 shadow-lg p-2">
+                <li>
+                  <a class="dropdown-item rich-dropdown-item  d-flex align-items-center gap-3 p-2 rounded-3" href="index.html">
+                    <div class="rich-dropdown-icon bg-primary-light text-primary-custom rounded-3 d-flex align-items-center justify-content-center">
+                      <i class="bi bi-shop fs-5"></i>
+                    </div>
+                    <div class="rich-dropdown-content">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="fw-bold text-heading">Home 1 — Street Vibes</span>
+                        <span class="badge badge-subtle-primary">Vibrant</span>
+                      </div>
+                      <small class="text-muted d-block">Street food photography, trucks &amp; community</small>
+                    </div>
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider my-1"></li>
+                <li>
+                  <a class="dropdown-item rich-dropdown-item  d-flex align-items-center gap-3 p-2 rounded-3" href="home-2.html">
+                    <div class="rich-dropdown-icon bg-warning-light text-secondary-custom rounded-3 d-flex align-items-center justify-content-center">
+                      <i class="bi bi-truck-front-fill fs-5"></i>
+                    </div>
+                    <div class="rich-dropdown-content">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="fw-bold text-heading">Home 2 — Catering Fleet</span>
+                        <span class="badge badge-subtle-warning">B2B</span>
+                      </div>
+                      <small class="text-muted d-block">Fleet rentals, private catering &amp; products</small>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- 2. About (Combined with Vendors) -->
+            <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+            <!-- 3. Directory with Menu dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Directory
+              </a>
+              <ul class="dropdown-menu border-0 shadow-md">
+                <li><a class="dropdown-item active" href="directory.html"><i class="bi bi-grid-fill me-2 text-primary-custom"></i> Food Truck Directory</a></li>
+                <li><a class="dropdown-item " href="menu.html"><i class="bi bi-book-half me-2 text-primary-custom"></i> Signature Street Menus</a></li>
+              </ul>
+            </li>
+            <!-- 4. Events -->
+            <li class="nav-item"><a class="nav-link " href="events.html">Events</a></li>
+            <!-- 5. Pricing -->
+            <li class="nav-item"><a class="nav-link " href="pricing.html">Pricing</a></li>
+            <!-- 6. Blog -->
+            <li class="nav-item"><a class="nav-link " href="blog.html">Blog</a></li>
+            <!-- 7. Contact -->
+            <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <!-- Mode Toggle (Icon only) -->
+            <button class="mode-toggle-btn icon-only" type="button" aria-label="Toggle Night Market mode" title="Toggle Night Market mode">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+
+            <!-- RTL Toggle (RTL alone) -->
+            <button class="rtl-toggle-btn text-only" type="button" aria-label="Toggle RTL layout" title="Toggle RTL layout">
+              <span class="fw-bold">RTL</span>
+            </button>
+
+            <!-- Vendor Profile / Dashboard Icon Button (Placed before Login) -->
+            <a href="dashboard.html" class="nav-profile-btn" title="Vendor Profile &amp; Dashboard" aria-label="Vendor Profile and Dashboard">
+              <i class="bi bi-person-circle"></i>
+            </a>
+
+            <!-- Vendor Login -->
+            <a href="login.html" class="nav-auth-link">
+              <i class="bi bi-box-arrow-in-right"></i> Login
+            </a>
+
+            <!-- Vendor Signup -->
+            <a href="vendor-signup.html" class="btn btn-brand-outline btn-sm-pill">
+              <i class="bi bi-person-plus"></i> Signup
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SECTION 01 — DIRECTORY HERO & LIVE SEARCH BAR -->
+  <section class="py-5 position-relative bg-surface-alt">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <div class="section-tag mustard">Neighborhood Fleet</div>
+          <h1 class="display-4 fw-bold mb-3">
+            EXPLORE THE <span class="text-primary-custom">FOOD TRUCK DIRECTORY</span>
+          </h1>
+          <p class="lead mb-4">
+            Filter by cravings, operating status, dietary requirements, and proximity. Track verified food truck locations across the city.
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <!-- Unique Image 4 -->
+          <div class="rounded-4 overflow-hidden shadow-md border border-2 border-white">
+            <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?q=80&w=1400&auto=format&fit=crop" alt="Vibrant street food line-up with colorful trucks and signs" class="w-100 object-fit-cover" style="height: 240px;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Search Box -->
+      <div class="hero-search-box mt-4">
+        <div class="d-flex align-items-center">
+          <div class="search-field-group flex-grow-1">
+            <i class="bi bi-search search-icon-badge"></i>
+            <input type="text" id="directory-search-input" class="search-input-clean" placeholder="Search by truck name, signature dish, or cuisine..." aria-label="Search trucks">
+          </div>
+          <div class="search-divider d-none d-md-block"></div>
+          <div class="search-field-group flex-grow-1">
+            <i class="bi bi-geo-alt-fill search-icon-badge text-secondary-custom"></i>
+            <input type="text" id="directory-location-input" class="search-input-clean" placeholder="Location: Downtown / Near Me" aria-label="Search location">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02 — QUICK CUISINE FILTER PILLS -->
+  <section class="py-3 bg-surface border-bottom">
+    <div class="container">
+      <div class="d-flex align-items-center gap-2 overflow-x-auto pb-2 text-nowrap">
+        <span class="small fw-bold text-muted me-2"><i class="bi bi-funnel-fill text-primary-custom"></i> Cuisines:</span>
+        <button class="btn btn-sm btn-brand-outline filter-cuisine-pill active btn-brand-primary" data-cuisine="all">All Cuisines</button>
+        <button class="btn btn-sm btn-brand-outline filter-cuisine-pill" data-cuisine="mexican">🌮 Mexican &amp; Tacos</button>
+        <button class="btn btn-sm btn-brand-outline filter-cuisine-pill" data-cuisine="burgers">🍔 Smash Burgers</button>
+        <button class="btn btn-sm btn-brand-outline filter-cuisine-pill" data-cuisine="pizza">🍕 Wood-Fired Pizza</button>
+        <button class="btn btn-sm btn-brand-outline filter-cuisine-pill" data-cuisine="bbq">🍖 Texas BBQ</button>
+        <button class="btn btn-sm btn-brand-outline filter-cuisine-pill" data-cuisine="asian">🥟 Asian &amp; Baos</button>
+        <button class="btn btn-sm btn-brand-outline filter-cuisine-pill" data-cuisine="indian">🍛 Desi Chaat</button>
+        <button class="btn btn-sm btn-brand-outline filter-cuisine-pill" data-cuisine="desserts">🍦 Churros &amp; Sweets</button>
+        <button class="btn btn-sm btn-brand-outline filter-cuisine-pill" data-cuisine="vegan">🥗 100% Plant Vegan</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 03 — MAIN DIRECTORY LISTINGS WITH MULTI-FACETED SIDEBAR -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Sidebar Filters -->
+        <div class="col-lg-3">
+          <div class="p-4 bg-surface-card border rounded-4 shadow-sm sticky-top" style="top: 85px;">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h5 class="mb-0 fw-bold"><i class="bi bi-sliders text-primary-custom me-2"></i>Filters</h5>
+              <button class="btn btn-sm btn-link text-muted p-0 text-decoration-none" onclick="window.location.reload();">Reset</button>
+            </div>
+
+            <!-- Cuisine Dropdown Filter -->
+            <div class="mb-4">
+              <label class="form-label">Cuisine Category</label>
+              <select id="directory-cuisine-select" class="form-select">
+                <option value="all">All Cuisines</option>
+                <option value="mexican">Mexican &amp; Tacos</option>
+                <option value="burgers">Burgers &amp; Sliders</option>
+                <option value="pizza">Wood-Fired Pizza</option>
+                <option value="bbq">Texas BBQ</option>
+                <option value="asian">Asian &amp; Baos</option>
+                <option value="desserts">Desserts &amp; Coffee</option>
+                <option value="vegan">100% Vegan</option>
+              </select>
+            </div>
+
+            <!-- Proximity Range Slider -->
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <label class="form-label mb-0">Max Distance</label>
+                <span class="small fw-bold text-primary-custom" id="distance-val-display">25 km</span>
+              </div>
+              <input type="range" class="form-range" id="directory-distance-range" min="1" max="50" value="25">
+            </div>
+
+            <!-- Open Now Toggle -->
+            <div class="mb-4">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="filter-open-now" checked>
+                <label class="form-check-label fw-bold" for="filter-open-now">Open Right Now</label>
+              </div>
+              <small class="text-muted d-block mt-1">Only show trucks serving food at this moment.</small>
+            </div>
+
+            <hr class="my-3">
+
+            <!-- Dietary Options -->
+            <div class="mb-4">
+              <label class="form-label">Dietary Preferences</label>
+              <div class="d-flex flex-column gap-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="diet-veg">
+                  <label class="form-check-label small" for="diet-veg">Vegetarian Friendly</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="diet-vegan">
+                  <label class="form-check-label small" for="diet-vegan">100% Vegan Options</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="diet-halal">
+                  <label class="form-check-label small" for="diet-halal">Halal Certified</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="diet-gf">
+                  <label class="form-check-label small" for="diet-gf">Gluten-Free Available</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event Availability -->
+            <div class="mb-3">
+              <label class="form-label">Event Catering</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="catering-available" checked>
+                <label class="form-check-label small" for="catering-available">Accepts Private Bookings</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Directory Cards Content Area -->
+        <div class="col-lg-9">
+          <!-- Top Results Bar -->
+          <div class="d-flex align-items-center justify-content-between mb-4 pb-2 border-bottom">
+            <div>
+              <span class="text-muted">Showing <strong class="text-heading" id="directory-results-count">9</strong> food trucks near you</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="small text-muted d-none d-sm-inline">View:</span>
+              <button class="btn btn-sm btn-outline-secondary active" id="btn-view-grid" title="Grid View">
+                <i class="bi bi-grid-fill"></i>
+              </button>
+              <button class="btn btn-sm btn-outline-secondary" id="btn-view-list" title="List View">
+                <i class="bi bi-list-ul"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Truck Cards Grid -->
+          <div class="row g-4" id="directory-cards-container">
+            
+            <!-- Item 1: The Taco Wagon -->
+            <div class="col-md-6 col-lg-4 food-truck-item" data-name="The Taco Wagon" data-cuisine="mexican" data-distance="1.2" data-status="open" data-dish="Quesabirria Tacos">
+              <div class="food-card">
+                <div class="food-card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop" alt="The Taco Wagon specialty birria tacos">
+                  <div class="food-card-badge-top">
+                    <span class="sticker-badge hot">Trending</span>
+                  </div>
+                  <div class="food-card-status-top">
+                    <span class="sticker-badge open"><span class="pulse-dot me-1"></span> Open Now</span>
+                  </div>
+                </div>
+                <div class="food-card-body">
+                  <div class="food-meta-row">
+                    <span class="text-muted"><i class="bi bi-geo-alt text-primary-custom"></i> 1.2 km • Riverside Park</span>
+                    <span class="food-rating"><i class="bi bi-star-fill"></i> 4.9 (248)</span>
+                  </div>
+                  <h4 class="food-card-title"><a href="food-truck-details.html?truck=taco-wagon">The Taco Wagon</a></h4>
+                  <p class="food-card-cuisine">Authentic Mexican &amp; Birria</p>
+                  <div class="food-dish-featured">
+                    <small class="text-muted d-block">Popular Item:</small>
+                    <strong>Quesabirria with Bone Broth Consomé</strong>
+                  </div>
+                  <div class="food-card-footer">
+                    <span class="fw-bold">₹180 - ₹340</span>
+                    <a href="food-truck-details.html?truck=taco-wagon" class="btn btn-sm btn-brand-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2: Burger Bus Co. -->
+            <div class="col-md-6 col-lg-4 food-truck-item" data-name="Burger Bus Co." data-cuisine="burgers" data-distance="0.8" data-status="open" data-dish="Truffle Smash Burger">
+              <div class="food-card">
+                <div class="food-card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop" alt="Burger Bus gourmet smash burger">
+                  <div class="food-card-badge-top">
+                    <span class="sticker-badge featured">Staff Pick</span>
+                  </div>
+                  <div class="food-card-status-top">
+                    <span class="sticker-badge open"><span class="pulse-dot me-1"></span> Open Now</span>
+                  </div>
+                </div>
+                <div class="food-card-body">
+                  <div class="food-meta-row">
+                    <span class="text-muted"><i class="bi bi-geo-alt text-primary-custom"></i> 0.8 km • High Street</span>
+                    <span class="food-rating"><i class="bi bi-star-fill"></i> 4.8 (192)</span>
+                  </div>
+                  <h4 class="food-card-title"><a href="food-truck-details.html?truck=burger-bus">Burger Bus Co.</a></h4>
+                  <p class="food-card-cuisine">American Craft Smash Burgers</p>
+                  <div class="food-dish-featured">
+                    <small class="text-muted d-block">Popular Item:</small>
+                    <strong>Truffle Bacon Double Smash Burger</strong>
+                  </div>
+                  <div class="food-card-footer">
+                    <span class="fw-bold">₹220 - ₹420</span>
+                    <a href="food-truck-details.html?truck=burger-bus" class="btn btn-sm btn-brand-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3: Pizza Bella Mobile -->
+            <div class="col-md-6 col-lg-4 food-truck-item" data-name="Pizza Bella Mobile" data-cuisine="pizza" data-distance="2.4" data-status="open" data-dish="Burrata Margherita">
+              <div class="food-card">
+                <div class="food-card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600&auto=format&fit=crop" alt="Pizza Bella custom wood-fired oven">
+                  <div class="food-card-badge-top">
+                    <span class="sticker-badge featured">Wood Fired</span>
+                  </div>
+                  <div class="food-card-status-top">
+                    <span class="sticker-badge open"><span class="pulse-dot me-1"></span> Open Now</span>
+                  </div>
+                </div>
+                <div class="food-card-body">
+                  <div class="food-meta-row">
+                    <span class="text-muted"><i class="bi bi-geo-alt text-primary-custom"></i> 2.4 km • Arts District</span>
+                    <span class="food-rating"><i class="bi bi-star-fill"></i> 4.7 (164)</span>
+                  </div>
+                  <h4 class="food-card-title"><a href="food-truck-details.html?truck=pizza-bella">Pizza Bella Mobile</a></h4>
+                  <p class="food-card-cuisine">Artisan Neapolitan Wood-Fired</p>
+                  <div class="food-dish-featured">
+                    <small class="text-muted d-block">Popular Item:</small>
+                    <strong>Spicy Honey Burrata Margherita</strong>
+                  </div>
+                  <div class="food-card-footer">
+                    <span class="fw-bold">₹280 - ₹550</span>
+                    <a href="food-truck-details.html?truck=pizza-bella" class="btn btn-sm btn-brand-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4: Smoke & Bone BBQ -->
+            <div class="col-md-6 col-lg-4 food-truck-item" data-name="Smoke &amp; Bone BBQ" data-cuisine="bbq" data-distance="3.1" data-status="open" data-dish="Smoked Brisket Platter">
+              <div class="food-card">
+                <div class="food-card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop" alt="Smoke and Bone BBQ smoker trailer">
+                  <div class="food-card-badge-top">
+                    <span class="sticker-badge hot">Pitmaster</span>
+                  </div>
+                  <div class="food-card-status-top">
+                    <span class="sticker-badge open"><span class="pulse-dot me-1"></span> Open Now</span>
+                  </div>
+                </div>
+                <div class="food-card-body">
+                  <div class="food-meta-row">
+                    <span class="text-muted"><i class="bi bi-geo-alt text-primary-custom"></i> 3.1 km • Brewery Lane</span>
+                    <span class="food-rating"><i class="bi bi-star-fill"></i> 4.9 (310)</span>
+                  </div>
+                  <h4 class="food-card-title"><a href="food-truck-details.html?truck=smoke-bone">Smoke &amp; Bone BBQ</a></h4>
+                  <p class="food-card-cuisine">14-Hour Hickory Smoked BBQ</p>
+                  <div class="food-dish-featured">
+                    <small class="text-muted d-block">Popular Item:</small>
+                    <strong>Smoked Brisket &amp; Jalapeno Cheddar</strong>
+                  </div>
+                  <div class="food-card-footer">
+                    <span class="fw-bold">₹350 - ₹780</span>
+                    <a href="food-truck-details.html?truck=smoke-bone" class="btn btn-sm btn-brand-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5: Seoul Street K-Bao -->
+            <div class="col-md-6 col-lg-4 food-truck-item" data-name="Seoul Street K-Bao" data-cuisine="asian" data-distance="4.2" data-status="open" data-dish="Pork Belly Bao">
+              <div class="food-card">
+                <div class="food-card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" alt="Seoul Street bao buns and dumplings">
+                  <div class="food-card-badge-top">
+                    <span class="sticker-badge featured">Handmade</span>
+                  </div>
+                  <div class="food-card-status-top">
+                    <span class="sticker-badge open"><span class="pulse-dot me-1"></span> Open Now</span>
+                  </div>
+                </div>
+                <div class="food-card-body">
+                  <div class="food-meta-row">
+                    <span class="text-muted"><i class="bi bi-geo-alt text-primary-custom"></i> 4.2 km • Tech Park</span>
+                    <span class="food-rating"><i class="bi bi-star-fill"></i> 4.9 (205)</span>
+                  </div>
+                  <h4 class="food-card-title"><a href="food-truck-details.html?truck=seoul-bao">Seoul Street K-Bao</a></h4>
+                  <p class="food-card-cuisine">Korean Street Food &amp; Baos</p>
+                  <div class="food-dish-featured">
+                    <small class="text-muted d-block">Popular Item:</small>
+                    <strong>Braised Pork Belly Steamed Bao Buns</strong>
+                  </div>
+                  <div class="food-card-footer">
+                    <span class="fw-bold">₹190 - ₹380</span>
+                    <a href="food-truck-details.html?truck=seoul-bao" class="btn btn-sm btn-brand-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6: Sweet Wheels Churros -->
+            <div class="col-md-6 col-lg-4 food-truck-item" data-name="Sweet Wheels Churros" data-cuisine="desserts" data-distance="2.8" data-status="open" data-dish="Dulce de Leche Churros">
+              <div class="food-card">
+                <div class="food-card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?q=80&w=600&auto=format&fit=crop" alt="Sweet Wheels retro coffee and churro cart">
+                  <div class="food-card-badge-top">
+                    <span class="sticker-badge hot">Sweet Treats</span>
+                  </div>
+                  <div class="food-card-status-top">
+                    <span class="sticker-badge open"><span class="pulse-dot me-1"></span> Open Now</span>
+                  </div>
+                </div>
+                <div class="food-card-body">
+                  <div class="food-meta-row">
+                    <span class="text-muted"><i class="bi bi-geo-alt text-primary-custom"></i> 2.8 km • Central Mall</span>
+                    <span class="food-rating"><i class="bi bi-star-fill"></i> 4.8 (175)</span>
+                  </div>
+                  <h4 class="food-card-title"><a href="food-truck-details.html?truck=sweet-wheels">Sweet Wheels Churros</a></h4>
+                  <p class="food-card-cuisine">Churros &amp; Specialty Espresso</p>
+                  <div class="food-dish-featured">
+                    <small class="text-muted d-block">Popular Item:</small>
+                    <strong>Cinnamon Sugar Churro Bites with Dip</strong>
+                  </div>
+                  <div class="food-card-footer">
+                    <span class="fw-bold">₹120 - ₹280</span>
+                    <a href="food-truck-details.html?truck=sweet-wheels" class="btn btn-sm btn-brand-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 7: Green Fuel Vegan Cart -->
+            <div class="col-md-6 col-lg-4 food-truck-item" data-name="Green Fuel Vegan" data-cuisine="vegan" data-distance="3.5" data-status="closed" data-dish="Avocado Jackfruit Tacos">
+              <div class="food-card">
+                <div class="food-card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=600&auto=format&fit=crop" alt="Green Fuel fresh plant bowls">
+                  <div class="food-card-badge-top">
+                    <span class="sticker-badge featured">Eco Friendly</span>
+                  </div>
+                  <div class="food-card-status-top">
+                    <span class="sticker-badge closed">Opens at 5 PM</span>
+                  </div>
+                </div>
+                <div class="food-card-body">
+                  <div class="food-meta-row">
+                    <span class="text-muted"><i class="bi bi-geo-alt text-primary-custom"></i> 3.5 km • Yoga District</span>
+                    <span class="food-rating"><i class="bi bi-star-fill"></i> 4.7 (98)</span>
+                  </div>
+                  <h4 class="food-card-title"><a href="food-truck-details.html?truck=green-fuel">Green Fuel Vegan</a></h4>
+                  <p class="food-card-cuisine">100% Plant-Based Clean Comfort</p>
+                  <div class="food-dish-featured">
+                    <small class="text-muted d-block">Popular Item:</small>
+                    <strong>Smoky Pulled Jackfruit &amp; Mango Bowl</strong>
+                  </div>
+                  <div class="food-card-footer">
+                    <span class="fw-bold">₹210 - ₹390</span>
+                    <a href="food-truck-details.html?truck=green-fuel" class="btn btn-sm btn-brand-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 8: Firebird Hot Chicken -->
+            <div class="col-md-6 col-lg-4 food-truck-item" data-name="Firebird Hot Chicken" data-cuisine="burgers" data-distance="1.8" data-status="open" data-dish="Nashville Hot Chicken Sando">
+              <div class="food-card">
+                <div class="food-card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?q=80&w=800&auto=format&fit=crop" alt="Crispy Nashville hot chicken sandwich on brioche bun">
+                  <div class="food-card-badge-top">
+                    <span class="sticker-badge hot">Spicy Crispy</span>
+                  </div>
+                  <div class="food-card-status-top">
+                    <span class="sticker-badge open"><span class="pulse-dot me-1"></span> Open Now</span>
+                  </div>
+                </div>
+                <div class="food-card-body">
+                  <div class="food-meta-row">
+                    <span class="text-muted"><i class="bi bi-geo-alt text-primary-custom"></i> 1.8 km • South Congress</span>
+                    <span class="food-rating"><i class="bi bi-star-fill"></i> 4.9 (340)</span>
+                  </div>
+                  <h4 class="food-card-title"><a href="food-truck-details.html?truck=firebird-chicken">Firebird Hot Chicken</a></h4>
+                  <p class="food-card-cuisine">Nashville Hot Poultry &amp; Sandos</p>
+                  <div class="food-dish-featured">
+                    <small class="text-muted d-block">Popular Item:</small>
+                    <strong>Cayenne Glazed Nashville Hot Chicken Sando</strong>
+                  </div>
+                  <div class="food-card-footer">
+                    <span class="fw-bold">₹240 - ₹450</span>
+                    <a href="food-truck-details.html?truck=firebird-chicken" class="btn btn-sm btn-brand-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 9: Tokyo Drift Noodle Bar -->
+            <div class="col-md-6 col-lg-4 food-truck-item" data-name="Tokyo Drift Noodle Bar" data-cuisine="asian" data-distance="2.2" data-status="open" data-dish="Rich Tonkotsu Black Garlic Ramen">
+              <div class="food-card">
+                <div class="food-card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=800&auto=format&fit=crop" alt="Steaming bowl of artisan Tonkotsu Ramen">
+                  <div class="food-card-badge-top">
+                    <span class="sticker-badge featured">Chef Special</span>
+                  </div>
+                  <div class="food-card-status-top">
+                    <span class="sticker-badge open"><span class="pulse-dot me-1"></span> Open Now</span>
+                  </div>
+                </div>
+                <div class="food-card-body">
+                  <div class="food-meta-row">
+                    <span class="text-muted"><i class="bi bi-geo-alt text-primary-custom"></i> 2.2 km • East Austin Lot</span>
+                    <span class="food-rating"><i class="bi bi-star-fill"></i> 4.9 (215)</span>
+                  </div>
+                  <h4 class="food-card-title"><a href="food-truck-details.html?truck=tokyo-drift">Tokyo Drift Noodle Bar</a></h4>
+                  <p class="food-card-cuisine">Hand-Pulled Ramen &amp; Crispy Gyoza</p>
+                  <div class="food-dish-featured">
+                    <small class="text-muted d-block">Popular Item:</small>
+                    <strong>Rich Black Garlic Shoyu Tonkotsu Ramen</strong>
+                  </div>
+                  <div class="food-card-footer">
+                    <span class="fw-bold">₹260 - ₹480</span>
+                    <a href="food-truck-details.html?truck=tokyo-drift" class="btn btn-sm btn-brand-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 04 — HOW OUR LIVE DIRECTORY WORKS -->
+  <section class="py-5 bg-surface-alt">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <div class="section-tag mustard">Real-Time Precision</div>
+        <h2 class="mb-2">How We Keep Directory Data Accurate</h2>
+        <p class="text-muted">No stale information. Vendors broadcast their daily park coordinates straight to our live system.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <div class="p-4 bg-surface rounded-4 border shadow-sm h-100">
+            <div class="stat-icon-wrap stat-icon-tomato mx-auto mb-3"><i class="bi bi-broadcast fs-3"></i></div>
+            <h5 class="fw-bold">1. Verified Check-In</h5>
+            <p class="small text-muted mb-0">Vendors tap "Check-In" on their command center upon putting their truck in park, verifying arrival and service start time.</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="p-4 bg-surface rounded-4 border shadow-sm h-100">
+            <div class="stat-icon-wrap stat-icon-mustard mx-auto mb-3"><i class="bi bi-clock-history fs-3"></i></div>
+            <h5 class="fw-bold">2. Sold-Out Alerts</h5>
+            <p class="small text-muted mb-0">When popular specialty cuts run out, trucks mark them unavailable instantly so you never get disappointed in line.</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="p-4 bg-surface rounded-4 border shadow-sm h-100">
+            <div class="stat-icon-wrap stat-icon-green mx-auto mb-3"><i class="bi bi-shield-check fs-3"></i></div>
+            <h5 class="fw-bold">3. Health &amp; Permit Audits</h5>
+            <p class="small text-muted mb-0">Every listing maintains active municipal food safety licenses and mobile vendor permits verified by our team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 05 — ARE YOU A FOOD TRUCK OPERATOR? -->
+  <section class="py-5">
+    <div class="container">
+      <div class="p-5 rounded-4 bg-surface-card border shadow-md">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <div class="section-tag green mb-2">Vendors Welcome</div>
+            <h3 class="display-6 fw-bold mb-2">Don't see your food truck listed here?</h3>
+            <p class="text-muted lead mb-0">Claim your listing or create a new profile in under 3 minutes. Start receiving customer discoveries and high-paying private event catering leads today.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="vendor-signup.html" class="btn btn-brand-primary">List Your Food Truck</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- GLOBAL FOOTER -->
+  <footer class="street-footer">
+    <div class="container">
+      <!-- Footer CTA Card -->
+      <div class="footer-cta-card">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h3 class="text-white mb-1">Have a Food Truck? Share Your Cooking with the City.</h3>
+            <p class="mb-0">Join 500+ independent food truck operators reaching thousands of hungry diners daily.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="vendor-signup.html" class="btn btn-brand-secondary">List Your Food Truck Today</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-3">
+          <a class="navbar-brand mb-3" href="index.html">
+          <div class="brand-logo-badge">
+            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="url(#sfBrandGrad)"/>
+              <path d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z" fill="white"/>
+              <path d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z" fill="white" fill-opacity="0.9"/>
+              <rect x="14" y="21" width="10" height="5" rx="1" fill="#E63946"/>
+              <path d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5" stroke="#FFD166" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z" fill="#161A1D"/>
+              <circle cx="16" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="16" cy="30" r="1.2" fill="#E9A820"/>
+              <circle cx="32" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="32" cy="30" r="1.2" fill="#E9A820"/>
+              <defs>
+                <linearGradient id="sfBrandGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E63946"/>
+                  <stop offset="1" stop-color="#E9A820"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text-wrap d-flex flex-column lh-1">
+            <span class="brand-title fw-bold fs-4 text-heading">Street<strong class="text-primary-custom">Feast</strong></span>
+            <span class="brand-tagline text-muted" style="font-size: 0.62rem; letter-spacing: 0.14em; font-weight: 800;">FOOD TRUCK &amp; TASTE</span>
+          </div>
+        </a>
+          <p class="footer-brand-desc mb-3 pe-lg-2">
+            The premier digital food truck booking &amp; discovery platform. Connecting street food lovers with live curbside kitchens, food festivals, and private catering events.
+          </p>
+          <div class="d-flex gap-2 mb-4 mb-lg-0">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Discover -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Discover</h5>
+          <ul class="footer-links">
+            <li><a href="directory.html"><i class="bi bi-chevron-right small"></i> Food Truck Directory</a></li>
+            <li><a href="directory.html?filter=nearby"><i class="bi bi-chevron-right small"></i> Nearby Trucks</a></li>
+            <li><a href="menu.html"><i class="bi bi-chevron-right small"></i> Signature Cuisines</a></li>
+            <li><a href="events.html"><i class="bi bi-chevron-right small"></i> Festivals &amp; Markets</a></li>
+            <li><a href="about.html#featured-chefs"><i class="bi bi-chevron-right small"></i> Featured Chefs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: For Vendors -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>For Vendors</h5>
+          <ul class="footer-links">
+            <li><a href="vendor-signup.html"><i class="bi bi-chevron-right small"></i> List Your Truck</a></li>
+            <li><a href="vendor-signup.html"><i class="bi bi-chevron-right small"></i> Vendor Signup</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right small"></i> Vendor Plans</a></li>
+            <li><a href="login.html"><i class="bi bi-chevron-right small"></i> Command Center</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right small"></i> Vendor Academy</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Popular Cuisines -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Popular Cuisines</h5>
+          <ul class="footer-links">
+            <li><a href="directory.html?cuisine=burgers"><i class="bi bi-chevron-right small"></i> Gourmet Burgers</a></li>
+            <li><a href="directory.html?cuisine=tacos"><i class="bi bi-chevron-right small"></i> Birria Tacos</a></li>
+            <li><a href="directory.html?cuisine=pizza"><i class="bi bi-chevron-right small"></i> Wood-Fired Pizza</a></li>
+            <li><a href="directory.html?cuisine=asian"><i class="bi bi-chevron-right small"></i> Asian &amp; Baos</a></li>
+            <li><a href="directory.html?cuisine=vegan"><i class="bi bi-chevron-right small"></i> 100% Plant Vegan</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Newsletter & Contact -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5>Contact</h5>
+          <ul class="list-unstyled mb-3">
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill text-primary-custom"></i>
+              <span>742 Culinary Boulevard, Austin, TX</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-envelope-fill text-primary-custom"></i>
+              <a href="mailto:hello@streetfeast.com" class="text-reset">hello@streetfeast.com</a>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill text-primary-custom"></i>
+              <a href="tel:+18004588782" class="text-reset">+1 (800) 458-TRUCK</a>
+            </li>
+          </ul>
+          <div class="mt-3">
+            <label class="footer-newsletter-label">Get Weekly Food Picks</label>
+            <form class="footer-newsletter-wrap needs-validation" novalidate>
+              <input type="email" class="form-control footer-newsletter-input" placeholder="Enter your email" required aria-label="Enter your email">
+              <button class="btn btn-brand-primary footer-newsletter-btn" type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div class="footer-copyright">
+          &copy; 2026 <strong class="text-white">StreetFeast Platform</strong>. All Rights Reserved. Built with HTML5, CSS3, Vanilla JS &amp; Bootstrap 5.
+        </div>
+        <div class="d-flex gap-4 footer-legal-links">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Service</a>
+          <a href="contact.html">Support Desk</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top-btn" type="button" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/forms.js"></script>
+  <script src="assets/js/directory.js"></script>
+  <script src="assets/js/filters.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>Customer Reviews — Vendor Command Center | StreetFeast</title>
+  <meta name="description" content="Manage customer reviews, read feedback, and post verified owner responses in real time.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Theme & Responsive Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- VENDOR DASHBOARD SIDEBAR -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-brand-header">
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-logo-badge">
+            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="url(#sfBrandGrad)"/>
+              <path d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z" fill="white"/>
+              <path d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z" fill="white" fill-opacity="0.9"/>
+              <rect x="14" y="21" width="10" height="5" rx="1" fill="#E63946"/>
+              <path d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5" stroke="#FFD166" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z" fill="#161A1D"/>
+              <circle cx="16" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="16" cy="30" r="1.2" fill="#E9A820"/>
+              <circle cx="32" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="32" cy="30" r="1.2" fill="#E9A820"/>
+              <defs>
+                <linearGradient id="sfBrandGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E63946"/>
+                  <stop offset="1" stop-color="#E9A820"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text-wrap d-flex flex-column lh-1">
+            <span class="brand-title fw-bold fs-4 text-heading">Street<strong class="text-primary-custom">Feast</strong></span>
+            <span class="brand-tagline text-muted" style="font-size: 0.62rem; letter-spacing: 0.14em; font-weight: 800;">FOOD TRUCK &amp; TASTE</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="sidebar-truck-badge">
+        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=200&auto=format&fit=crop" class="sidebar-truck-avatar" alt="The Taco Wagon">
+        <div class="overflow-hidden">
+          <strong class="d-block text-white text-truncate" style="font-size: 0.92rem;">The Taco Wagon</strong>
+          <small class="text-success d-flex align-items-center gap-1" style="font-size: 0.75rem;">
+            <span class="pulse-dot"></span> Serving Now
+          </small>
+        </div>
+      </div>
+
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-item"><a href="dashboard.html" class="sidebar-nav-link"><i class="bi bi-speedometer2"></i> Overview</a></li>
+        <li class="sidebar-nav-item"><a href="truck-profile.html" class="sidebar-nav-link"><i class="bi bi-truck"></i> Truck Profile</a></li>
+        <li class="sidebar-nav-item"><a href="location-schedule.html" class="sidebar-nav-link"><i class="bi bi-geo-alt"></i> Location Schedule</a></li>
+        <li class="sidebar-nav-item"><a href="menu-management.html" class="sidebar-nav-link"><i class="bi bi-journal-text"></i> Menu Management</a></li>
+        <li class="sidebar-nav-item"><a href="booking-requests.html" class="sidebar-nav-link"><i class="bi bi-calendar2-heart"></i> Booking Requests <span class="badge bg-danger rounded-pill ms-auto">6</span></a></li>
+        <li class="sidebar-nav-item"><a href="orders.html" class="sidebar-nav-link"><i class="bi bi-receipt"></i> Orders <span class="badge bg-warning text-dark rounded-pill ms-auto">3</span></a></li>
+        <li class="sidebar-nav-item"><a href="earnings.html" class="sidebar-nav-link"><i class="bi bi-cash-stack"></i> Earnings</a></li>
+        <li class="sidebar-nav-item"><a href="reviews.html" class="sidebar-nav-link active"><i class="bi bi-star"></i> Reviews</a></li>
+        <li class="sidebar-nav-item"><a href="vendor-profile.html" class="sidebar-nav-link"><i class="bi bi-person-gear"></i> Vendor Profile</a></li>
+        <li class="sidebar-nav-item mt-4 pt-3 border-top border-secondary border-opacity-25">
+          <a href="login.html" class="sidebar-nav-link text-danger"><i class="bi bi-box-arrow-left"></i> Logout</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm btn-outline-secondary d-lg-none" id="dashboard-sidebar-toggle" type="button"><i class="bi bi-list fs-5"></i></button>
+          <div>
+            <h5 class="mb-0 fw-bold">Customer Reviews &amp; Ratings</h5>
+            <small class="text-muted">Manage your street food reputation and post verified replies</small>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button class="mode-toggle-btn" type="button"><i class="bi bi-moon-stars-fill"></i> <span>Night Market</span></button>
+          <button class="rtl-toggle-btn" type="button"><span class="fw-bold">LTR</span> | <span class="text-primary-custom fw-bold">RTL</span></button>
+        </div>
+      </header>
+
+      <main class="dashboard-content">
+        <!-- SECTION 01 — RATINGS SCORECARD & BREAKDOWN -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <div class="row align-items-center g-4">
+              <div class="col-md-4 text-center border-end-md">
+                <h1 class="display-3 fw-bold text-heading mb-0">4.9</h1>
+                <div class="text-warning fs-4 mb-1">★★★★★</div>
+                <p class="text-muted small mb-0">Based on 328 verified diner reviews</p>
+              </div>
+              <div class="col-md-8">
+                <div class="d-flex align-items-center gap-3 mb-2 small">
+                  <span style="min-width: 60px;">5 Stars</span>
+                  <div class="progress flex-grow-1" style="height: 8px;">
+                    <div class="progress-bar bg-warning" style="width: 92%;"></div>
+                  </div>
+                  <span class="text-muted" style="min-width: 40px;">302</span>
+                </div>
+                <div class="d-flex align-items-center gap-3 mb-2 small">
+                  <span style="min-width: 60px;">4 Stars</span>
+                  <div class="progress flex-grow-1" style="height: 8px;">
+                    <div class="progress-bar bg-warning" style="width: 6%;"></div>
+                  </div>
+                  <span class="text-muted" style="min-width: 40px;">20</span>
+                </div>
+                <div class="d-flex align-items-center gap-3 small">
+                  <span style="min-width: 60px;">3 Stars</span>
+                  <div class="progress flex-grow-1" style="height: 8px;">
+                    <div class="progress-bar bg-warning" style="width: 2%;"></div>
+                  </div>
+                  <span class="text-muted" style="min-width: 40px;">6</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 02 — REVIEWS STREAM WITH INSTANT REPLY DIALOG -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-bold mb-0"><i class="bi bi-chat-left-quote text-primary-custom me-2"></i>Diner Feedback Feed</h5>
+              <span class="badge bg-surface-alt text-muted border">Showing Latest 3</span>
+            </div>
+
+            <div class="d-flex flex-column gap-3">
+              <!-- Review 1 -->
+              <div class="customer-review-card p-4 bg-surface rounded-4 border shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div>
+                    <strong class="customer-name fs-6">Elena Rostova</strong>
+                    <span class="badge bg-success-light text-success ms-2">Verified Walk-Up Diner</span>
+                  </div>
+                  <small class="text-muted">Today at 1:15 PM</small>
+                </div>
+                <div class="text-warning small mb-2">★★★★★</div>
+                <div class="review-body">
+                  <p class="text-muted small mb-2">
+                    "The quesabirria tacos were absolutely out of this world! The dipping broth has so much depth and warmth. You can taste the hours of braising. Will definitely hunt down their location next week!"
+                  </p>
+                  <!-- Existing Reply -->
+                  <div class="vendor-reply-container p-3 bg-surface-alt rounded border-start border-3 border-danger">
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                      <span class="badge bg-danger text-white">Owner Response</span>
+                      <span class="small text-muted">2 hours ago</span>
+                    </div>
+                    <p class="small mb-0 text-body">"Thank you Elena! We slow-simmer the bone marrow for 14 hours every morning. So glad you loved it!"</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 2 (Pending Reply) -->
+              <div class="customer-review-card p-4 bg-surface rounded-4 border shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div>
+                    <strong class="customer-name fs-6">Marcus Vance</strong>
+                    <span class="badge bg-warning-light text-dark ms-2">Private Catering Client</span>
+                  </div>
+                  <small class="text-muted">Yesterday at 6:40 PM</small>
+                </div>
+                <div class="text-warning small mb-2">★★★★★</div>
+                <div class="review-body">
+                  <p class="text-muted small mb-2">
+                    "We hired The Taco Wagon for our company product launch with 120 guests. The speed of service was jaw-dropping. Everyone received piping hot tacos within seconds."
+                  </p>
+                  <button class="btn btn-sm btn-brand-outline btn-open-reply-modal" data-bs-toggle="modal" data-bs-target="#modalReplyReview">
+                    <i class="bi bi-reply me-1"></i> Post Owner Reply
+                  </button>
+                </div>
+              </div>
+
+              <!-- Review 3 -->
+              <div class="customer-review-card p-4 bg-surface rounded-4 border shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div>
+                    <strong class="customer-name fs-6">Priya Sharma</strong>
+                    <span class="badge bg-surface-alt text-muted ms-2">Festival Attendee</span>
+                  </div>
+                  <small class="text-muted">3 days ago</small>
+                </div>
+                <div class="text-warning small mb-2">★★★★★</div>
+                <div class="review-body">
+                  <p class="text-muted small mb-2">
+                    "So grateful for their gluten-free dedicated fryer! As someone with celiac, eating safely at street festivals is rare. The corn esquites cup was heaven."
+                  </p>
+                  <button class="btn btn-sm btn-brand-outline btn-open-reply-modal" data-bs-toggle="modal" data-bs-target="#modalReplyReview">
+                    <i class="bi bi-reply me-1"></i> Post Owner Reply
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 03 — DINER DELIGHT VISUAL -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-4">
+                <!-- Unique Image 25: Happy diner biting into giant artisanal taco -->
+                <div class="rounded-3 overflow-hidden border">
+                  <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?q=80&w=1200&auto=format&fit=crop" class="w-100 object-fit-cover" style="height: 180px;" alt="Happy street food diner">
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <h5 class="fw-bold mb-1">Customer Sentiment Summary</h5>
+                <p class="small text-muted mb-2">99% positive customer mentions for "Crispy Quesabirria", "Hot Consomé", and "Fast Friendly Service".</p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge bg-success-light text-success border">#1 Rated Mexican Food Truck in Austin</span>
+                  <span class="badge bg-surface-alt text-heading border">100% Response Rate on Catering Reviews</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 04 — EMBEDDABLE BADGE WIDGET -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <h5 class="fw-bold mb-2"><i class="bi bi-code-slash text-secondary-custom me-2"></i>Embeddable Review Badge</h5>
+            <p class="small text-muted mb-3">Copy this HTML snippet to show your 4.9-star rating on your private food truck website or Instagram link-in-bio.</p>
+            <div class="p-3 bg-surface-alt rounded border font-monospace small">
+              &lt;iframe src="https://streetfeast.com/badge/the-taco-wagon" width="280" height="90"&gt;&lt;/iframe&gt;
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 05 — REVIEW INCENTIVE POLICY -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <h6 class="fw-bold mb-1"><i class="bi bi-shield-check text-success me-2"></i>Verified Authenticity Guidelines</h6>
+            <p class="small text-muted mb-0">Only customers who placed orders or booked private catering events can leave verified reviews. Never incentivize fake reviews with free alcohol or prohibited items.</p>
+          </div>
+        </section>
+
+        <!-- SECTION 06 — SAVE PREFERENCES ACTION -->
+        <section class="mb-4">
+          <div class="p-3 bg-surface-card rounded-4 border shadow-sm d-flex justify-content-between align-items-center">
+            <span class="small text-muted">All published replies update immediately in the public directory profile.</span>
+            <button class="btn btn-brand-primary" onclick="window.showDashboardToast('✅ <strong>Saved:</strong> Review alert preferences updated.', 'success')">Save Preferences</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- MODAL: REPLY TO REVIEW -->
+  <div class="modal fade" id="modalReplyReview" tabindex="-1" aria-labelledby="modalReplyReviewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-surface border">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="modalReplyReviewLabel">
+            Reply to <span id="reply-customer-name">Customer</span>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="form-reply-review">
+            <div class="mb-3">
+              <label class="form-label">Owner Response *</label>
+              <textarea class="form-control" id="reply-text" rows="3" placeholder="Write a warm note of appreciation..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-brand-primary w-100 py-2">
+              Post Response to Public Profile
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/reviews.js"></script>
+</body>
+</html>

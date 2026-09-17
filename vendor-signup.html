@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>Vendor Sign Up — List Your Food Truck | StreetFeast</title>
+  <meta name="description" content="Register your food truck on StreetFeast. Receive catering booking inquiries, publish daily spots, and manage orders.">
+  <meta name="keywords" content="list food truck, food truck vendor registration, vendor signup, food truck platform">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Theme & Responsive Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body class="bg-surface-alt min-vh-100 d-flex flex-column justify-content-between p-3 p-md-4">  <!-- Floating Utility Bar -->
+  <div class="d-flex justify-content-between align-items-center auth-page-wrapper-wide mb-2">
+    <a href="index.html" class="text-muted small text-decoration-none d-inline-flex align-items-center gap-1">
+      <i class="bi bi-arrow-left"></i> Back to StreetFeast
+    </a>
+    <div class="d-flex align-items-center gap-2">
+      <button class="mode-toggle-btn border-0 bg-transparent text-muted small" type="button" aria-label="Toggle Night Market mode" title="Toggle Night Market mode">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+      <button class="rtl-toggle-btn border-0 bg-transparent text-muted small" type="button" aria-label="Toggle LTR/RTL layout" title="Toggle LTR/RTL layout">
+        <span>LTR/RTL</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Centered Form Container -->
+  <main class="auth-page-wrapper-wide my-auto py-2">
+    <!-- Brand Logo (Universal Standard - Compact) -->
+    <div class="text-center mb-3">
+      <a class="navbar-brand d-inline-flex align-items-center gap-2.5 text-decoration-none" href="index.html">
+        <div class="brand-logo-badge auth-brand-badge">
+          <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="url(#sfBrandGradSignup)"/>
+            <path d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z" fill="white"/>
+            <path d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z" fill="white" fill-opacity="0.9"/>
+            <rect x="14" y="21" width="10" height="5" rx="1" fill="#E63946"/>
+            <path d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5" stroke="#FFD166" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z" fill="#161A1D"/>
+            <circle cx="16" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+            <circle cx="16" cy="30" r="1.2" fill="#E9A820"/>
+            <circle cx="32" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+            <circle cx="32" cy="30" r="1.2" fill="#E9A820"/>
+            <defs>
+              <linearGradient id="sfBrandGradSignup" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#E63946"/>
+                <stop offset="1" stop-color="#E9A820"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="brand-text-wrap d-flex flex-column text-start lh-1">
+          <span class="brand-title fw-bold fs-4 text-heading auth-brand-title">Street<strong class="text-primary-custom">Feast</strong></span>
+          <span class="brand-tagline text-muted" style="font-size: 0.58rem; letter-spacing: 0.14em; font-weight: 800;">FOOD TRUCK &amp; TASTE</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- The Standalone Sign Up Form Card (Compact) -->
+    <div class="auth-card">
+      <div class="mb-3 text-center text-sm-start">
+        <h3 class="fw-bold mb-1">List Your Food Truck</h3>
+        <p class="small text-muted mb-0" style="font-size: 0.82rem;">Join our verified mobile vendor roster in under 3 minutes</p>
+      </div>
+
+      <form action="dashboard.html" method="GET" class="needs-validation" novalidate id="form-vendor-signup">
+        <div class="row g-2.5">
+          <!-- Plan Selection Cards (Compact) -->
+          <div class="col-12 mb-1" id="plan-selection-wrapper">
+            <div class="d-flex justify-content-between align-items-center mb-1.5">
+              <label class="form-label mb-0 small fw-semibold">Membership Tier *</label>
+              <a href="pricing.html" class="small text-primary-custom text-decoration-none" style="font-size: 0.78rem;"><i class="bi bi-info-circle me-1"></i> Compare</a>
+            </div>
+            <div class="row g-2">
+              <div class="col-4">
+                <label class="p-2 rounded-3 border w-100 cursor-pointer text-center bg-surface-alt transition-all" id="plan-card-starter">
+                  <input type="radio" name="vendor_plan" value="starter" class="d-none" onchange="selectSignupPlan('starter')">
+                  <div class="fw-bold small text-heading" style="font-size: 0.78rem;">Starter</div>
+                  <div class="text-success fw-bold" style="font-size: 0.85rem;">₹0</div>
+                  <small class="text-muted d-block" style="font-size: 0.68rem;">Free</small>
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="p-2 rounded-3 border w-100 cursor-pointer text-center border-primary bg-primary-subtle transition-all" id="plan-card-growth">
+                  <input type="radio" name="vendor_plan" value="growth" class="d-none" checked onchange="selectSignupPlan('growth')">
+                  <div class="fw-bold small text-primary-custom" style="font-size: 0.78rem;">Growth ★</div>
+                  <div class="fw-bold text-heading" style="font-size: 0.85rem;">₹2,499<small>/mo</small></div>
+                  <small class="text-muted d-block" style="font-size: 0.68rem;">Trial</small>
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="p-2 rounded-3 border w-100 cursor-pointer text-center bg-surface-alt transition-all" id="plan-card-pro">
+                  <input type="radio" name="vendor_plan" value="pro" class="d-none" onchange="selectSignupPlan('pro')">
+                  <div class="fw-bold small text-heading" style="font-size: 0.78rem;">Pro</div>
+                  <div class="fw-bold text-heading" style="font-size: 0.85rem;">₹5,999<small>/mo</small></div>
+                  <small class="text-muted d-block" style="font-size: 0.68rem;">Circuit</small>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Alert Container -->
+          <div id="signup-alert-container" class="col-12"></div>
+
+          <!-- Owner & Business Details -->
+          <div class="col-md-6">
+            <label class="form-label" for="owner-name">Owner Full Name *</label>
+            <input type="text" class="form-control" id="owner-name" placeholder="e.g. Marco Ruiz" required>
+            <div class="invalid-feedback">Owner name required.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label" for="business-name">Business / Legal Name *</label>
+            <input type="text" class="form-control" id="business-name" placeholder="e.g. Ruiz Culinary LLC" required>
+            <div class="invalid-feedback">Business name required.</div>
+          </div>
+
+          <!-- Truck Name & Cuisine -->
+          <div class="col-md-6">
+            <label class="form-label" for="truck-name">Truck Public Name *</label>
+            <input type="text" class="form-control" id="truck-name" placeholder="e.g. The Taco Wagon" required>
+            <div class="invalid-feedback">Food truck name required.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label" for="truck-cuisine">Primary Cuisine *</label>
+            <select class="form-select" id="truck-cuisine" required>
+              <option value="">Select Cuisine...</option>
+              <option selected>Mexican &amp; Tacos</option>
+              <option>American &amp; Smash Burgers</option>
+              <option>Wood-Fired Pizza</option>
+              <option>Texas Smoked BBQ</option>
+              <option>Asian Street &amp; Baos</option>
+              <option>Desi Street Chaat</option>
+              <option>Churros, Coffee &amp; Desserts</option>
+              <option>100% Plant Vegan</option>
+              <option>Other Street Cuisine</option>
+            </select>
+            <div class="invalid-feedback">Please choose cuisine.</div>
+          </div>
+
+          <!-- Email & Phone -->
+          <div class="col-md-6">
+            <label class="form-label" for="truck-email">Account Email Address *</label>
+            <input type="email" class="form-control" id="truck-email" placeholder="chef@tacowagon.com" required>
+            <div class="invalid-feedback">Valid email required.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label" for="truck-phone">Direct Phone Number *</label>
+            <input type="tel" class="form-control" id="truck-phone" placeholder="+1 (512) 555-0199" required>
+            <div class="invalid-feedback">Phone number required.</div>
+          </div>
+
+          <!-- Password & Confirm Password -->
+          <div class="col-md-6">
+            <label class="form-label" for="truck-password">Account Password *</label>
+            <input type="password" class="form-control" id="truck-password" placeholder="At least 6 characters" minlength="6" required>
+            <div class="invalid-feedback">At least 6 characters.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label" for="truck-confirm-password">Confirm Password *</label>
+            <input type="password" class="form-control" id="truck-confirm-password" placeholder="Repeat password" required>
+            <div class="invalid-feedback">Repeat password.</div>
+          </div>
+
+          <!-- Operating City & Service Radius -->
+          <div class="col-md-6">
+            <label class="form-label" for="truck-city">Base City *</label>
+            <input type="text" class="form-control" id="truck-city" placeholder="e.g. Austin, TX" required>
+            <div class="invalid-feedback">City required.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label" for="truck-radius">Service Area Radius *</label>
+            <select class="form-select" id="truck-radius" required>
+              <option>Within 15 miles</option>
+              <option selected>Within 30 miles (Metro)</option>
+              <option>Regional / Festivals</option>
+            </select>
+          </div>
+
+          <!-- Health Permit Checkbox -->
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="permit-check" required checked>
+              <label class="form-check-label small" for="permit-check" style="font-size: 0.78rem;">
+                I confirm our food truck holds active municipal health permits and insurance.
+              </label>
+              <div class="invalid-feedback">Permit confirmation required.</div>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="col-12 mt-2">
+            <button type="submit" class="btn btn-brand-primary w-100" id="btn-signup-submit">
+              Create Account
+            </button>
+            <p class="small text-muted text-center mt-1.5 mb-0" style="font-size: 0.75rem;">Instant dashboard setup upon login.</p>
+          </div>
+        </div>
+      </form>
+
+      <div class="text-center mt-3 pt-2.5 border-top">
+        <p class="small text-muted mb-0" style="font-size: 0.82rem;">
+          Already registered? <a href="login.html" class="text-primary-custom fw-bold text-decoration-none">Sign in here</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Copyright Footer -->
+  <footer class="text-center py-3 text-muted small">
+    &copy; 2026 <strong>StreetFeast</strong>. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/forms.js"></script>
+  <script>
+    function selectSignupPlan(planId) {
+      const plans = ['starter', 'growth', 'pro'];
+      plans.forEach(p => {
+        const card = document.getElementById('plan-card-' + p);
+        const radio = card?.querySelector('input[type="radio"]');
+        if (card) {
+          if (p === planId) {
+            card.classList.add('border-primary', 'bg-primary-subtle');
+            card.classList.remove('bg-surface-alt');
+            if (radio) radio.checked = true;
+          } else {
+            card.classList.remove('border-primary', 'bg-primary-subtle');
+            card.classList.add('bg-surface-alt');
+            if (radio) radio.checked = false;
+          }
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const plan = urlParams.get('plan');
+      if (plan && ['starter', 'growth', 'pro'].includes(plan)) {
+        selectSignupPlan(plan);
+      }
+    });
+  </script>
+</body>
+</html>

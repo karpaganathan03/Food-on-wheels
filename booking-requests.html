@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>Booking Requests — Vendor Command Center | StreetFeast</title>
+  <meta name="description" content="Manage private event, wedding, festival, and corporate catering booking requests for your food truck.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Theme & Responsive Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- VENDOR DASHBOARD SIDEBAR -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-brand-header">
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-logo-badge">
+            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="url(#sfBrandGrad)"/>
+              <path d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z" fill="white"/>
+              <path d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z" fill="white" fill-opacity="0.9"/>
+              <rect x="14" y="21" width="10" height="5" rx="1" fill="#E63946"/>
+              <path d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5" stroke="#FFD166" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z" fill="#161A1D"/>
+              <circle cx="16" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="16" cy="30" r="1.2" fill="#E9A820"/>
+              <circle cx="32" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="32" cy="30" r="1.2" fill="#E9A820"/>
+              <defs>
+                <linearGradient id="sfBrandGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E63946"/>
+                  <stop offset="1" stop-color="#E9A820"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text-wrap d-flex flex-column lh-1">
+            <span class="brand-title fw-bold fs-4 text-heading">Street<strong class="text-primary-custom">Feast</strong></span>
+            <span class="brand-tagline text-muted" style="font-size: 0.62rem; letter-spacing: 0.14em; font-weight: 800;">FOOD TRUCK &amp; TASTE</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="sidebar-truck-badge">
+        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=200&auto=format&fit=crop" class="sidebar-truck-avatar" alt="The Taco Wagon">
+        <div class="overflow-hidden">
+          <strong class="d-block text-white text-truncate" style="font-size: 0.92rem;">The Taco Wagon</strong>
+          <small class="text-success d-flex align-items-center gap-1" style="font-size: 0.75rem;">
+            <span class="pulse-dot"></span> Serving Now
+          </small>
+        </div>
+      </div>
+
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-item"><a href="dashboard.html" class="sidebar-nav-link"><i class="bi bi-speedometer2"></i> Overview</a></li>
+        <li class="sidebar-nav-item"><a href="truck-profile.html" class="sidebar-nav-link"><i class="bi bi-truck"></i> Truck Profile</a></li>
+        <li class="sidebar-nav-item"><a href="location-schedule.html" class="sidebar-nav-link"><i class="bi bi-geo-alt"></i> Location Schedule</a></li>
+        <li class="sidebar-nav-item"><a href="menu-management.html" class="sidebar-nav-link"><i class="bi bi-journal-text"></i> Menu Management</a></li>
+        <li class="sidebar-nav-item"><a href="booking-requests.html" class="sidebar-nav-link active"><i class="bi bi-calendar2-heart"></i> Booking Requests <span class="badge bg-danger rounded-pill ms-auto">6</span></a></li>
+        <li class="sidebar-nav-item"><a href="orders.html" class="sidebar-nav-link"><i class="bi bi-receipt"></i> Orders <span class="badge bg-warning text-dark rounded-pill ms-auto">3</span></a></li>
+        <li class="sidebar-nav-item"><a href="earnings.html" class="sidebar-nav-link"><i class="bi bi-cash-stack"></i> Earnings</a></li>
+        <li class="sidebar-nav-item"><a href="reviews.html" class="sidebar-nav-link"><i class="bi bi-star"></i> Reviews</a></li>
+        <li class="sidebar-nav-item"><a href="vendor-profile.html" class="sidebar-nav-link"><i class="bi bi-person-gear"></i> Vendor Profile</a></li>
+        <li class="sidebar-nav-item mt-4 pt-3 border-top border-secondary border-opacity-25">
+          <a href="login.html" class="sidebar-nav-link text-danger"><i class="bi bi-box-arrow-left"></i> Logout</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm btn-outline-secondary d-lg-none" id="dashboard-sidebar-toggle" type="button"><i class="bi bi-list fs-5"></i></button>
+          <div>
+            <h5 class="mb-0 fw-bold">Private Event Booking Inquiries</h5>
+            <small class="text-muted">High-value wedding, corporate, and festival requests</small>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button class="mode-toggle-btn" type="button"><i class="bi bi-moon-stars-fill"></i> <span>Night Market</span></button>
+          <button class="rtl-toggle-btn" type="button"><span class="fw-bold">LTR</span> | <span class="text-primary-custom fw-bold">RTL</span></button>
+        </div>
+      </header>
+
+      <main class="dashboard-content">
+        <!-- SECTION 01 — PIPELINE STATS & FILTER TABS -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+              <div>
+                <div class="section-tag mustard mb-2">Catering Pipeline</div>
+                <h4 class="fw-bold mb-0">6 Pending Inquiries • Estimated Pipeline: ₹3,14,000</h4>
+              </div>
+              <button class="btn btn-brand-outline btn-sm" onclick="window.showDashboardToast('📊 <strong>Exporting:</strong> 6 Catering leads exported to CSV.', 'success')">
+                <i class="bi bi-download me-1"></i> Export Inquiries
+              </button>
+            </div>
+
+            <div class="d-flex gap-2 overflow-x-auto pb-2">
+              <button class="btn btn-sm btn-brand-primary active" id="tab-req-all">All Requests (6)</button>
+              <button class="btn btn-sm btn-brand-outline" id="tab-req-new">New (4)</button>
+              <button class="btn btn-sm btn-brand-outline" id="tab-req-accepted">Accepted (1)</button>
+              <button class="btn btn-sm btn-brand-outline" id="tab-req-declined">Declined (1)</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 02 — HIGH-BUDGET EVENT SPOTLIGHT -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-4">
+                <!-- Unique Image 22: Private event & rooftop festival scene -->
+                <div class="rounded-3 overflow-hidden border">
+                  <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800&auto=format&fit=crop" class="w-100 object-fit-cover" style="height: 190px;" alt="Private event scene">
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <span class="badge bg-danger text-white">VIP Inquiry</span>
+                  <span class="small text-muted">Corporate Summit</span>
+                </div>
+                <h5 class="fw-bold mb-1">Dell Technologies Fall Innovation Quad</h5>
+                <p class="small text-muted mb-2">
+                  <i class="bi bi-calendar-check text-primary-custom me-1"></i> Oct 15, 2026 • 11:30 AM – 3:30 PM • <strong>320 Expected Guests</strong> • Dell Campus Plaza
+                </p>
+                <div class="d-flex align-items-center gap-3">
+                  <span class="fs-4 fw-bold text-primary-custom">Est. ₹1,45,000</span>
+                  <button class="btn btn-sm btn-brand-primary" data-bs-toggle="modal" data-bs-target="#modalRfpDetails">View RFP Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 03 — INTERACTIVE INQUIRIES STREAM -->
+        <section class="mb-4">
+          <div class="d-flex flex-column gap-3" id="booking-requests-container">
+            <!-- Request 1 -->
+            <div class="p-4 bg-surface rounded-4 border shadow-sm request-card" data-status="new">
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-2">
+                <div class="d-flex align-items-center gap-2">
+                  <h5 class="fw-bold mb-0">Rooftop Wedding Reception: Sarah &amp; Liam</h5>
+                  <span class="badge-status new req-status-badge">New Request</span>
+                </div>
+                <span class="fs-5 fw-bold text-primary-custom">₹62,500</span>
+              </div>
+              <p class="small text-muted mb-3">
+                <strong>Date:</strong> Saturday, Nov 07, 2026 • <strong>Guests:</strong> 140 • <strong>Location:</strong> The Contemporary Austin Rooftop • <strong>Service:</strong> Full Quesabirria Trio Fiesta + Churro Bar
+              </p>
+              <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-brand-primary btn-accept-req" type="button"><i class="bi bi-check2-circle me-1"></i> Accept Request</button>
+                <button class="btn btn-sm btn-outline-danger btn-decline-req" type="button"><i class="bi bi-x-circle me-1"></i> Decline</button>
+                <button class="btn btn-sm btn-outline-secondary btn-open-contact" data-bs-toggle="modal" data-bs-target="#modalContactClient" data-client-name="Sarah & Liam" data-client-email="sarah.wed@example.com" data-client-phone="+1 (512) 555-0182"><i class="bi bi-chat-left-dots me-1"></i> Contact Client</button>
+              </div>
+            </div>
+
+            <!-- Request 2 -->
+            <div class="p-4 bg-surface rounded-4 border shadow-sm request-card" data-status="new">
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-2">
+                <div class="d-flex align-items-center gap-2">
+                  <h5 class="fw-bold mb-0">University Fall Alumni Block Party</h5>
+                  <span class="badge-status new req-status-badge">New Request</span>
+                </div>
+                <span class="fs-5 fw-bold text-primary-custom">₹48,000</span>
+              </div>
+              <p class="small text-muted mb-3">
+                <strong>Date:</strong> Friday, Oct 23, 2026 • <strong>Guests:</strong> 200 • <strong>Location:</strong> North Lawn Quad • <strong>Service:</strong> Street Taco &amp; Corn Bar
+              </p>
+              <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-brand-primary btn-accept-req" type="button"><i class="bi bi-check2-circle me-1"></i> Accept Request</button>
+                <button class="btn btn-sm btn-outline-danger btn-decline-req" type="button"><i class="bi bi-x-circle me-1"></i> Decline</button>
+                <button class="btn btn-sm btn-outline-secondary btn-open-contact" data-bs-toggle="modal" data-bs-target="#modalContactClient" data-client-name="University Alumni Board" data-client-email="alumni@univ.edu" data-client-phone="+1 (512) 555-4820"><i class="bi bi-chat-left-dots me-1"></i> Contact Client</button>
+              </div>
+            </div>
+
+            <!-- Request 3 -->
+            <div class="p-4 bg-surface rounded-4 border shadow-sm request-card" data-status="accepted">
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-2">
+                <div class="d-flex align-items-center gap-2">
+                  <h5 class="fw-bold mb-0">Apex Systems 10th Milestone Celebration</h5>
+                  <span class="badge-status ready req-status-badge">Accepted &amp; Confirmed</span>
+                </div>
+                <span class="fs-5 fw-bold text-success">₹38,500</span>
+              </div>
+              <p class="small text-muted mb-3">
+                <strong>Date:</strong> Thursday, Oct 08, 2026 • <strong>Guests:</strong> 95 • <strong>Location:</strong> Apex Tech Campus • <strong>Status:</strong> 50% Deposit Paid (₹19,250)
+              </p>
+              <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalCateringContract"><i class="bi bi-file-earmark-pdf me-1"></i> View Catering Contract</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 04 — CATERING POLICIES & DEPOSIT SETTINGS -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <h5 class="fw-bold mb-3"><i class="bi bi-sliders text-warning me-2"></i>Catering Terms &amp; Policies</h5>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label small">Minimum Catering Spend</label>
+                <input type="text" class="form-control form-control-sm" value="₹25,000">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label small">Deposit Requirement</label>
+                <input type="text" class="form-control form-control-sm" value="50% upon booking confirmation">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label small">Cancellation Policy</label>
+                <input type="text" class="form-control form-control-sm" value="Full refund up to 14 days prior">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 05 — CALENDAR INTEGRATION DEMO -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <h5 class="fw-bold mb-2"><i class="bi bi-calendar-event text-success me-2"></i>Calendar Sync</h5>
+            <p class="small text-muted mb-3">Keep your private bookings synchronized with Google Calendar or Apple iCal to prevent double-booking.</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-brand-outline" type="button" id="btn-sync-google"><i class="bi bi-google me-1"></i> Sync Google Calendar</button>
+              <button class="btn btn-sm btn-brand-outline" type="button" id="btn-sync-ical"><i class="bi bi-apple me-1"></i> Apple iCal Feed</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 06 — SAVE PREFERENCES ACTION -->
+        <section class="mb-4">
+          <div class="p-3 bg-surface-card rounded-4 border shadow-sm d-flex justify-content-between align-items-center">
+            <span class="small text-muted">All booking responses notify clients via SMS and email instantly.</span>
+            <button class="btn btn-brand-primary" type="button" id="btn-save-booking-prefs">Save Preferences</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- MODAL: RFP DETAILS (DELL TECHNOLOGIES) -->
+  <div class="modal fade" id="modalRfpDetails" tabindex="-1" aria-labelledby="modalRfpLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-surface border">
+        <div class="modal-header border-bottom">
+          <div>
+            <span class="badge bg-danger text-white mb-1">VIP Corporate Inquiry</span>
+            <h5 class="modal-title fw-bold" id="modalRfpLabel">Dell Technologies Fall Innovation Quad</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-3 mb-4">
+            <div class="col-sm-6 col-md-3">
+              <small class="text-muted d-block">Expected Attendance</small>
+              <strong>320 Guests</strong>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <small class="text-muted d-block">Estimated Budget</small>
+              <strong class="text-primary-custom fs-5">₹1,45,000</strong>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <small class="text-muted d-block">Event Date</small>
+              <strong>Oct 15, 2026</strong>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <small class="text-muted d-block">Service Window</small>
+              <strong>11:30 AM – 3:30 PM</strong>
+            </div>
+          </div>
+
+          <h6 class="fw-bold mb-2">Requested Service Scope</h6>
+          <p class="small text-muted mb-3">
+            Dell campus quad setup. Provide continuous service window for 320 employees with customizable street taco choices (Birria, Al Pastor, Jackfruit Vegan) plus bottled agua frescas. Dedicated generator hookup and waste management provided on-site.
+          </p>
+
+          <div class="p-3 bg-surface-alt rounded-3 border mb-4">
+            <h6 class="fw-bold mb-1">Corporate Client Contact</h6>
+            <div class="small text-muted">
+              <span>Coordinator: <strong>Rachel Howard</strong> (Senior Workplace Experience)</span><br>
+              <span>Email: <strong>events@dell.com</strong> • Phone: <strong>+1 (512) 728-4000</strong></span>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end gap-2">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-brand-primary" id="btn-accept-rfp">
+              <i class="bi bi-check2-circle me-1"></i> Accept RFP &amp; Send Bid
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: CONTACT CLIENT -->
+  <div class="modal fade" id="modalContactClient" tabindex="-1" aria-labelledby="modalContactClientLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-surface border">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="modalContactClientLabel">
+            <i class="bi bi-chat-left-dots text-primary-custom me-2"></i>Contact Client: <span id="contact-client-name">Sarah &amp; Liam</span>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="form-contact-client">
+            <div class="mb-3">
+              <label class="form-label small">Client Direct Info</label>
+              <div class="p-2 bg-surface-alt rounded border small" id="contact-client-details">
+                Email: sarah.wed@example.com • Phone: +1 (512) 555-0182
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small">Message Subject</label>
+              <input type="text" class="form-control" id="contact-subject" value="Regarding Your Food Truck Catering Request | The Taco Wagon" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small">Message Content</label>
+              <textarea class="form-control" rows="4" id="contact-body" required>Hello! We would love to cater your event. We have reserved your date in our private booking system and are ready to finalize menu options.</textarea>
+            </div>
+            <button type="submit" class="btn btn-brand-primary w-100 py-2">
+              <i class="bi bi-send me-1"></i> Send Message to Client
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: VIEW CATERING CONTRACT -->
+  <div class="modal fade" id="modalCateringContract" tabindex="-1" aria-labelledby="modalContractLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-surface border">
+        <div class="modal-header border-bottom">
+          <div>
+            <span class="badge bg-success text-white mb-1">Contract Executed</span>
+            <h5 class="modal-title fw-bold" id="modalContractLabel">Catering Service Agreement #SF-CT-491</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="p-4 bg-surface-alt rounded-3 border mb-3 font-monospace small">
+            <h6 class="fw-bold font-sans">STREETFEAST CATERING AGREEMENT</h6>
+            <hr class="my-2">
+            <p class="mb-1"><strong>Parties:</strong> Apex Systems Inc. (Client) &amp; The Taco Wagon (Vendor)</p>
+            <p class="mb-1"><strong>Event:</strong> Apex Systems 10th Milestone Celebration</p>
+            <p class="mb-1"><strong>Date &amp; Hours:</strong> Thursday, Oct 08, 2026 • 12:00 PM – 4:00 PM</p>
+            <p class="mb-1"><strong>Total Agreed Sum:</strong> ₹38,500.00</p>
+            <p class="mb-1"><strong>Deposit Paid:</strong> ₹19,250.00 (50% via Chase Commercial ACH)</p>
+            <p class="mb-0"><strong>Status:</strong> Legally Binding • Electronic Signatures Verified</p>
+          </div>
+          <div class="d-flex justify-content-end gap-2">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-brand-primary" onclick="window.showDashboardToast('📄 Catering Contract PDF downloaded successfully!', 'success')">
+              <i class="bi bi-download me-1"></i> Download Signed Contract PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script>
+    // Tab filters for booking requests
+    const filterTabs = [
+      { id: 'tab-req-all', status: 'all' },
+      { id: 'tab-req-new', status: 'new' },
+      { id: 'tab-req-accepted', status: 'accepted' },
+      { id: 'tab-req-declined', status: 'declined' }
+    ];
+
+    filterTabs.forEach(tab => {
+      const btn = document.getElementById(tab.id);
+      if (btn) {
+        btn.addEventListener('click', function() {
+          filterTabs.forEach(t => {
+            const b = document.getElementById(t.id);
+            if (b) b.classList.remove('active', 'btn-brand-primary');
+            if (b) b.classList.add('btn-brand-outline');
+          });
+          this.classList.add('active', 'btn-brand-primary');
+          this.classList.remove('btn-brand-outline');
+
+          const cards = document.querySelectorAll('.request-card');
+          cards.forEach(card => {
+            const cStatus = card.getAttribute('data-status');
+            if (tab.status === 'all' || cStatus === tab.status) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      }
+    });
+
+    // Accept & Decline buttons with feedback
+    document.addEventListener('click', function(e) {
+      const acceptBtn = e.target.closest('.btn-accept-req');
+      if (acceptBtn) {
+        const card = acceptBtn.closest('.request-card');
+        const badge = card.querySelector('.req-status-badge');
+        card.setAttribute('data-status', 'accepted');
+        badge.className = 'badge-status ready req-status-badge';
+        badge.textContent = 'Accepted & Confirmed';
+        acceptBtn.parentElement.innerHTML = '<span class="text-success small fw-bold"><i class="bi bi-check2-circle"></i> Booking Confirmed. Contract Sent!</span>';
+        if (window.showDashboardToast) {
+          window.showDashboardToast('🎉 <strong>Booking Confirmed:</strong> Client notified and contract dispatched!', 'success');
+        }
+      }
+
+      const declineBtn = e.target.closest('.btn-decline-req');
+      if (declineBtn) {
+        if (confirm('Are you sure you want to decline this catering request?')) {
+          const card = declineBtn.closest('.request-card');
+          const badge = card.querySelector('.req-status-badge');
+          card.setAttribute('data-status', 'declined');
+          badge.className = 'badge-status declined req-status-badge';
+          badge.textContent = 'Declined';
+          declineBtn.parentElement.innerHTML = '<span class="text-muted small">Declined</span>';
+          if (window.showDashboardToast) {
+            window.showDashboardToast('Request marked as declined.', 'default');
+          }
+        }
+      }
+
+      // Contact Client modal dynamic info
+      const contactBtn = e.target.closest('.btn-open-contact');
+      if (contactBtn) {
+        const name = contactBtn.getAttribute('data-client-name') || 'Client';
+        const email = contactBtn.getAttribute('data-client-email') || '';
+        const phone = contactBtn.getAttribute('data-client-phone') || '';
+        document.getElementById('contact-client-name').textContent = name;
+        document.getElementById('contact-client-details').innerHTML = `Email: <strong>${email}</strong> • Phone: <strong>${phone}</strong>`;
+      }
+    });
+
+    // Accept RFP button in modal
+    document.getElementById('btn-accept-rfp')?.addEventListener('click', function() {
+      const modalEl = document.getElementById('modalRfpDetails');
+      const modal = bootstrap.Modal.getInstance(modalEl);
+      if (modal) modal.hide();
+      if (window.showDashboardToast) {
+        window.showDashboardToast('💼 <strong>RFP Accepted:</strong> Proposal dispatched to Dell Corporate Procurement team!', 'success');
+      }
+    });
+
+    // Contact Client form submission
+    document.getElementById('form-contact-client')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const modalEl = document.getElementById('modalContactClient');
+      const modal = bootstrap.Modal.getInstance(modalEl);
+      if (modal) modal.hide();
+      if (window.showDashboardToast) {
+        window.showDashboardToast('✉️ <strong>Message Sent:</strong> Message delivered to client via email & SMS.', 'success');
+      }
+    });
+
+    // Calendar sync & preferences buttons
+    document.getElementById('btn-sync-google')?.addEventListener('click', function() {
+      if (window.showDashboardToast) {
+        window.showDashboardToast('📅 <strong>Google Calendar:</strong> 3 bookings synchronized with your Google Calendar.', 'success');
+      }
+    });
+    document.getElementById('btn-sync-ical')?.addEventListener('click', function() {
+      if (window.showDashboardToast) {
+        window.showDashboardToast('🔗 <strong>iCal Feed:</strong> Calendar subscription link copied to clipboard.', 'success');
+      }
+    });
+    document.getElementById('btn-save-booking-prefs')?.addEventListener('click', function() {
+      if (window.showDashboardToast) {
+        window.showDashboardToast('✅ <strong>Saved:</strong> Catering policies and deposit terms updated.', 'success');
+      }
+    });
+  </script>
+</body>
+</html>

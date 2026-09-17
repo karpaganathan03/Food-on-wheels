@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>Truck Profile — Vendor Command Center | StreetFeast</title>
+  <meta name="description" content="Manage your food truck specifications, kitchen equipment capacity, photos, and public culinary profile.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Theme & Responsive Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- VENDOR DASHBOARD SIDEBAR -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-brand-header">
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-logo-badge">
+            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="url(#sfBrandGrad)"/>
+              <path d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z" fill="white"/>
+              <path d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z" fill="white" fill-opacity="0.9"/>
+              <rect x="14" y="21" width="10" height="5" rx="1" fill="#E63946"/>
+              <path d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5" stroke="#FFD166" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z" fill="#161A1D"/>
+              <circle cx="16" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="16" cy="30" r="1.2" fill="#E9A820"/>
+              <circle cx="32" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
+              <circle cx="32" cy="30" r="1.2" fill="#E9A820"/>
+              <defs>
+                <linearGradient id="sfBrandGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E63946"/>
+                  <stop offset="1" stop-color="#E9A820"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text-wrap d-flex flex-column lh-1">
+            <span class="brand-title fw-bold fs-4 text-heading">Street<strong class="text-primary-custom">Feast</strong></span>
+            <span class="brand-tagline text-muted" style="font-size: 0.62rem; letter-spacing: 0.14em; font-weight: 800;">FOOD TRUCK &amp; TASTE</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="sidebar-truck-badge">
+        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=200&auto=format&fit=crop" class="sidebar-truck-avatar" alt="The Taco Wagon">
+        <div class="overflow-hidden">
+          <strong class="d-block text-white text-truncate" style="font-size: 0.92rem;">The Taco Wagon</strong>
+          <small class="text-success d-flex align-items-center gap-1" style="font-size: 0.75rem;">
+            <span class="pulse-dot"></span> Serving Now
+          </small>
+        </div>
+      </div>
+
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-item">
+          <a href="dashboard.html" class="sidebar-nav-link">
+            <i class="bi bi-speedometer2"></i> Overview
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="truck-profile.html" class="sidebar-nav-link active">
+            <i class="bi bi-truck"></i> Truck Profile
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="location-schedule.html" class="sidebar-nav-link">
+            <i class="bi bi-geo-alt"></i> Location Schedule
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="menu-management.html" class="sidebar-nav-link">
+            <i class="bi bi-journal-text"></i> Menu Management
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="booking-requests.html" class="sidebar-nav-link">
+            <i class="bi bi-calendar2-heart"></i> Booking Requests
+            <span class="badge bg-danger rounded-pill ms-auto">6</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="orders.html" class="sidebar-nav-link">
+            <i class="bi bi-receipt"></i> Orders
+            <span class="badge bg-warning text-dark rounded-pill ms-auto">3</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="earnings.html" class="sidebar-nav-link">
+            <i class="bi bi-cash-stack"></i> Earnings
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="reviews.html" class="sidebar-nav-link">
+            <i class="bi bi-star"></i> Reviews
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="vendor-profile.html" class="sidebar-nav-link">
+            <i class="bi bi-person-gear"></i> Vendor Profile
+          </a>
+        </li>
+        <li class="sidebar-nav-item mt-4 pt-3 border-top border-secondary border-opacity-25">
+          <a href="login.html" class="sidebar-nav-link text-danger">
+            <i class="bi bi-box-arrow-left"></i> Logout
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm btn-outline-secondary d-lg-none" id="dashboard-sidebar-toggle" type="button">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+          <div>
+            <h5 class="mb-0 fw-bold">Truck Profile Management</h5>
+            <small class="text-muted">Public directory listing and equipment specs</small>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button class="mode-toggle-btn" type="button"><i class="bi bi-moon-stars-fill"></i> <span>Night Market</span></button>
+          <button class="rtl-toggle-btn" type="button"><span class="fw-bold">LTR</span> | <span class="text-primary-custom fw-bold">RTL</span></button>
+          <a href="food-truck-details.html" target="_blank" class="btn btn-sm btn-brand-outline ms-1"><i class="bi bi-eye"></i> Public View</a>
+        </div>
+      </header>
+
+      <main class="dashboard-content">
+        <!-- SECTION 01 — TRUCK IDENTITY & VERIFICATION STATUS -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+              <div class="d-flex align-items-center gap-3">
+                <img src="https://images.unsplash.com/photo-1567129937968-cdad8f07e2f8?q=80&w=200&auto=format&fit=crop" class="rounded-3 object-fit-cover" style="width: 80px; height: 80px;" alt="Truck thumbnail">
+                <div>
+                  <h4 class="fw-bold mb-1">The Taco Wagon</h4>
+                  <div class="d-flex gap-2 align-items-center flex-wrap">
+                    <span class="badge bg-success text-white"><i class="bi bi-check-circle-fill me-1"></i> Verified Permit #ATX-4819</span>
+                    <span class="badge bg-surface-alt text-muted border">Class 4 Mobile Food Unit</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-sm btn-brand-outline" data-bs-toggle="modal" data-bs-target="#modalHealthCert">
+                <i class="bi bi-file-earmark-medical me-1"></i> View Health Certificate
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 02 — GENERAL TRUCK PROFILE FORM -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <h5 class="fw-bold mb-3"><i class="bi bi-pencil-square text-primary-custom me-2"></i>Public Profile Information</h5>
+
+            <form class="needs-validation" novalidate id="form-truck-profile">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Food Truck Public Name *</label>
+                  <input type="text" class="form-control" value="The Taco Wagon" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Tagline / Slogan *</label>
+                  <input type="text" class="form-control" value="Slow-Braised Jalisco Beef Birria &amp; Handcrafted Tortillas" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Primary Cuisine Category *</label>
+                  <select class="form-select" required>
+                    <option selected>Mexican &amp; Tacos</option>
+                    <option>Smash Burgers</option>
+                    <option>Texas BBQ</option>
+                    <option>Wood-Fired Pizza</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Price Range Guide</label>
+                  <select class="form-select">
+                    <option>₹ (Under ₹150)</option>
+                    <option selected>₹₹ (₹150 - ₹400)</option>
+                    <option>₹₹₹ (₹400+)</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Truck Biography &amp; Story</label>
+                  <textarea class="form-control" rows="3">Founded in 2019 by Chef Marco Ruiz, The Taco Wagon began with an antique 1974 trailer and a family recipe from Guadalajara. Marrow bones, guajillo peppers, and slow-simmered beef birria made fresh daily.</textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- SECTION 03 — KITCHEN EQUIPMENT & TRUCK SPECIFICATIONS -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <h5 class="fw-bold mb-3"><i class="bi bi-gear-wide-connected text-secondary-custom me-2"></i>Vehicle &amp; Kitchen Specifications</h5>
+            <div class="row g-3">
+              <div class="col-md-3 col-6">
+                <label class="form-label small">Trailer Dimensions</label>
+                <input type="text" class="form-control form-control-sm" value="22 ft Length x 8.5 ft Width">
+              </div>
+              <div class="col-md-3 col-6">
+                <label class="form-label small">Electrical Reqt.</label>
+                <input type="text" class="form-control form-control-sm" value="50 Amp / 220V Twist-Lock">
+              </div>
+              <div class="col-md-3 col-6">
+                <label class="form-label small">Generator Onboard</label>
+                <input type="text" class="form-control form-control-sm" value="7000W Quiet Inverter (Whisper)">
+              </div>
+              <div class="col-md-3 col-6">
+                <label class="form-label small">Service Window</label>
+                <input type="text" class="form-control form-control-sm" value="Passenger Side (Right)">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 04 — PHOTO GALLERY MANAGER -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-bold mb-0"><i class="bi bi-images text-success me-2"></i>Truck &amp; Food Photos</h5>
+              <div>
+                <input type="file" id="truck-photo-input" class="d-none" accept="image/*">
+                <button class="btn btn-sm btn-brand-outline" type="button" id="btn-upload-photo">
+                  <i class="bi bi-upload me-1"></i> Upload Photo
+                </button>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-4">
+                <!-- Unique Image 19: Handcrafted timber truck exterior -->
+                <div class="rounded-3 overflow-hidden border position-relative">
+                  <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" class="w-100 object-fit-cover" style="height: 160px;" alt="Truck exterior showcase">
+                  <span class="badge bg-dark text-white position-absolute top-0 start-0 m-2">Exterior</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="rounded-3 overflow-hidden border position-relative">
+                  <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop" class="w-100 object-fit-cover" style="height: 160px;" alt="Quesabirria tacos">
+                  <span class="badge bg-dark text-white position-absolute top-0 start-0 m-2">Signature Dish</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="rounded-3 overflow-hidden border position-relative">
+                  <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=600&auto=format&fit=crop" class="w-100 object-fit-cover" style="height: 160px;" alt="Chef Marco Ruiz">
+                  <span class="badge bg-dark text-white position-absolute top-0 start-0 m-2">Chef Photo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 05 — SOCIAL PROFILES & CONTACT LINKS -->
+        <section class="mb-4">
+          <div class="p-4 rounded-4 bg-surface-card border shadow-sm">
+            <h5 class="fw-bold mb-3"><i class="bi bi-share text-primary-custom me-2"></i>Social Handles &amp; Website</h5>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label small">Instagram</label>
+                <input type="text" class="form-control" value="@TheTacoWagonATX">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label small">Facebook</label>
+                <input type="text" class="form-control" value="TacoWagonAustin">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label small">Direct Phone</label>
+                <input type="text" class="form-control" value="+1 (512) 555-0199">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 06 — SAVE CHANGES ACTION BAR -->
+        <section class="mb-4">
+          <div class="p-3 bg-surface-card rounded-4 border shadow-sm d-flex justify-content-between align-items-center">
+            <span class="small text-muted">All updates reflect immediately in the public directory and mobile map.</span>
+            <button class="btn btn-brand-primary btn-save-profile" type="button">
+              <i class="bi bi-check2-circle me-1"></i> Save Changes
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- MODAL: HEALTH CERTIFICATE -->
+  <div class="modal fade" id="modalHealthCert" tabindex="-1" aria-labelledby="modalHealthCertLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-surface border">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="modalHealthCertLabel">
+            <i class="bi bi-patch-check-fill text-success me-2"></i>City Health Inspection Certificate
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="p-3 bg-success-light rounded-3 border border-success border-opacity-25 mb-3 text-center">
+            <span class="text-success fs-2 fw-bold d-block">Grade 98 / 100</span>
+            <small class="text-success fw-semibold">Class 4 Mobile Food Establishment • Gold Hygiene Seal</small>
+          </div>
+          <ul class="list-unstyled small text-muted mb-4 d-flex flex-column gap-2">
+            <li><strong>Permit Number:</strong> #ATX-MFU-4819-A</li>
+            <li><strong>Jurisdiction:</strong> Austin Public Health Environmental Inspection</li>
+            <li><strong>Valid Through:</strong> December 31, 2026</li>
+            <li><strong>Inspected Unit:</strong> The Taco Wagon (VIN: •••• 9281)</li>
+            <li><strong>Status:</strong> Active &amp; Verified in City Directory</li>
+          </ul>
+          <button type="button" class="btn btn-brand-primary w-100" data-bs-dismiss="modal">
+            Close Certificate
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script>
+    // Photo upload simulation
+    const uploadBtn = document.getElementById('btn-upload-photo');
+    const photoInput = document.getElementById('truck-photo-input');
+
+    if (uploadBtn && photoInput) {
+      uploadBtn.addEventListener('click', () => photoInput.click());
+      photoInput.addEventListener('change', function() {
+        if (this.files && this.files[0]) {
+          if (window.showDashboardToast) {
+            window.showDashboardToast(`📸 <strong>Uploaded:</strong> "${this.files[0].name}" added to your truck gallery!`, 'success');
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
