@@ -36,6 +36,27 @@
   .navbar-nav .nav-link {
     padding: 0.6rem 0.75rem !important;
   }
+  .nav-item.dropdown {
+    position: relative;
+  }
+  .nav-item.dropdown .dropdown-menu {
+    display: none;
+    position: static;
+    float: none;
+    width: 100%;
+    margin-top: 0.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: none;
+    border: 1px solid var(--border-color);
+    pointer-events: auto;
+  }
+  .nav-item.dropdown.show .dropdown-menu,
+  .nav-item.dropdown .dropdown-menu.show {
+    display: block;
+  }
+  .dropdown-menu.dropdown-menu-rich {
+    min-width: 100%;
+  }
   .nav-actions {
     margin-top: 1rem;
     padding-top: 1rem;
@@ -107,12 +128,55 @@
   }
 }
 
+/* Mobile-safe global defaults */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  display: block;
+}
+body {
+  overflow-x: hidden;
+}
+
 /* Mobile landscape and tablets (max-width: 767.98px) */
 @media (max-width: 767.98px) {
-  h1 { font-size: 2.2rem; }
-  h2 { font-size: 1.8rem; }
-  h3 { font-size: 1.4rem; }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
 
+  .welcome-hero-banner {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  .welcome-hero-banner .display-4 {
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    line-height: 1.08;
+  }
+  .hero-search-box form {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .hero-search-box .search-field-group {
+    width: 100%;
+    min-width: 0;
+  }
+  .hero-search-box .btn {
+    width: 100%;
+  }
+  .mosaic-item img {
+    height: auto !important;
+    min-height: 170px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+  }
   .map-canvas-mockup {
     height: 360px;
   }
@@ -131,18 +195,34 @@
     justify-content: space-between;
   }
 
-  .table-responsive-stack td, .table-responsive-stack th {
+  .table-responsive-stack td,
+  .table-responsive-stack th {
     white-space: nowrap;
   }
 
   .pricing-card-vendor {
     padding: 1.75rem 1.25rem;
   }
+
+  .food-card-horizontal {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+  }
+  .food-card-horizontal .food-card-img-wrap {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 220px;
+  }
 }
 
 /* Small mobile devices (max-width: 575.98px) */
 @media (max-width: 575.98px) {
-  .btn-brand-primary, .btn-brand-secondary, .btn-brand-outline, .btn-brand-dark {
+  .btn-brand-primary,
+  .btn-brand-secondary,
+  .btn-brand-outline,
+  .btn-brand-dark {
     padding: 0.7rem 1.25rem;
     font-size: 0.88rem;
   }
@@ -154,6 +234,24 @@
   }
   .navbar-brand {
     font-size: 1.25rem;
+    min-width: 0;
+  }
+  .navbar-brand .brand-text-wrap {
+    min-width: 0;
+  }
+  .navbar-brand .brand-tagline {
+    display: none;
+  }
+  .navbar-toggler {
+    margin-left: auto;
+  }
+  .nav-actions {
+    width: 100%;
+  }
+  .nav-actions .btn,
+  .nav-actions a {
+    width: 100%;
+    justify-content: center;
   }
 
   .stat-card-vendor {
@@ -169,6 +267,34 @@
   .footer-newsletter-btn {
     padding: 0 1.15rem !important;
   }
+
+  .photo-craving-card {
+    min-height: 260px;
+  }
+  .photo-craving-card h5 {
+    font-size: 1.05rem;
+  }
+}
+
+/* Very small devices polishing (max-width: 420px) */
+@media (max-width: 420px) {
+  .street-navbar .navbar {
+    gap: 0.5rem;
+  }
+  .navbar-brand .brand-title {
+    font-size: 1.1rem;
+  }
+  .welcome-hero-banner .d-inline-flex {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .photo-craving-overlay {
+    padding: 1rem;
+  }
+  .photo-craving-overlay h5 {
+    font-size: 0.98rem;
+  }
 }
 
 /* Ultra small devices (320px - 360px) */
@@ -176,8 +302,27 @@
   body {
     font-size: 15px;
   }
-  h1 { font-size: 1.85rem; }
-  .navbar-brand span {
+  h1 {
+    font-size: 1.85rem;
+  }
+  .navbar-brand {
+    gap: 0.5rem;
+    max-width: 100%;
+  }
+  .brand-text-wrap {
+    min-width: 0;
+  }
+  .navbar-brand .brand-title {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  .navbar-brand .brand-tagline {
     display: none;
+  }
+  .search-field-group {
+    padding: 0.6rem 0.8rem;
+  }
+  .welcome-hero-banner .lead {
+    font-size: 1rem;
   }
 }
