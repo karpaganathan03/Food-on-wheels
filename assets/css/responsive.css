@@ -41,7 +41,9 @@
   }
   .nav-item.dropdown .dropdown-menu {
     display: none;
-    position: static;
+    position: static; !important;
+    inset: auto; !important;
+    transform: none; !important;
     float: none;
     width: 100%;
     margin-top: 0.5rem;
@@ -324,5 +326,73 @@ body {
   }
   .welcome-hero-banner .lead {
     font-size: 1rem;
+  }
+}
+
+/* ==========================================================================
+   Mobile Functionality Fixes — Home 1, Home 2 & Directory
+   Added without altering desktop layout, structure or alignment.
+   ========================================================================== */
+
+/* Fix 1 — Directory: stop the filter sidebar from sticking mid-page on
+   mobile. It's meant to stay pinned next to the results on desktop, but
+   once it stacks above the cards on small screens it was locking itself
+   over the truck listings while scrolling. Static below the lg breakpoint
+   restores normal scrolling. */
+@media (max-width: 991.98px) {
+  .sticky-top {
+    position: static !important;
+    top: auto !important;
+  }
+}
+
+/* Fix 2 — Directory: smoother touch scrolling for the horizontally
+   scrollable cuisine pill strip on iOS/Android. */
+@media (max-width: 991.98px) {
+  .overflow-x-auto.pb-2.text-nowrap {
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-left: 1rem;
+  }
+}
+
+/* Fix 3 — Directory: let the "Showing X food trucks" + Grid/List toggle
+   row wrap cleanly instead of crowding together on narrow phones. */
+@media (max-width: 420px) {
+  .col-lg-9 > .d-flex.align-items-center.justify-content-between.mb-4.pb-2.border-bottom {
+    flex-wrap: wrap;
+    row-gap: 0.75rem;
+  }
+}
+
+/* Fix 4 — Home 2: the fleet hero image has a fixed height with an
+   absolutely-positioned, overflow-hidden text overlay on top of it. On
+   narrow screens the wrapped heading + badges need more vertical room
+   than 380px allows, which was clipping text at the top of the overlay.
+   Give the image more height and shrink the overlay text slightly so
+   everything fits without being cut off. */
+@media (max-width: 575.98px) {
+  .position-relative.rounded-4.overflow-hidden.mb-5.shadow-xl.border.border-3.border-white img {
+    height: 460px !important;
+  }
+  .position-relative.rounded-4.overflow-hidden.mb-5.shadow-xl.border.border-3.border-white .position-absolute.bottom-0 h3 {
+    font-size: 1.15rem;
+  }
+  .position-relative.rounded-4.overflow-hidden.mb-5.shadow-xl.border.border-3.border-white .badge {
+    font-size: 0.72rem;
+    padding: 0.45rem 0.65rem !important;
+  }
+}
+
+/* Fix 5 — Home 1 & Home 2 (global navbar): give a touch more breathing
+   room between the mode/RTL toggle buttons on ultra-narrow phones so
+   they don't press up against each other once nav-actions goes full
+   width. */
+@media (max-width: 360px) {
+  .nav-actions {
+    gap: 0.6rem;
+  }
+  .nav-actions .mode-toggle-btn,
+  .nav-actions .rtl-toggle-btn {
+    flex-shrink: 0;
   }
 }
