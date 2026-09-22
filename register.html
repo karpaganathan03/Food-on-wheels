@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+  <link rel="shortcut icon" href="assets/images/favicon-64.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
   <title>Vendor Sign Up — StreetFeast</title>
   <meta name="description" content="Create your StreetFeast vendor account. Join the food truck platform and manage your daily orders and bookings.">
   <meta name="keywords" content="vendor registration, create food truck account, food truck platform sign up">
@@ -85,8 +88,8 @@
 
           <div class="col-md-6">
             <label class="form-label" for="reg-owner-name">Owner Full Name *</label>
-            <input type="text" class="form-control" id="reg-owner-name" placeholder="Marco Rossi" required>
-            <div class="invalid-feedback">Owner name required.</div>
+            <input type="text" class="form-control" id="reg-owner-name" placeholder="Marco Rossi" pattern="[A-Za-z][A-Za-z\s'\-\.]{1,59}" minlength="2" required>
+            <div class="invalid-feedback">Please enter a valid full name (letters only, at least 2 characters).</div>
           </div>
 
           <div class="col-md-6">
@@ -97,26 +100,26 @@
 
           <div class="col-md-6">
             <label class="form-label" for="reg-email">Email Address *</label>
-            <input type="email" class="form-control" id="reg-email" placeholder="chef.marco@example.com" required>
-            <div class="invalid-feedback">Valid email required.</div>
+            <input type="email" class="form-control" id="reg-email" placeholder="chef.marco@example.com" pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}" required>
+            <div class="invalid-feedback">Please enter a valid email address (e.g. chef.marco@example.com).</div>
           </div>
 
           <div class="col-md-6">
             <label class="form-label" for="reg-phone">Phone Number *</label>
-            <input type="tel" class="form-control" id="reg-phone" placeholder="+1 (512) 555-0199" required>
-            <div class="invalid-feedback">Phone number required.</div>
+            <input type="tel" class="form-control" id="reg-phone" placeholder="+1 (512) 555-0199" pattern="[0-9+\-().\s]{7,20}" minlength="7" required>
+            <div class="invalid-feedback">Please enter a valid phone number (digits only).</div>
           </div>
 
           <div class="col-md-6">
             <label class="form-label" for="reg-password">Password *</label>
             <input type="password" class="form-control" id="reg-password" placeholder="At least 6 characters" minlength="6" required>
-            <div class="invalid-feedback">Must be at least 6 characters.</div>
+            <div class="invalid-feedback">Password must be at least 6 characters.</div>
           </div>
 
           <div class="col-md-6">
             <label class="form-label" for="reg-confirm-password">Confirm Password *</label>
-            <input type="password" class="form-control" id="reg-confirm-password" placeholder="Repeat password" required>
-            <div class="invalid-feedback">Please confirm password.</div>
+            <input type="password" class="form-control" id="reg-confirm-password" placeholder="Repeat password" minlength="6" required>
+            <div class="invalid-feedback">Passwords do not match.</div>
           </div>
 
           <div class="col-12">

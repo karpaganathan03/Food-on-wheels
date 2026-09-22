@@ -149,6 +149,28 @@ document.addEventListener('DOMContentLoaded', function () {
     handleAccountCreation(registerForm, 'register-alert-container', false);
   }
 
+  // Live "Confirm Password" matching so the mismatch state only ever shows
+  // when the two fields genuinely differ, and clears the instant they match.
+  function wireConfirmPasswordMatch(passId, confirmId) {
+    const passEl = document.getElementById(passId);
+    const confirmEl = document.getElementById(confirmId);
+    if (!passEl || !confirmEl) return;
+
+    function checkMatch() {
+      if (confirmEl.value && confirmEl.value !== passEl.value) {
+        confirmEl.setCustomValidity('Passwords do not match.');
+      } else {
+        confirmEl.setCustomValidity('');
+      }
+    }
+
+    passEl.addEventListener('input', checkMatch);
+    confirmEl.addEventListener('input', checkMatch);
+  }
+
+  wireConfirmPasswordMatch('truck-password', 'truck-confirm-password');
+  wireConfirmPasswordMatch('reg-password', 'reg-confirm-password');
+
   /* ==========================================================================
      2. LOGIN CONTROLLER (login.html)
      ========================================================================== */

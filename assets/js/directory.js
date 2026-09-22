@@ -65,19 +65,67 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Quick Cuisine Pill Buttons
   const cuisinePills = document.querySelectorAll('.filter-cuisine-pill');
+
+  function activatePillForCuisine(cuisine) {
+    cuisinePills.forEach(p => {
+      const isMatch = (p.getAttribute('data-cuisine') || 'all').toLowerCase() === cuisine;
+      p.classList.toggle('active', isMatch);
+      p.classList.toggle('btn-brand-primary', isMatch);
+    });
+  }
+
   cuisinePills.forEach(pill => {
     pill.addEventListener('click', function (e) {
       e.preventDefault();
-      cuisinePills.forEach(p => p.classList.remove('active', 'btn-brand-primary'));
-      this.classList.add('active', 'btn-brand-primary');
-
       const cuisine = this.getAttribute('data-cuisine') || 'all';
+      activatePillForCuisine(cuisine);
+
       if (cuisineSelect) {
         cuisineSelect.value = cuisine;
       }
       filterTrucks();
     });
   });
+
+  // Pre-select cuisine from URL query string, e.g. directory.html?cuisine=burgers
+  // Links across the site (home page food gallery, blog CTAs, etc.) use a few
+  // shorthand cuisine slugs that don't map 1:1 to the select/pill values below.
+  const CUISINE_PARAM_ALIASES = {
+    tacos: 'mexican',
+    taco: 'mexican',
+    mexican: 'mexican',
+    burgers: 'burgers',
+    burger: 'burgers',
+    pizza: 'pizza',
+    bbq: 'bbq',
+    asian: 'asian',
+    indian: 'indian',
+    desserts: 'desserts',
+    dessert: 'desserts',
+    coffee: 'desserts',
+    vegan: 'vegan',
+    all: 'all'
+  };
+
+  function applyCuisineFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const rawCuisine = (params.get('cuisine') || '').toLowerCase().trim();
+    if (!rawCuisine) return;
+
+    const resolvedCuisine = CUISINE_PARAM_ALIASES[rawCuisine] || rawCuisine;
+
+    if (cuisineSelect) {
+      const hasOption = Array.from(cuisineSelect.options).some(
+        opt => opt.value.toLowerCase() === resolvedCuisine
+      );
+      if (hasOption) {
+        cuisineSelect.value = resolvedCuisine;
+      }
+    }
+
+    activatePillForCuisine(resolvedCuisine);
+    filterTrucks();
+  }
 
   // Grid / List View Toggle
   if (viewGridBtn && viewListBtn && cardsContainer) {
@@ -111,4 +159,10 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  // Apply any cuisine passed in via the URL (e.g. from the home page food
+  // gallery links) as soon as the page loads, then run the filter once so
+  // the results/counts are correct from the start.
+  applyCuisineFromUrl();
+  filterTrucks();
 });

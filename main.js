@@ -9,12 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".street-navbar");
   const backToTopBtn = document.querySelector(".back-to-top-btn");
 
-  // Fix 19 — this used to run the scroll+class-toggle work on every single
-  // scroll event with no throttling, which on 768px tablets (combined with
-  // the navbar's backdrop-filter blur) caused visibly slow/janky scrolling.
-  // requestAnimationFrame batches the DOM writes to once per frame instead.
-  let scrollTicking = false;
-  function handleScroll() {
+  window.addEventListener("scroll", function () {
     const scrollPos = window.scrollY;
 
     if (navbar) {
@@ -32,19 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         backToTopBtn.classList.remove("visible");
       }
     }
-    scrollTicking = false;
-  }
-
-  window.addEventListener(
-    "scroll",
-    function () {
-      if (!scrollTicking) {
-        window.requestAnimationFrame(handleScroll);
-        scrollTicking = true;
-      }
-    },
-    { passive: true },
-  );
+  });
 
   if (backToTopBtn) {
     backToTopBtn.addEventListener("click", function (e) {

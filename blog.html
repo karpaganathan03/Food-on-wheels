@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+  <link rel="shortcut icon" href="assets/images/favicon-64.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
   <title>Street Food Chronicles — Editorial Stories &amp; Vendor Guides | StreetFeast</title>
   <meta name="description" content="Discover street food culture, pitmaster interviews, secret sauce recipes, event catering guides, and business tips for food truck operators.">
   <meta name="keywords" content="food truck blog, street food stories, food truck business guide, festival guides, burger trends">
@@ -70,9 +73,6 @@
               <ul class="dropdown-menu dropdown-menu-rich border-0 shadow-lg p-2">
                 <li>
                   <a class="dropdown-item rich-dropdown-item  d-flex align-items-center gap-3 p-2 rounded-3" href="index.html">
-                    <div class="rich-dropdown-icon bg-primary-light text-primary-custom rounded-3 d-flex align-items-center justify-content-center">
-                      <i class="bi bi-shop fs-5"></i>
-                    </div>
                     <div class="rich-dropdown-content">
                       <div class="d-flex align-items-center gap-2">
                         <span class="fw-bold text-heading">Home 1 — Street Vibes</span>
@@ -85,9 +85,6 @@
                 <li><hr class="dropdown-divider my-1"></li>
                 <li>
                   <a class="dropdown-item rich-dropdown-item  d-flex align-items-center gap-3 p-2 rounded-3" href="home-2.html">
-                    <div class="rich-dropdown-icon bg-warning-light text-secondary-custom rounded-3 d-flex align-items-center justify-content-center">
-                      <i class="bi bi-truck-front-fill fs-5"></i>
-                    </div>
                     <div class="rich-dropdown-content">
                       <div class="d-flex align-items-center gap-2">
                         <span class="fw-bold text-heading">Home 2 — Catering Fleet</span>
@@ -228,16 +225,16 @@
           <p class="text-muted mb-0">Browse by culinary category or operational topics.</p>
         </div>
         <div class="d-flex gap-2 mt-3 mt-md-0 overflow-x-auto pb-2">
-          <button class="btn btn-sm btn-brand-outline active btn-brand-primary">All Stories</button>
-          <button class="btn btn-sm btn-brand-outline">Food Truck Stories</button>
-          <button class="btn btn-sm btn-brand-outline">Vendor Guides</button>
-          <button class="btn btn-sm btn-brand-outline">Festivals</button>
+          <button class="btn btn-sm btn-brand-outline active btn-brand-primary blog-filter-tab" data-filter="all">All Stories</button>
+          <button class="btn btn-sm btn-brand-outline blog-filter-tab" data-filter="stories">Food Truck Stories</button>
+          <button class="btn btn-sm btn-brand-outline blog-filter-tab" data-filter="vendor">Vendor Guides</button>
+          <button class="btn btn-sm btn-brand-outline blog-filter-tab" data-filter="festivals">Festivals</button>
         </div>
       </div>
 
       <div class="row g-4">
         <!-- Post 1 -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 blog-post-item" data-category="stories">
           <div class="p-4 bg-surface rounded-4 border shadow-sm h-100 d-flex flex-column">
             <div class="rounded-3 overflow-hidden mb-3">
               <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600&auto=format&fit=crop" alt="Smash burger article" class="w-100 object-fit-cover" style="height: 200px;">
@@ -253,7 +250,7 @@
         </div>
 
         <!-- Post 2 -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 blog-post-item" data-category="vendor">
           <div class="p-4 bg-surface rounded-4 border shadow-sm h-100 d-flex flex-column">
             <div class="rounded-3 overflow-hidden mb-3">
               <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop" alt="Slow smoke barbecue article" class="w-100 object-fit-cover" style="height: 200px;">
@@ -269,7 +266,7 @@
         </div>
 
         <!-- Post 3 -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 blog-post-item" data-category="festivals">
           <div class="p-4 bg-surface rounded-4 border shadow-sm h-100 d-flex flex-column">
             <div class="rounded-3 overflow-hidden mb-3">
               <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=600&auto=format&fit=crop" alt="Vegan street food" class="w-100 object-fit-cover" style="height: 200px;">
@@ -381,7 +378,7 @@
         </div>
 
         <!-- Col 2: Discover -->
-        <div class="col-6 col-md-3 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <h5>Discover</h5>
           <ul class="footer-links">
             <li><a href="directory.html"><i class="bi bi-chevron-right small"></i> Food Truck Directory</a></li>
@@ -393,11 +390,11 @@
         </div>
 
         <!-- Col 3: For Vendors -->
-        <div class="col-6 col-md-3 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <h5>For Vendors</h5>
           <ul class="footer-links">
             <li><a href="vendor-signup.html"><i class="bi bi-chevron-right small"></i> List Your Truck</a></li>
-            <li><a href="vendor-signup.html"><i class="bi bi-chevron-right small"></i> Vendor Signup</a></li>
+            <li><a href="register.html"><i class="bi bi-chevron-right small"></i> Vendor Signup</a></li>
             <li><a href="pricing.html"><i class="bi bi-chevron-right small"></i> Vendor Plans</a></li>
             <li><a href="login.html"><i class="bi bi-chevron-right small"></i> Command Center</a></li>
             <li><a href="blog.html"><i class="bi bi-chevron-right small"></i> Vendor Academy</a></li>
@@ -405,7 +402,7 @@
         </div>
 
         <!-- Col 4: Popular Cuisines -->
-        <div class="col-6 col-md-3 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <h5>Popular Cuisines</h5>
           <ul class="footer-links">
             <li><a href="directory.html?cuisine=burgers"><i class="bi bi-chevron-right small"></i> Gourmet Burgers</a></li>
@@ -417,7 +414,7 @@
         </div>
 
         <!-- Col 5: Newsletter & Contact -->
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-12 col-lg-3">
           <h5>Contact</h5>
           <ul class="list-unstyled mb-3">
             <li class="footer-contact-item">
@@ -443,7 +440,7 @@
         </div>
       </div>
 
-      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="footer-bottom d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
         <div class="footer-copyright">
           &copy; 2026 <strong class="text-white">StreetFeast Platform</strong>. All Rights Reserved. Built with HTML5, CSS3, Vanilla JS &amp; Bootstrap 5.
         </div>
@@ -464,6 +461,7 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/rtl.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/filters.js"></script>
   <script src="assets/js/forms.js"></script>
 </body>
 </html>

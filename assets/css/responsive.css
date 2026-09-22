@@ -24,6 +24,16 @@
 
 /* Tablets and below (max-width: 991.98px) */
 @media (max-width: 991.98px) {
+  /* Fix 19 — backdrop-filter blur on the sticky navbar is expensive to
+     repaint on every scroll frame and was the main cause of slow/janky
+     scrolling on tablets (~768px). Swap it for a plain solid background on
+     touch/tablet widths; desktop keeps the glassy blur. */
+  .street-navbar {
+    background-color: var(--background-color) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
   /* Navbar collapse styling */
   .navbar-collapse {
     background-color: var(--surface-card);
@@ -41,9 +51,9 @@
   }
   .nav-item.dropdown .dropdown-menu {
     display: none;
-    position: static; !important;
-    inset: auto; !important;
-    transform: none; !important;
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
     float: none;
     width: 100%;
     margin-top: 0.5rem;
@@ -394,5 +404,26 @@ body {
   .nav-actions .mode-toggle-btn,
   .nav-actions .rtl-toggle-btn {
     flex-shrink: 0;
+  }
+}
+
+/* Fix 6 — Pricing: the ROI Calculator card's label/value rows use
+   justify-content-between on one line. At 360px the longer labels
+   ("StreetFeast Annual Membership:") + bold ₹ values no longer fit on one
+   line and were wrapping awkwardly out of alignment. Stack each row at this
+   width and left-align both parts so nothing squashes or overlaps. */
+@media (max-width: 360px) {
+  .roi-calculator-card {
+    padding: 1.25rem !important;
+  }
+  .roi-calc-row {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.25rem;
+  }
+  .roi-calc-row strong,
+  .roi-calc-row .fs-4,
+  .roi-calc-row .fs-5 {
+    font-size: 1.1rem !important;
   }
 }

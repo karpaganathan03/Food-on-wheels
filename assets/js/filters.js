@@ -37,4 +37,27 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+  // Blog "Recent Articles" Category Filter Tabs (Food Truck Stories,
+  // Vendor Guides, Festivals, All Stories)
+  const blogFilterButtons = document.querySelectorAll('.blog-filter-tab');
+  const blogPostItems = document.querySelectorAll('.blog-post-item');
+
+  blogFilterButtons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      blogFilterButtons.forEach(b => b.classList.remove('active', 'btn-brand-primary'));
+      this.classList.add('active', 'btn-brand-primary');
+
+      const filter = this.getAttribute('data-filter') || 'all';
+
+      blogPostItems.forEach(post => {
+        const category = post.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          post.style.display = '';
+        } else {
+          post.style.display = 'none';
+        }
+      });
+    });
+  });
 });

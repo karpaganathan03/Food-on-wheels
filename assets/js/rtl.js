@@ -19,11 +19,12 @@
     // Update all RTL toggle buttons text (strictly RTL alone)
     const rtlBtns = document.querySelectorAll('.rtl-toggle-btn');
     rtlBtns.forEach(btn => {
-      btn.innerHTML = '<span class="fw-bold">RTL</span>';
       if (dir === 'rtl') {
+        btn.innerHTML = '<span class="fw-bold">LTR</span>';
         btn.classList.add('active');
         btn.setAttribute('title', 'Switch to LTR layout');
       } else {
+        btn.innerHTML = '<span class="fw-bold">RTL</span>';
         btn.classList.remove('active');
         btn.setAttribute('title', 'Switch to RTL layout');
       }

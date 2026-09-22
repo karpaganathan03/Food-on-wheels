@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+  <link rel="shortcut icon" href="assets/images/favicon-64.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
   <title>Vendor Sign Up — List Your Food Truck | StreetFeast</title>
   <meta name="description" content="Register your food truck on StreetFeast. Receive catering booking inquiries, publish daily spots, and manage orders.">
   <meta name="keywords" content="list food truck, food truck vendor registration, vendor signup, food truck platform">
@@ -118,8 +121,8 @@
           <!-- Owner & Business Details -->
           <div class="col-md-6">
             <label class="form-label" for="owner-name">Owner Full Name *</label>
-            <input type="text" class="form-control" id="owner-name" placeholder="e.g. Marco Ruiz" required>
-            <div class="invalid-feedback">Owner name required.</div>
+            <input type="text" class="form-control" id="owner-name" placeholder="e.g. Marco Ruiz" pattern="[A-Za-z][A-Za-z\s'\-\.]{1,59}" minlength="2" required>
+            <div class="invalid-feedback">Please enter a valid full name (letters only, at least 2 characters).</div>
           </div>
 
           <div class="col-md-6">
@@ -155,34 +158,34 @@
           <!-- Email & Phone -->
           <div class="col-md-6">
             <label class="form-label" for="truck-email">Account Email Address *</label>
-            <input type="email" class="form-control" id="truck-email" placeholder="chef@tacowagon.com" required>
-            <div class="invalid-feedback">Valid email required.</div>
+            <input type="email" class="form-control" id="truck-email" placeholder="chef@tacowagon.com" pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}" required>
+            <div class="invalid-feedback">Please enter a valid email address (e.g. chef@tacowagon.com).</div>
           </div>
 
           <div class="col-md-6">
             <label class="form-label" for="truck-phone">Direct Phone Number *</label>
-            <input type="tel" class="form-control" id="truck-phone" placeholder="+1 (512) 555-0199" required>
-            <div class="invalid-feedback">Phone number required.</div>
+            <input type="tel" class="form-control" id="truck-phone" placeholder="+1 (512) 555-0199" pattern="[0-9+\-().\s]{7,20}" minlength="7" required>
+            <div class="invalid-feedback">Please enter a valid phone number (digits only).</div>
           </div>
 
           <!-- Password & Confirm Password -->
           <div class="col-md-6">
             <label class="form-label" for="truck-password">Account Password *</label>
             <input type="password" class="form-control" id="truck-password" placeholder="At least 6 characters" minlength="6" required>
-            <div class="invalid-feedback">At least 6 characters.</div>
+            <div class="invalid-feedback">Password must be at least 6 characters.</div>
           </div>
 
           <div class="col-md-6">
             <label class="form-label" for="truck-confirm-password">Confirm Password *</label>
-            <input type="password" class="form-control" id="truck-confirm-password" placeholder="Repeat password" required>
-            <div class="invalid-feedback">Repeat password.</div>
+            <input type="password" class="form-control" id="truck-confirm-password" placeholder="Repeat password" minlength="6" required>
+            <div class="invalid-feedback">Passwords do not match.</div>
           </div>
 
           <!-- Operating City & Service Radius -->
           <div class="col-md-6">
             <label class="form-label" for="truck-city">Base City *</label>
-            <input type="text" class="form-control" id="truck-city" placeholder="e.g. Austin, TX" required>
-            <div class="invalid-feedback">City required.</div>
+            <input type="text" class="form-control" id="truck-city" placeholder="e.g. Austin, TX" pattern="[A-Za-z][A-Za-z\s,'\-\.]{1,59}" minlength="2" required>
+            <div class="invalid-feedback">Please enter a valid city name (e.g. Austin, TX).</div>
           </div>
 
           <div class="col-md-6">
