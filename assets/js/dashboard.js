@@ -123,9 +123,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const currentLocDisplay = document.getElementById('current-location-display');
       const currentTimeDisplay = document.getElementById('current-time-display');
+      const liveMap = document.getElementById('vendor-live-map');
 
       if (currentLocDisplay) currentLocDisplay.textContent = spotName;
       if (currentTimeDisplay) currentTimeDisplay.textContent = spotTime;
+      if (liveMap) {
+        const mapUrl = new URL('https://www.google.com/maps');
+        mapUrl.searchParams.set('q', `${spotName}, Austin, TX`);
+        mapUrl.searchParams.set('z', '15');
+        mapUrl.searchParams.set('output', 'embed');
+        liveMap.src = mapUrl.toString();
+      }
 
       // Close modal using bootstrap
       const modalEl = document.getElementById('modalUpdateLocation');

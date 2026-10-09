@@ -1,33 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const dir = 'C:\\Users\\kiris\\Desktop\\September - Projects\\Foodtruck';
+const dir = path.resolve(__dirname, "..");
 
-// SVG Brand Logo definition
-const svgBrandLogo = `<div class="brand-logo-badge">
-            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="48" rx="12" fill="url(#sfBrandGrad)"/>
-              <path d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z" fill="white"/>
-              <path d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z" fill="white" fill-opacity="0.9"/>
-              <rect x="14" y="21" width="10" height="5" rx="1" fill="#E63946"/>
-              <path d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5" stroke="#FFD166" stroke-width="2.2" stroke-linecap="round"/>
-              <path d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z" fill="#161A1D"/>
-              <circle cx="16" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
-              <circle cx="16" cy="30" r="1.2" fill="#E9A820"/>
-              <circle cx="32" cy="30" r="3.5" fill="#161A1D" stroke="white" stroke-width="1.5"/>
-              <circle cx="32" cy="30" r="1.2" fill="#E9A820"/>
-              <defs>
-                <linearGradient id="sfBrandGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#E63946"/>
-                  <stop offset="1" stop-color="#E9A820"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <div class="brand-text-wrap d-flex flex-column lh-1">
-            <span class="brand-title fw-bold fs-4 text-heading">Street<strong class="text-primary-custom">Feast</strong></span>
-            <span class="brand-tagline text-muted" style="font-size: 0.62rem; letter-spacing: 0.14em; font-weight: 800;">FOOD TRUCK &amp; TASTE</span>
-          </div>`;
+// Shared brand logo markup
+const brandLogoMarkup = `<img class="brand-logo-image" src="assets/images/Logo.png" alt="StreetFeast - Food Truck &amp; Taste">`;
 
 function getNavbarForPage(filename) {
   const isHome1 = filename === 'index.html';
@@ -44,9 +21,9 @@ function getNavbarForPage(filename) {
   <header class="street-navbar">
     <div class="container">
       <nav class="navbar navbar-expand-lg p-0">
-        <!-- Creative Food Truck Logo with Sizzling Smoke & Culinary Badge -->
+        <!-- StreetFeast Brand Logo -->
         <a class="navbar-brand" href="index.html">
-          ${svgBrandLogo}
+          ${brandLogoMarkup}
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#streetNavbarNav" aria-controls="streetNavbarNav" aria-expanded="false" aria-label="Toggle navigation">

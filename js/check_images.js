@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const dir = 'C:\\Users\\kiris\\Desktop\\September - Projects\\Foodtruck';
+const dir = path.resolve(__dirname, "..");
 
 const h1 = fs.readFileSync(path.join(dir, 'index.html'), 'utf8');
 const h2 = fs.readFileSync(path.join(dir, 'home-2.html'), 'utf8');

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const rootDir = 'c:\\Users\\kiris\\Desktop\\September - Projects\\Foodtruck';
+const rootDir = path.resolve(__dirname, "..");
 
 console.log('--- STARTING SYSTEM VERIFICATION ---');
 

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const rootDir = 'c:\\Users\\kiris\\Desktop\\September - Projects\\Foodtruck';
+const rootDir = path.resolve(__dirname, "..");
 
 // 1. Verify login.html has no demo button or demo script
 const loginHtml = fs.readFileSync(path.join(rootDir, 'login.html'), 'utf-8');

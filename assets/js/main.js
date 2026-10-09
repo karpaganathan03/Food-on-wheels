@@ -65,125 +65,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // 3. Close mobile navbar on link click
   const navbarCollapse = document.querySelector(".navbar-collapse");
   if (navbarCollapse) {
-    document.querySelectorAll(".navbar-nav .nav-link:not(.dropdown-toggle)").forEach((link) => {
-      link.addEventListener("click", () => {
-        if (navbarCollapse.classList.contains("show")) {
-          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-          if (bsCollapse) bsCollapse.hide();
-        }
-      });
-    });
-  }
-
-  // 4. Mobile-friendly dropdown interaction for Home and Directory menus
-  function closeMobileDropdowns(exceptDropdown = null) {
-    document.querySelectorAll(".nav-item.dropdown").forEach((item) => {
-      if (item !== exceptDropdown) {
-        item.classList.remove("show");
-        const menu = item.querySelector(".dropdown-menu");
-        if (menu) {
-          menu.classList.remove("show");
-        }
-      }
-    });
-  }
-
-  function toggleMobileDropdown(toggle) {
-    if (window.innerWidth >= 992) return;
-
-    const item = toggle.closest(".nav-item.dropdown");
-    if (!item) return;
-
-    const menu = item.querySelector(".dropdown-menu");
-    if (!menu) return;
-
-    const shouldOpen = !item.classList.contains("show");
-    closeMobileDropdowns(item);
-    item.classList.add("show");
-    menu.classList.add("show");
-    if (!shouldOpen) {
-      item.classList.remove("show");
-      menu.classList.remove("show");
-    }
-    toggle.setAttribute("aria-expanded", shouldOpen ? "true" : "false");
-  }
-
-  document
-    .querySelectorAll(".nav-item.dropdown > .dropdown-toggle")
-    .forEach((toggle) => {
-      const handleMobileToggle = (event) => {
-        if (window.innerWidth < 992) {
-          event.preventDefault();
-          event.stopPropagation();
-          event.stopImmediatePropagation();
-          const item = toggle.closest(".nav-item.dropdown");
-          const menu = item ? item.querySelector(".dropdown-menu") : null;
-          const isOpen = item && item.classList.contains("show");
-
-          if (!menu) return;
-
-          closeMobileDropdowns(item);
-
-          if (!isOpen) {
-            item.classList.add("show");
-            menu.classList.add("show");
-            toggle.setAttribute("aria-expanded", "true");
-          } else {
-            item.classList.remove("show");
-            menu.classList.remove("show");
-            toggle.setAttribute("aria-expanded", "false");
+    navbarCollapse
+      .querySelectorAll(
+        ".navbar-nav .nav-link:not(.dropdown-toggle), .navbar-nav .dropdown-item",
+      )
+      .forEach((link) => {
+        link.addEventListener("click", () => {
+          if (
+            window.innerWidth < 1200 &&
+            navbarCollapse.classList.contains("show")
+          ) {
+            bootstrap.Collapse.getOrCreateInstance(navbarCollapse).hide();
           }
-        }
-      };
-
-      toggle.addEventListener("click", handleMobileToggle, true);
-      toggle.addEventListener(
-        "touchstart",
-        (event) => {
-          if (window.innerWidth < 992) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-        },
-        { passive: false },
-      );
-    });
-
-  document
-    .querySelectorAll(".nav-item.dropdown .dropdown-item")
-    .forEach((item) => {
-      item.addEventListener("click", function (event) {
-        if (window.innerWidth < 992) {
-          event.stopPropagation();
-          const parentItem = item.closest(".nav-item.dropdown");
-          if (parentItem) {
-            parentItem.classList.remove("show");
-            const menu = parentItem.querySelector(".dropdown-menu");
-            if (menu) menu.classList.remove("show");
-          }
-        }
-      });
-    });
-
-  document.addEventListener("click", function (event) {
-    if (window.innerWidth < 992) {
-      const dropdown = event.target.closest(".nav-item.dropdown");
-      if (!dropdown) {
-        closeMobileDropdowns();
-      }
-    }
-  });
-
-  window.addEventListener("resize", function () {
-    if (window.innerWidth >= 992) {
-      closeMobileDropdowns();
-      document
-        .querySelectorAll(".nav-item.dropdown > .dropdown-toggle")
-        .forEach((toggle) => {
-          toggle.setAttribute("aria-expanded", "false");
         });
-    }
-  });
+      });
+  }
 
   // 5. Interactive Map Pin Click (for Home 2 & Discovery pages)
   const mapPins = document.querySelectorAll(".map-truck-pin");

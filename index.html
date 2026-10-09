@@ -41,94 +41,28 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/rtl.css" />
+
+    <style>
+      /* Root-cause fix: .navbar-brand (StreetFeast logo + name) has no
+         flex-shrink protection in the shared style.css. On narrower desktop
+         widths the flex row can shrink the brand's box below its content
+         width; since Bootstrap's own .navbar-brand rule sets
+         white-space: nowrap, the text can't shrink with it and visually
+         overflows into "Home". flex-shrink: 0 stops the box from ever
+         shrinking below the text's natural width. */
+      .navbar-brand {
+        flex-shrink: 0;
+      }
+    </style>
   </head>
   <body>
     <!-- GLOBAL NAVBAR -->
     <header class="street-navbar">
       <div class="container">
         <nav class="navbar navbar-expand-lg p-0">
-          <!-- Creative Food Truck Logo with Sizzling Smoke & Culinary Badge -->
+          <!-- StreetFeast Brand Logo -->
           <a class="navbar-brand" href="index.html">
-            <div class="brand-logo-badge">
-              <svg
-                width="42"
-                height="42"
-                viewBox="0 0 48 48"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="48" height="48" rx="12" fill="url(#sfBrandGrad)" />
-                <path
-                  d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z"
-                  fill="white"
-                />
-                <path
-                  d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z"
-                  fill="white"
-                  fill-opacity="0.9"
-                />
-                <rect
-                  x="14"
-                  y="21"
-                  width="10"
-                  height="5"
-                  rx="1"
-                  fill="#E63946"
-                />
-                <path
-                  d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5"
-                  stroke="#FFD166"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                />
-                <path d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z" fill="#161A1D" />
-                <circle
-                  cx="16"
-                  cy="30"
-                  r="3.5"
-                  fill="#161A1D"
-                  stroke="white"
-                  stroke-width="1.5"
-                />
-                <circle cx="16" cy="30" r="1.2" fill="#E9A820" />
-                <circle
-                  cx="32"
-                  cy="30"
-                  r="3.5"
-                  fill="#161A1D"
-                  stroke="white"
-                  stroke-width="1.5"
-                />
-                <circle cx="32" cy="30" r="1.2" fill="#E9A820" />
-                <defs>
-                  <linearGradient
-                    id="sfBrandGrad"
-                    x1="0"
-                    y1="0"
-                    x2="48"
-                    y2="48"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#E63946" />
-                    <stop offset="1" stop-color="#E9A820" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <div class="brand-text-wrap d-flex flex-column lh-1">
-              <span class="brand-title fw-bold fs-4 text-heading"
-                >Street<strong class="text-primary-custom">Feast</strong></span
-              >
-              <span
-                class="brand-tagline text-muted"
-                style="
-                  font-size: 0.62rem;
-                  letter-spacing: 0.14em;
-                  font-weight: 800;
-                "
-                >FOOD TRUCK &amp; TASTE</span
-              >
-            </div>
+            <img class="brand-logo-image" src="assets/images/Logo.png" alt="StreetFeast - Food Truck &amp; Taste">
           </a>
 
           <button
@@ -270,27 +204,19 @@
                 <span class="fw-bold">RTL</span>
               </button>
 
-              <!-- Vendor Profile / Dashboard Icon Button (Placed before Login) -->
-              <a
-                href="dashboard.html"
-                class="nav-profile-btn"
-                title="Vendor Profile &amp; Dashboard"
-                aria-label="Vendor Profile and Dashboard"
-              >
-                <i class="bi bi-person-circle"></i>
+              <!-- Dashboard -->
+              <a href="user-dashboard.html" class="nav-profile-btn" title="Dashboard" aria-label="Open Dashboard">
+                <i class="bi bi-speedometer2"></i>
               </a>
 
-              <!-- Vendor Login -->
+              <!-- Sign In (dummy demo page) -->
               <a href="login.html" class="nav-auth-link">
-                <i class="bi bi-box-arrow-in-right"></i> Login
+                <i class="bi bi-box-arrow-in-right"></i> Sign In
               </a>
 
-              <!-- Vendor Signup -->
-              <a
-                href="vendor-signup.html"
-                class="btn btn-brand-outline btn-sm-pill"
-              >
-                <i class="bi bi-person-plus"></i> Signup
+              <!-- Register (dummy demo page) -->
+              <a href="register.html" class="btn btn-brand-outline btn-sm-pill">
+                <i class="bi bi-person-plus"></i> Sign Up
               </a>
             </div>
           </div>
@@ -576,7 +502,7 @@
           <div class="col-md-6 col-lg-4">
             <div class="street-snap-card">
               <img
-                src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=600&auto=format&fit=crop"
+                src="./assets/images/rvr food.jfif"
                 alt="Friends laughing and sharing street food outdoors"
               />
               <div class="p-3">
@@ -613,7 +539,7 @@
           <div class="col-md-6 col-lg-4">
             <div class="street-snap-card">
               <img
-                src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600&auto=format&fit=crop"
+                src="./assets/images/nt evts.jfif"
                 alt="Outdoor street market with colorful canopies and food trucks"
               />
               <div class="p-3">
@@ -656,7 +582,7 @@
             <div class="event-card">
               <div class="event-card-img-wrap">
                 <img
-                  src="https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=600&auto=format&fit=crop"
+                  src="./assets/images/wk 1.jfif"
                   alt="Night Market Food Truck Festival with ambient lights"
                 />
                 <div class="event-date-badge">
@@ -706,7 +632,7 @@
             <div class="event-card">
               <div class="event-card-img-wrap">
                 <img
-                  src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600&auto=format&fit=crop"
+                  src="./assets/images/wk22.jpg"
                   alt="City block party with neon food truck signage"
                 />
                 <div class="event-date-badge">
@@ -756,7 +682,7 @@
             <div class="event-card">
               <div class="event-card-img-wrap">
                 <img
-                  src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600&auto=format&fit=crop"
+                  src="./assets/images/wk 3.jfif"
                   alt="Campus food truck carnival"
                 />
                 <div class="event-date-badge">
@@ -825,7 +751,7 @@
               <a href="directory.html" class="btn btn-brand-primary">
                 <i class="bi bi-geo-alt-fill me-1"></i> Find Food Trucks Near Me
               </a>
-              <a href="about.html" class="btn btn-brand-secondary">
+              <a href="about.html" class="btn btn-brand-primary">
                 <i class="bi bi-heart-fill me-1"></i> Our Community Story
               </a>
             </div>
@@ -860,96 +786,7 @@
           <!-- Col 1: Brand Info -->
           <div class="col-lg-3">
             <a class="navbar-brand mb-3" href="index.html">
-              <div class="brand-logo-badge">
-                <svg
-                  width="42"
-                  height="42"
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    width="48"
-                    height="48"
-                    rx="12"
-                    fill="url(#sfBrandGrad)"
-                  />
-                  <path
-                    d="M10 29V20C10 18.8954 10.8954 18 12 18H28V29H10Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M28 20H33.5858C34.3815 20 35.1446 20.3161 35.7071 20.8787L38.1213 23.2929C38.6839 23.8554 39 24.6185 39 25.4142V29H28V20Z"
-                    fill="white"
-                    fill-opacity="0.9"
-                  />
-                  <rect
-                    x="14"
-                    y="21"
-                    width="10"
-                    height="5"
-                    rx="1"
-                    fill="#E63946"
-                  />
-                  <path
-                    d="M18 12C18 12 16.5 14 17.5 15.5C18.5 17 20 15 20 15C20 15 21.5 17 20.5 18C19.5 19 18 18.5 18 18.5"
-                    stroke="#FFD166"
-                    stroke-width="2.2"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M29.5 21.5H34.5L36.5 24.5H29.5V21.5Z"
-                    fill="#161A1D"
-                  />
-                  <circle
-                    cx="16"
-                    cy="30"
-                    r="3.5"
-                    fill="#161A1D"
-                    stroke="white"
-                    stroke-width="1.5"
-                  />
-                  <circle cx="16" cy="30" r="1.2" fill="#E9A820" />
-                  <circle
-                    cx="32"
-                    cy="30"
-                    r="3.5"
-                    fill="#161A1D"
-                    stroke="white"
-                    stroke-width="1.5"
-                  />
-                  <circle cx="32" cy="30" r="1.2" fill="#E9A820" />
-                  <defs>
-                    <linearGradient
-                      id="sfBrandGrad"
-                      x1="0"
-                      y1="0"
-                      x2="48"
-                      y2="48"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#E63946" />
-                      <stop offset="1" stop-color="#E9A820" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
-              <div class="brand-text-wrap d-flex flex-column lh-1">
-                <span class="brand-title fw-bold fs-4 text-heading"
-                  >Street<strong class="text-primary-custom"
-                    >Feast</strong
-                  ></span
-                >
-                <span
-                  class="brand-tagline text-muted"
-                  style="
-                    font-size: 0.62rem;
-                    letter-spacing: 0.14em;
-                    font-weight: 800;
-                  "
-                  >FOOD TRUCK &amp; TASTE</span
-                >
-              </div>
+              <img class="brand-logo-image" src="assets/images/Logo.png" alt="StreetFeast - Food Truck &amp; Taste">
             </a>
             <p class="footer-brand-desc mb-3 pe-lg-2">
               The premier digital food truck booking &amp; discovery platform.
