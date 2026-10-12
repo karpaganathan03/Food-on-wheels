@@ -574,7 +574,8 @@
                 </div>
                 <div class="col-md-6">
                   <label class="form-label small fw-bold">Phone Number</label>
-                  <input type="tel" class="form-control" placeholder="+1 (555) 234-5678" required>
+                  <input type="tel" class="form-control phone-number-input" inputmode="tel" pattern="\+?[0-9]{7,15}" maxlength="16" placeholder="+15552345678" aria-describedby="service-phone-feedback" required>
+                  <div class="invalid-feedback" id="service-phone-feedback">Enter 7–15 digits, with an optional + at the beginning.</div>
                 </div>
 
                 <div class="col-md-4">

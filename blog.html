@@ -145,13 +145,14 @@
             In-depth dispatches from asphalt kitchens: chef profiles, festival guides, regional flavor histories, and operational insights for mobile food entrepreneurs.
           </p>
           <div class="hero-search-box">
-            <div class="d-flex align-items-center">
+            <form class="d-flex align-items-center" id="blog-search-form" role="search">
               <div class="search-field-group flex-grow-1">
                 <i class="bi bi-search search-icon-badge"></i>
-                <input type="text" class="search-input-clean" placeholder="Search articles, recipes, vendor tips..." aria-label="Search blog">
+                <input type="search" class="search-input-clean" id="blog-search-input" placeholder="Search articles, recipes, vendor tips..." aria-label="Search blog">
               </div>
-              <button class="btn btn-brand-primary btn-sm">Search</button>
-            </div>
+              <button class="btn btn-brand-primary btn-sm" type="submit">Search</button>
+            </form>
+            <p class="small text-muted mt-2 mb-0" id="blog-search-feedback" role="status" aria-live="polite"></p>
           </div>
         </div>
         <div class="col-lg-5">
@@ -208,10 +209,10 @@
           <p class="text-muted mb-0">Browse by culinary category or operational topics.</p>
         </div>
         <div class="d-flex gap-2 mt-3 mt-md-0 overflow-x-auto pb-2 filter-button-group">
-          <button class="btn btn-sm btn-brand-outline active btn-brand-primary blog-filter-tab" data-filter="all">All Stories</button>
-          <button class="btn btn-sm btn-brand-outline blog-filter-tab" data-filter="stories">Food Truck Stories</button>
-          <button class="btn btn-sm btn-brand-outline blog-filter-tab" data-filter="vendor">Vendor Guides</button>
-          <button class="btn btn-sm btn-brand-outline blog-filter-tab" data-filter="festivals">Festivals</button>
+          <button class="btn btn-sm btn-brand-outline active btn-brand-primary blog-filter-tab" data-filter="all" aria-pressed="true">All Stories</button>
+          <button class="btn btn-sm btn-brand-outline blog-filter-tab" data-filter="stories" aria-pressed="false">Food Truck Stories</button>
+          <button class="btn btn-sm btn-brand-outline blog-filter-tab" data-filter="vendor" aria-pressed="false">Vendor Guides</button>
+          <button class="btn btn-sm btn-brand-outline blog-filter-tab" data-filter="festivals" aria-pressed="false">Festivals</button>
         </div>
       </div>
 

@@ -19,45 +19,93 @@ document.addEventListener('DOMContentLoaded', function () {
   // Events Category Filter Tabs
   const eventFilterButtons = document.querySelectorAll('.event-filter-tab');
   const eventCards = document.querySelectorAll('.event-item-card');
+  const eventEmptyState = document.getElementById('event-filter-empty');
+  const eventFilterStatus = document.getElementById('event-filter-status');
 
-  eventFilterButtons.forEach(btn => {
-    btn.addEventListener('click', function () {
-      eventFilterButtons.forEach(b => b.classList.remove('active', 'btn-brand-primary'));
-      this.classList.add('active', 'btn-brand-primary');
+  function applyEventFilter(selectedButton) {
+    const filter = selectedButton ? selectedButton.getAttribute('data-filter') || 'all' : 'all';
+    const filterLabel = selectedButton ? selectedButton.textContent.trim() : 'All Gatherings';
+    let visibleCount = 0;
 
-      const filter = this.getAttribute('data-filter') || 'all';
-
-      eventCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+    eventFilterButtons.forEach(button => {
+      const isActive = button === selectedButton;
+      button.classList.toggle('active', isActive);
+      button.classList.toggle('btn-brand-primary', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
     });
+
+    eventCards.forEach(card => {
+      const isVisible = filter === 'all' || card.getAttribute('data-category') === filter;
+      card.style.display = isVisible ? '' : 'none';
+      if (isVisible) visibleCount += 1;
+    });
+
+    if (eventEmptyState) eventEmptyState.classList.toggle('d-none', visibleCount > 0);
+    if (eventFilterStatus) {
+      eventFilterStatus.textContent = visibleCount
+        ? filter === 'all'
+          ? `Showing all ${visibleCount} gatherings.`
+          : `Showing ${visibleCount} ${visibleCount === 1 ? 'gathering' : 'gatherings'} in ${filterLabel}.`
+        : `No gatherings are available for ${filterLabel.toLowerCase()}.`;
+    }
+  }
+
+  eventFilterButtons.forEach(button => {
+    button.addEventListener('click', () => applyEventFilter(button));
   });
+  if (eventFilterButtons.length) {
+    const activeEventFilter = Array.from(eventFilterButtons).find(button => button.classList.contains('active'));
+    applyEventFilter(activeEventFilter || eventFilterButtons[0]);
+  }
 
   // Blog "Recent Articles" Category Filter Tabs (Food Truck Stories,
   // Vendor Guides, Festivals, All Stories)
   const blogFilterButtons = document.querySelectorAll('.blog-filter-tab');
   const blogPostItems = document.querySelectorAll('.blog-post-item');
+  const blogSearchForm = document.getElementById('blog-search-form');
+  const blogSearchInput = document.getElementById('blog-search-input');
+  const blogSearchFeedback = document.getElementById('blog-search-feedback');
+  let activeBlogCategory = 'all';
+  let blogSearchQuery = '';
 
-  blogFilterButtons.forEach(btn => {
-    btn.addEventListener('click', function () {
-      blogFilterButtons.forEach(b => b.classList.remove('active', 'btn-brand-primary'));
-      this.classList.add('active', 'btn-brand-primary');
+  function applyBlogFilters() {
+    let visibleCount = 0;
+    blogPostItems.forEach(post => {
+      const matchesCategory = activeBlogCategory === 'all' || post.getAttribute('data-category') === activeBlogCategory;
+      const matchesQuery = !blogSearchQuery || post.textContent.toLowerCase().includes(blogSearchQuery);
+      const isVisible = matchesCategory && matchesQuery;
+      post.style.display = isVisible ? '' : 'none';
+      if (isVisible) visibleCount += 1;
+    });
 
-      const filter = this.getAttribute('data-filter') || 'all';
+    if (blogSearchFeedback && blogSearchQuery) {
+      blogSearchFeedback.textContent = visibleCount
+        ? `${visibleCount} article${visibleCount === 1 ? '' : 's'} found.`
+        : 'No articles match that search. Try another keyword.';
+    } else if (blogSearchFeedback && blogSearchForm && blogSearchForm.dataset.searchSubmitted === 'true') {
+      blogSearchFeedback.textContent = 'Enter a keyword to search articles. Showing the selected category.';
+    }
+  }
 
-      blogPostItems.forEach(post => {
-        const category = post.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          post.style.display = '';
-        } else {
-          post.style.display = 'none';
-        }
+  blogFilterButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      activeBlogCategory = this.getAttribute('data-filter') || 'all';
+      blogFilterButtons.forEach(filterButton => {
+        const isActive = filterButton === this;
+        filterButton.classList.toggle('active', isActive);
+        filterButton.classList.toggle('btn-brand-primary', isActive);
+        filterButton.setAttribute('aria-pressed', String(isActive));
       });
+      applyBlogFilters();
     });
   });
+
+  if (blogSearchForm && blogSearchInput) {
+    blogSearchForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      blogSearchQuery = blogSearchInput.value.trim().toLowerCase();
+      blogSearchForm.dataset.searchSubmitted = 'true';
+      applyBlogFilters();
+    });
+  }
 });

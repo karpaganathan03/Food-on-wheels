@@ -1565,7 +1565,6 @@ a.text-heading:hover {
 .event-card-body > .border-top > .btn {
   flex: 0 0 auto;
 }
-
 /* --------------------------------------------------------------------------
    11. Map-Inspired Interactive UI Block
    -------------------------------------------------------------------------- */
@@ -2338,6 +2337,12 @@ a.text-heading:hover {
   position: relative;
   min-width: 0;
 }
+#service-offerings .row {
+  align-items: stretch;
+}
+#service-offerings .service-pillar-card {
+  width: 100%;
+}
 .service-pillar-card:hover {
   border-color: var(--primary-color);
   transform: translateY(-8px);
@@ -2356,11 +2361,12 @@ a.text-heading:hover {
   transform: scale(1.02);
 }
 .service-card-title {
-  min-height: 56px;
+  min-height: 2.5em;
   font-size: 1.25rem;
+  line-height: 1.25;
 }
 .service-card-desc {
-  min-height: 68px;
+  min-height: 4.65em;
   line-height: 1.55;
 }
 .service-card-features {
@@ -2370,7 +2376,7 @@ a.text-heading:hover {
   margin-top: auto;
   width: 100%;
   box-sizing: border-box;
-  height: 44px;
+  height: auto;
   min-height: 44px;
   padding: 0.625rem 1.35rem;
   font-size: 0.95rem;
@@ -2385,7 +2391,8 @@ a.text-heading:hover {
   transition: background-color var(--transition-base), border-color var(--transition-base),
     color var(--transition-base), box-shadow var(--transition-base);
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
   border: 2px solid var(--border-color);
   background: var(--surface-alt);
   color: var(--heading-color) !important;
@@ -2484,12 +2491,47 @@ a.text-heading:hover {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  min-width: 0;
+}
+#service-packages .catering-product-body > .d-flex:first-child {
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+#service-packages .catering-product-body h4 {
+  min-height: 2.4em;
+  line-height: 1.2;
 }
 .product-price-tag {
   font-size: 1.5rem;
   font-weight: 800;
   font-family: var(--font-heading);
   color: var(--primary-color);
+}
+
+.menu-page-hero {
+  padding-block: clamp(3.25rem, 6vw, 5rem) !important;
+}
+.menu-page-hero .row {
+  align-items: center;
+}
+.menu-page-hero .col-lg-7 {
+  min-width: 0;
+}
+.menu-page-hero h1 {
+  line-height: 1.08;
+  text-wrap: balance;
+}
+.menu-page-hero .d-flex.flex-wrap {
+  gap: 0.75rem !important;
+}
+.menu-page-hero .d-flex.flex-wrap > .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+}
+.menu-page-hero img {
+  height: clamp(240px, 30vw, 380px) !important;
 }
 
 .service-workflow-step {

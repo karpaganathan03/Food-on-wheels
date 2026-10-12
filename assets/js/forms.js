@@ -171,6 +171,31 @@ document.addEventListener('DOMContentLoaded', function () {
   wireConfirmPasswordMatch('truck-password', 'truck-confirm-password');
   wireConfirmPasswordMatch('reg-password', 'reg-confirm-password');
 
+  // Phone fields accept 7–15 digits and, optionally, a leading plus sign.
+  document.querySelectorAll('.phone-number-input').forEach(phoneInput => {
+    phoneInput.addEventListener('input', function () {
+      const originalValue = phoneInput.value;
+      const cleanValue = originalValue
+        .replace(/[^\d+]/g, '')
+        .replace(/(?!^)\+/g, '');
+      phoneInput.value = cleanValue;
+
+      const digitCount = cleanValue.replace(/\D/g, '').length;
+      let validationMessage = '';
+
+      if (originalValue !== cleanValue) {
+        validationMessage = 'Use digits only, with an optional + at the beginning.';
+      } else if (cleanValue && (digitCount < 7 || digitCount > 15)) {
+        validationMessage = 'Enter a phone number with 7–15 digits.';
+      } else if (phoneInput.required && digitCount === 0) {
+        validationMessage = 'Enter a valid phone number with 7–15 digits.';
+      }
+
+      phoneInput.setCustomValidity(validationMessage);
+      phoneInput.classList.toggle('is-invalid', Boolean(validationMessage));
+    });
+  });
+
   /* ==========================================================================
      2. LOGIN CONTROLLER (login.html)
      ========================================================================== */

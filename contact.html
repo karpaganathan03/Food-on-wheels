@@ -233,8 +233,8 @@
 
               <div class="col-md-6">
                 <label class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" placeholder="+1 (555) 000-0000" pattern="[0-9+\-().\s]{7,20}">
-                <div class="invalid-feedback">Please enter a valid phone number (digits only).</div>
+                <input type="tel" class="form-control phone-number-input" inputmode="tel" placeholder="+15550000000" pattern="\+?[0-9]{7,15}" maxlength="16" aria-describedby="contact-phone-feedback">
+                <div class="invalid-feedback" id="contact-phone-feedback">Enter 7–15 digits, with an optional + at the beginning.</div>
               </div>
 
               <div class="col-md-6">

@@ -208,13 +208,14 @@
           <p class="text-muted mb-0">Filter by category to find weekend rallies, university pop-ups, and markets.</p>
         </div>
         <!-- Filter Tabs -->
-        <div class="d-flex gap-2 mt-3 mt-md-0 overflow-x-auto pb-2 filter-button-group">
-          <button class="btn btn-sm btn-brand-outline event-filter-tab active btn-brand-primary" data-filter="all">All Gatherings</button>
-          <button class="btn btn-sm btn-brand-outline event-filter-tab" data-filter="festivals">Festivals</button>
-          <button class="btn btn-sm btn-brand-outline event-filter-tab" data-filter="markets">Night Markets</button>
-          <button class="btn btn-sm btn-brand-outline event-filter-tab" data-filter="college">Campus Rallies</button>
+        <div class="d-flex gap-2 mt-3 mt-md-0 overflow-x-auto pb-2 filter-button-group" role="group" aria-label="Filter gatherings by category">
+          <button type="button" class="btn btn-sm btn-brand-outline event-filter-tab active btn-brand-primary" data-filter="all" aria-pressed="true">All Gatherings</button>
+          <button type="button" class="btn btn-sm btn-brand-outline event-filter-tab" data-filter="festivals" aria-pressed="false">Festivals</button>
+          <button type="button" class="btn btn-sm btn-brand-outline event-filter-tab" data-filter="markets" aria-pressed="false">Night Markets</button>
+          <button type="button" class="btn btn-sm btn-brand-outline event-filter-tab" data-filter="college" aria-pressed="false">Campus Rallies</button>
         </div>
       </div>
+      <p id="event-filter-status" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
 
       <div class="row g-4">
         <!-- Event 1 -->
@@ -295,6 +296,7 @@
           </div>
         </div>
       </div>
+      <p id="event-filter-empty" class="d-none text-muted text-center mt-4 mb-0" role="status">No events are available in this category yet.</p>
     </div>
   </section>
 
