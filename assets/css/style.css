@@ -2378,8 +2378,8 @@ a.text-heading:hover {
   box-sizing: border-box;
   height: auto;
   min-height: 44px;
-  padding: 0.625rem 1.35rem;
-  font-size: 0.95rem;
+  padding: 0.625rem 0.5rem;
+  font-size: 0.85rem;
   font-family: var(--font-heading);
   font-weight: 700;
   border-radius: var(--radius-pill);
@@ -2391,8 +2391,7 @@ a.text-heading:hover {
   transition: background-color var(--transition-base), border-color var(--transition-base),
     color var(--transition-base), box-shadow var(--transition-base);
   text-align: center;
-  white-space: normal;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
   border: 2px solid var(--border-color);
   background: var(--surface-alt);
   color: var(--heading-color) !important;
