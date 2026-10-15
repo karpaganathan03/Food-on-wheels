@@ -873,6 +873,13 @@ a.text-heading:hover {
   font-weight: 700;
   letter-spacing: -0.01em;
 }
+.street-footer > .container > .row:not(.footer-bottom) > [class*="col-"] {
+  min-width: 0;
+}
+.street-footer > .container > .row:not(.footer-bottom) > [class*="col-"] > h5 {
+  min-height: 1.5em;
+  line-height: 1.3;
+}
 .street-footer a {
   color: #CAD5E2;
   text-decoration: none;
@@ -1073,8 +1080,10 @@ a.text-heading:hover {
 
 .footer-newsletter-wrap {
   display: flex !important;
-  align-items: stretch !important;
+  align-items: center !important;
   width: 100%;
+  min-width: 0;
+  min-height: 48px;
   background-color: #FFFFFF !important;
   border-radius: var(--radius-pill) !important;
   overflow: hidden !important;
@@ -1096,7 +1105,8 @@ a.text-heading:hover {
   height: 46px !important;
   min-height: 46px !important;
   min-width: 0 !important;
-  flex: 1 1 auto !important;
+  flex: 1 1 0 !important;
+  width: 0;
   box-shadow: none !important;
   outline: none !important;
   margin: 0 !important;
@@ -1131,6 +1141,7 @@ a.text-heading:hover {
   box-shadow: none !important;
   transform: none !important;
   flex-shrink: 0 !important;
+  min-width: 72px;
   cursor: pointer !important;
   white-space: nowrap !important;
   transition: background-color var(--transition-fast) !important;
@@ -2529,8 +2540,53 @@ a.text-heading:hover {
   justify-content: center;
   min-height: 44px;
 }
+.menu-page-hero-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background-color: var(--surface-color);
+}
 .menu-page-hero img {
-  height: clamp(240px, 30vw, 380px) !important;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blog-featured-article .row > [class*="col-"] {
+  min-width: 0;
+}
+.blog-featured-title,
+.blog-post-item h4 {
+  line-height: 1.3;
+  overflow: visible;
+  overflow-wrap: anywhere;
+}
+.blog-featured-title a,
+.blog-post-item h4 a {
+  display: inline;
+  overflow: visible;
+}
+
+.pricing-hero-copy {
+  text-align: center;
+}
+.pricing-hero-actions {
+  justify-content: center;
+}
+.pricing-hero-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background-color: var(--surface-color);
+}
+.pricing-hero-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .service-workflow-step {
